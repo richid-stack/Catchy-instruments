@@ -1,0 +1,4 @@
+# Audio never goes in git. Use scripts/fetch_datasets.sh to rebuild datasets/.
+datasets/clean/*/
+datasets/research-private/
+datasets/.tmp.*/

@@ -1,0 +1,25 @@
+id|repo|tier|license|attribution|notes
+vcsl|sgossner/VCSL|clean|CC0-1.0|no|African percussion (balafon, mbira, kalimba, agogo, congas, bongos, cajon, shakers, cowbell, claves), grand/upright pianos, harp, recorders, tenor sax, TX81Z FM piano
+vsco2ce|sgossner/VSCO-2-CE|clean|CC0-1.0|no|Orchestral strings, brass, woodwinds, harp, upright piano, organ, mallets
+osiris-piano|sfzinstruments/Osiris_Piano|clean|CC0-1.0|no|Grand piano
+splendid-grand-piano|sfzinstruments/SplendidGrandPiano|clean|Public domain (per SFZ Instruments site)|no|Steinway grand piano
+salamander-grand|sfzinstruments/SalamanderGrandPiano|clean|CC-BY-3.0|yes: Alexander Holm|Grand piano
+greg-sullivan-epianos|sfzinstruments/GregSullivan.E-Pianos|clean|CC-BY-3.0|yes: Greg Sullivan|Wurlitzer EP200, Yamaha CP80, Hohner Pianet T
+virtuosity-drums|sfzinstruments/virtuosity_drums|clean|CC0-1.0|no|Jazz drum kit
+big-little-bass|sfzinstruments/karoryfer.big-little-bass|clean|CC0-1.0|no|Electric bass
+black-and-blue-basses|sfzinstruments/karoryfer.black-and-blue-basses|clean|CC0-1.0|no|Electric basses
+sneakybass|sfzinstruments/karoryfer.sneakybass|clean|CC0-1.0|no|Pizzicato double bass
+pastabass|sfzinstruments/karoryfer.pastabass|clean|CC0-1.0|no|Electric bass
+weresax|sfzinstruments/karoryfer.weresax|clean|CC0-1.0|no|Saxophone
+string-cyborgs|sfzinstruments/karoryfer.string-cyborgs|clean|CC0-1.0|no|Strings
+shinyguitar|sfzinstruments/karoryfer.shinyguitar|clean|CC0-1.0|no|Electric guitar
+ganjo|sfzinstruments/ganjo|clean|CC0-1.0|no|Guitar banjo
+aliexpress-erhu|sfzinstruments/aliexpress-erhu|clean|CC0-1.0|no|Erhu
+steel-drum|sfzinstruments/jlearman.SteelDrum|clean|Unlicense|no|Tenor steel drum
+stargate-sample-pack|stargatedaw/stargate-sample-pack|clean|Self-declared open and attribution-free (verify per folder)|no|Kicks, hats, drums, loops
+jrhodes3d|sfzinstruments/jlearman.jRhodes3d|research-private|CC-BY-NC-4.0 (samples)|yes|Rhodes Mark I stage 73
+sonatina-sso|peastman/sso|research-private|CC Sampling Plus 1.0|yes|Symphonic orchestra
+drum-machines|smpldsnds/drum-machines|research-private|Public domain per org page (verify)|unknown|TR-808, LM-2, 909 and other drum machines
+sonic-pi-samples|smpldsnds/sonic-pi-samples|research-private|CC0 per org page (verify)|unknown|Percussion, drums, tabla, misc
+wavedit-wavetables|smpldsnds/wavedit-online|research-private|CC0 per org page (verify)|unknown|Wavetables for the synth engine
+discord-gm-bank|sfzinstruments/Discord-SFZ-GM-Bank|research-private|Mixed (verify)|unknown|General MIDI SFZ mappings (work in progress)
