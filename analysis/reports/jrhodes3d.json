@@ -1,0 +1,375 @@
+{
+ "pack": "jrhodes3d",
+ "tier": "research-private",
+ "summary": {
+  "files": 196,
+  "errors": 0,
+  "minutes": 45.38,
+  "formats": [
+   "FLAC",
+   "MP3"
+  ],
+  "subtypes": [
+   "MPEG_LAYER_III",
+   "PCM_16"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   1,
+   2
+  ],
+  "pitched_ratio": 0.99,
+  "pitch_range": [
+   "F1",
+   "C7"
+  ],
+  "distinct_pitches": 15,
+  "gaps_over_4_semitones": [
+   [
+    "F1",
+    "B1",
+    6
+   ],
+   [
+    "B1",
+    "E2",
+    5
+   ],
+   [
+    "E2",
+    "A2",
+    5
+   ],
+   [
+    "A2",
+    "D3",
+    5
+   ],
+   [
+    "D3",
+    "G3",
+    5
+   ],
+   [
+    "F4",
+    "B4",
+    6
+   ]
+  ],
+  "files_per_pitch_median": 15,
+  "sfz_root_vs_pitch": {
+   "compared": 195,
+   "within_60_cents": 195,
+   "octave_off": 0,
+   "other": 0,
+   "by_octave": {
+    "0": 195
+   }
+  },
+  "sfz_regions_seen": 1350,
+  "envelope": {
+   "long-decay": 160,
+   "decaying": 36
+  },
+  "centroid_hz_median": 696.5,
+  "level_db_median": -13.95,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.01,
+  "duration_s_median": 14.601,
+  "name_vs_pitch": {
+   "compared": 195,
+   "agree": 195,
+   "octave_shift_mode": 0,
+   "mismatch": 0
+  },
+  "flags": {},
+  "sfz_files": 13,
+  "sfz_root_files": 13,
+  "sfz_regions": 1350,
+  "sfz_layers": {
+   "velocity_layers_max": 11,
+   "velocity_layers_median": 5,
+   "round_robins_max": 1,
+   "keys_with_regions": 88
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 1
+ },
+ "groups": {
+  ".": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.8,
+   "formats": [
+    "MP3"
+   ],
+   "subtypes": [
+    "MPEG_LAYER_III"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "long-decay": 1
+   },
+   "centroid_hz_median": 376,
+   "level_db_median": -29.5,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 1.929,
+   "duration_s_median": 48.1,
+   "flags": {}
+  },
+  "jRhodes3d-mono": {
+   "files": 65,
+   "errors": 0,
+   "minutes": 14.86,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F1",
+    "C7"
+   ],
+   "distinct_pitches": 15,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "B1",
+     6
+    ],
+    [
+     "B1",
+     "E2",
+     5
+    ],
+    [
+     "E2",
+     "A2",
+     5
+    ],
+    [
+     "A2",
+     "D3",
+     5
+    ],
+    [
+     "D3",
+     "G3",
+     5
+    ],
+    [
+     "F4",
+     "B4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 5,
+   "sfz_root_vs_pitch": {
+    "compared": 65,
+    "within_60_cents": 65,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 65
+    }
+   },
+   "sfz_regions_seen": 450,
+   "envelope": {
+    "long-decay": 53,
+    "decaying": 12
+   },
+   "centroid_hz_median": 696,
+   "level_db_median": -9.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 14.601,
+   "name_vs_pitch": {
+    "compared": 65,
+    "agree": 65,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {}
+  },
+  "jRhodes3d-st": {
+   "files": 65,
+   "errors": 0,
+   "minutes": 14.86,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F1",
+    "C7"
+   ],
+   "distinct_pitches": 15,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "B1",
+     6
+    ],
+    [
+     "B1",
+     "E2",
+     5
+    ],
+    [
+     "E2",
+     "A2",
+     5
+    ],
+    [
+     "A2",
+     "D3",
+     5
+    ],
+    [
+     "D3",
+     "G3",
+     5
+    ],
+    [
+     "F4",
+     "B4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 5,
+   "sfz_root_vs_pitch": {
+    "compared": 65,
+    "within_60_cents": 65,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 65
+    }
+   },
+   "sfz_regions_seen": 450,
+   "envelope": {
+    "long-decay": 53,
+    "decaying": 12
+   },
+   "centroid_hz_median": 697,
+   "level_db_median": -15.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 14.601,
+   "name_vs_pitch": {
+    "compared": 65,
+    "agree": 65,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {}
+  },
+  "jRhodes3d-sv": {
+   "files": 65,
+   "errors": 0,
+   "minutes": 14.86,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F1",
+    "C7"
+   ],
+   "distinct_pitches": 15,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "B1",
+     6
+    ],
+    [
+     "B1",
+     "E2",
+     5
+    ],
+    [
+     "E2",
+     "A2",
+     5
+    ],
+    [
+     "A2",
+     "D3",
+     5
+    ],
+    [
+     "D3",
+     "G3",
+     5
+    ],
+    [
+     "F4",
+     "B4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 5,
+   "sfz_root_vs_pitch": {
+    "compared": 65,
+    "within_60_cents": 65,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 65
+    }
+   },
+   "sfz_regions_seen": 450,
+   "envelope": {
+    "long-decay": 53,
+    "decaying": 12
+   },
+   "centroid_hz_median": 697,
+   "level_db_median": -15.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 14.601,
+   "name_vs_pitch": {
+    "compared": 65,
+    "agree": 65,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {}
+  }
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "pack": "big-little-bass",
+ "tier": "clean",
+ "summary": {
+  "files": 440,
+  "errors": 0,
+  "minutes": 39.52,
+  "formats": [
+   "WAVEX"
+  ],
+  "subtypes": [
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   1
+  ],
+  "pitched_ratio": 1.0,
+  "pitch_range": [
+   "B0",
+   "F#4"
+  ],
+  "distinct_pitches": 44,
+  "files_per_pitch_median": 10.0,
+  "name_dynamics": [
+   "f",
+   "p"
+  ],
+  "name_round_robins": 5,
+  "sfz_root_vs_pitch": {
+   "compared": 430,
+   "within_60_cents": 0,
+   "octave_off": 430,
+   "other": 0,
+   "by_octave": {
+    "-1": 430
+   }
+  },
+  "sfz_regions_seen": 3432,
+  "envelope": {
+   "decaying": 415,
+   "percussive": 19,
+   "long-decay": 6
+  },
+  "centroid_hz_median": 214.0,
+  "level_db_median": -16.0,
+  "lead_silence_s_median": 0.012,
+  "attack_s_median": 0.022,
+  "duration_s_median": 4.963,
+  "flags": {},
+  "sfz_files": 18,
+  "sfz_root_files": 2,
+  "sfz_regions": 3432,
+  "sfz_layers": {
+   "velocity_layers_max": 2,
+   "velocity_layers_median": 2,
+   "round_robins_max": 5,
+   "keys_with_regions": 44
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 0
+ },
+ "groups": {
+  "Samples": {
+   "files": 440,
+   "errors": 0,
+   "minutes": 39.52,
+   "formats": [
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "B0",
+    "F#4"
+   ],
+   "distinct_pitches": 44,
+   "files_per_pitch_median": 10.0,
+   "name_dynamics": [
+    "f",
+    "p"
+   ],
+   "name_round_robins": 5,
+   "sfz_root_vs_pitch": {
+    "compared": 430,
+    "within_60_cents": 0,
+    "octave_off": 430,
+    "other": 0,
+    "by_octave": {
+     "-1": 430
+    }
+   },
+   "sfz_regions_seen": 3432,
+   "envelope": {
+    "decaying": 415,
+    "percussive": 19,
+    "long-decay": 6
+   },
+   "centroid_hz_median": 214.0,
+   "level_db_median": -16.0,
+   "lead_silence_s_median": 0.012,
+   "attack_s_median": 0.022,
+   "duration_s_median": 4.963,
+   "flags": {}
+  }
+ }
+}

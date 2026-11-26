@@ -1,0 +1,145 @@
+{
+ "pack": "wavedit-wavetables",
+ "tier": "research-private",
+ "summary": {
+  "files": 705,
+  "errors": 0,
+  "minutes": 4.37,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_16"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   1
+  ],
+  "pitched_ratio": 0.41,
+  "pitch_range": [
+   "A#0",
+   "B9"
+  ],
+  "distinct_pitches": 72,
+  "gaps_over_4_semitones": [
+   [
+    "C7",
+    "F7",
+    5
+   ],
+   [
+    "C8",
+    "A8",
+    9
+   ],
+   [
+    "C9",
+    "A9",
+    9
+   ]
+  ],
+  "files_per_pitch_median": 1.0,
+  "name_dynamics": [
+   "soft"
+  ],
+  "articulations": {
+   "bell": 2,
+   "harmonic": 1,
+   "bend": 1
+  },
+  "envelope": {
+   "sustained": 662,
+   "percussive": 42,
+   "decaying": 1
+  },
+  "centroid_hz_median": 3263,
+  "level_db_median": -4.6,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.18,
+  "duration_s_median": 0.372,
+  "name_vs_pitch": {
+   "compared": 1,
+   "agree": 0,
+   "octave_shift_mode": null,
+   "mismatch": 1
+  },
+  "flags": {
+   "cut_off_ending": 702,
+   "clipped_files": 578
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "samples": {
+   "files": 705,
+   "errors": 0,
+   "minutes": 4.37,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.41,
+   "pitch_range": [
+    "A#0",
+    "B9"
+   ],
+   "distinct_pitches": 72,
+   "gaps_over_4_semitones": [
+    [
+     "C7",
+     "F7",
+     5
+    ],
+    [
+     "C8",
+     "A8",
+     9
+    ],
+    [
+     "C9",
+     "A9",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "soft"
+   ],
+   "articulations": {
+    "bell": 2,
+    "harmonic": 1,
+    "bend": 1
+   },
+   "envelope": {
+    "sustained": 662,
+    "percussive": 42,
+    "decaying": 1
+   },
+   "centroid_hz_median": 3263,
+   "level_db_median": -4.6,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.18,
+   "duration_s_median": 0.372,
+   "name_vs_pitch": {
+    "compared": 1,
+    "agree": 0,
+    "octave_shift_mode": null,
+    "mismatch": 1
+   },
+   "flags": {
+    "cut_off_ending": 702,
+    "clipped_files": 578
+   }
+  }
+ }
+}

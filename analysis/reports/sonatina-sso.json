@@ -1,0 +1,4531 @@
+{
+ "pack": "sonatina-sso",
+ "tier": "research-private",
+ "summary": {
+  "files": 3062,
+  "errors": 0,
+  "minutes": 222.56,
+  "formats": [
+   "FLAC",
+   "WAV",
+   "WAVEX"
+  ],
+  "subtypes": [
+   "PCM_16",
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100,
+   48000
+  ],
+  "channels": [
+   1,
+   2
+  ],
+  "pitched_ratio": 0.83,
+  "pitch_range": [
+   "B-1",
+   "C#8"
+  ],
+  "distinct_pitches": 93,
+  "gaps_over_4_semitones": [
+   [
+    "B-1",
+    "F0",
+    6
+   ]
+  ],
+  "files_per_pitch_median": 26,
+  "name_dynamics": [
+   "f",
+   "ff",
+   "hard",
+   "mf",
+   "mp",
+   "p",
+   "pp",
+   "soft"
+  ],
+  "name_round_robins": 3,
+  "articulations": {
+   "sustain": 359,
+   "vibrato": 328,
+   "arco": 164,
+   "pizzicato": 82,
+   "swell": 72,
+   "spiccato": 72,
+   "release": 54,
+   "roll": 42
+  },
+  "sfz_root_vs_pitch": {
+   "compared": 2390,
+   "within_60_cents": 1869,
+   "octave_off": 317,
+   "other": 204,
+   "by_octave": {
+    "-1": 47,
+    "0": 1869,
+    "1": 104,
+    "2": 166
+   }
+  },
+  "sfz_regions_seen": 20696,
+  "envelope": {
+   "sustained": 819,
+   "decaying": 763,
+   "percussive": 891,
+   "long-decay": 589
+  },
+  "centroid_hz_median": 1671.0,
+  "level_db_median": -19.3,
+  "lead_silence_s_median": 0.002,
+  "attack_s_median": 0.185,
+  "duration_s_median": 4.03,
+  "name_vs_pitch": {
+   "compared": 475,
+   "agree": 33,
+   "octave_shift_mode": 1,
+   "mismatch": 0
+  },
+  "flags": {
+   "dual_mono_files": 251,
+   "cut_off_ending": 1145,
+   "clipped_files": 8
+  },
+  "sfz_files": 747,
+  "sfz_root_files": 94,
+  "sfz_regions": 20696,
+  "sfz_layers": {
+   "velocity_layers_max": 5,
+   "velocity_layers_median": 1,
+   "round_robins_max": 3,
+   "keys_with_regions": 88
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 161
+ },
+ "groups": {
+  "Sonatina Symphonic Orchestra/Samples-looped/Alto Flute": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.53,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.85,
+   "pitch_range": [
+    "G3",
+    "G#6"
+   ],
+   "distinct_pitches": 11,
+   "gaps_over_4_semitones": [
+    [
+     "A#3",
+     "E4",
+     6
+    ],
+    [
+     "G4",
+     "C#5",
+     6
+    ],
+    [
+     "C#5",
+     "G5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 11,
+    "within_60_cents": 10,
+    "octave_off": 0,
+    "other": 1,
+    "by_octave": {
+     "0": 10
+    }
+   },
+   "sfz_regions_seen": 156,
+   "envelope": {
+    "sustained": 10,
+    "decaying": 1,
+    "percussive": 2
+   },
+   "centroid_hz_median": 2281,
+   "level_db_median": -17.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.96,
+   "duration_s_median": 2.579,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Bass Clarinet": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.53,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "D2",
+    "D5"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 104,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 2732,
+   "level_db_median": -16.8,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 1.538,
+   "duration_s_median": 2.069,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Bass Trombone": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 0.66,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E1",
+    "G4"
+   ],
+   "distinct_pitches": 14,
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 14,
+    "within_60_cents": 14,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 14
+    }
+   },
+   "sfz_regions_seen": 448,
+   "envelope": {
+    "sustained": 14
+   },
+   "centroid_hz_median": 1097.0,
+   "level_db_median": -19.65,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.781,
+   "duration_s_median": 2.756,
+   "flags": {
+    "cut_off_ending": 14
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Bassoon": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 0.5,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "A#1",
+    "E5"
+   ],
+   "distinct_pitches": 14,
+   "gaps_over_4_semitones": [
+    [
+     "C#3",
+     "G3",
+     6
+    ],
+    [
+     "C#4",
+     "G4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 14,
+    "within_60_cents": 12,
+    "octave_off": 1,
+    "other": 1,
+    "by_octave": {
+     "0": 12,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 112,
+   "envelope": {
+    "sustained": 14
+   },
+   "centroid_hz_median": 960.5,
+   "level_db_median": -14.45,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 1.074,
+   "duration_s_median": 2.094,
+   "flags": {
+    "cut_off_ending": 14
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Bassoons": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 1.2,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.8,
+   "pitch_range": [
+    "A#1",
+    "E5"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "E2",
+     "A#2",
+     6
+    ],
+    [
+     "G3",
+     "C#4",
+     6
+    ],
+    [
+     "C#4",
+     "G4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "sustain": 15
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 12,
+    "within_60_cents": 10,
+    "octave_off": 0,
+    "other": 2,
+    "by_octave": {
+     "0": 10
+    }
+   },
+   "sfz_regions_seen": 180,
+   "envelope": {
+    "sustained": 15
+   },
+   "centroid_hz_median": 804,
+   "level_db_median": -15.5,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 2.405,
+   "duration_s_median": 4.85,
+   "flags": {
+    "cut_off_ending": 15
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Cello": {
+   "files": 32,
+   "errors": 0,
+   "minutes": 1.17,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.94,
+   "pitch_range": [
+    "C2",
+    "D#7"
+   ],
+   "distinct_pitches": 21,
+   "gaps_over_4_semitones": [
+    [
+     "A6",
+     "D#7",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 29,
+    "within_60_cents": 18,
+    "octave_off": 11,
+    "other": 0,
+    "by_octave": {
+     "0": 18,
+     "1": 1,
+     "2": 10
+    }
+   },
+   "sfz_regions_seen": 160,
+   "envelope": {
+    "sustained": 29,
+    "decaying": 2,
+    "percussive": 1
+   },
+   "centroid_hz_median": 3235.5,
+   "level_db_median": -20.55,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.312,
+   "duration_s_median": 2.212,
+   "flags": {
+    "cut_off_ending": 32
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Chorus": {
+   "files": 42,
+   "errors": 0,
+   "minutes": 5.52,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.86,
+   "pitch_range": [
+    "G2",
+    "C6"
+   ],
+   "distinct_pitches": 36,
+   "gaps_over_4_semitones": [
+    [
+     "A2",
+     "D3",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 35,
+    "within_60_cents": 35,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 35
+    }
+   },
+   "sfz_regions_seen": 252,
+   "envelope": {
+    "sustained": 35,
+    "decaying": 4,
+    "long-decay": 2,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1762.0,
+   "level_db_median": -20.65,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.653,
+   "duration_s_median": 7.939,
+   "flags": {
+    "cut_off_ending": 42
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Clarinet": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.39,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "D3",
+    "D6"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 104,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 2521,
+   "level_db_median": -13.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.42,
+   "duration_s_median": 1.863,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Clarinets": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.95,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "D3",
+    "D6"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "B3",
+     "F4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 12,
+    "octave_off": 0,
+    "other": 1,
+    "by_octave": {
+     "0": 12
+    }
+   },
+   "sfz_regions_seen": 156,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 1453,
+   "level_db_median": -17.2,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 1.686,
+   "duration_s_median": 4.662,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Contrabassoon": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.27,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "A#0",
+    "A#4"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "G3",
+     "A#4",
+     15
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 12,
+    "octave_off": 1,
+    "other": 0,
+    "by_octave": {
+     "0": 12,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 104,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 575,
+   "level_db_median": -15.1,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.419,
+   "duration_s_median": 1.28,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Cor Anglais": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 0.63,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.89,
+   "pitch_range": [
+    "F3",
+    "D6"
+   ],
+   "distinct_pitches": 8,
+   "gaps_over_4_semitones": [
+    [
+     "G#3",
+     "D4",
+     6
+    ],
+    [
+     "B4",
+     "F5",
+     6
+    ],
+    [
+     "F5",
+     "D6",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 8,
+    "within_60_cents": 7,
+    "octave_off": 1,
+    "other": 0,
+    "by_octave": {
+     "0": 7,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 108,
+   "envelope": {
+    "sustained": 9
+   },
+   "centroid_hz_median": 1766,
+   "level_db_median": -22.8,
+   "lead_silence_s_median": 0.01,
+   "attack_s_median": 1.783,
+   "duration_s_median": 4.507,
+   "flags": {
+    "cut_off_ending": 9
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Flute": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 1.09,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C7"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 156,
+   "envelope": {
+    "sustained": 6,
+    "decaying": 5,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 2338,
+   "level_db_median": -15.6,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.53,
+   "duration_s_median": 5.065,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Flutes": {
+   "files": 12,
+   "errors": 0,
+   "minutes": 0.82,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "A6"
+   ],
+   "distinct_pitches": 12,
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "articulations": {
+    "sustain": 12
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 12,
+    "within_60_cents": 12,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 12
+    }
+   },
+   "sfz_regions_seen": 180,
+   "envelope": {
+    "sustained": 8,
+    "decaying": 3,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1856.5,
+   "level_db_median": -15.8,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 1.165,
+   "duration_s_median": 4.14,
+   "flags": {
+    "cut_off_ending": 12
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Horn": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.5,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E2",
+    "E5"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 312,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 765,
+   "level_db_median": -15.4,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.528,
+   "duration_s_median": 2.513,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Horns": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.58,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.91,
+   "pitch_range": [
+    "E2",
+    "A#4"
+   ],
+   "distinct_pitches": 10,
+   "gaps_over_4_semitones": [
+    [
+     "A#3",
+     "E4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "sustain": 11
+   },
+   "envelope": {
+    "sustained": 11
+   },
+   "centroid_hz_median": 1224,
+   "level_db_median": -20.2,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.549,
+   "duration_s_median": 3.173,
+   "flags": {
+    "cut_off_ending": 11
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Oboe": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 0.22,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.8,
+   "pitch_range": [
+    "A#3",
+    "E6"
+   ],
+   "distinct_pitches": 8,
+   "gaps_over_4_semitones": [
+    [
+     "C#4",
+     "A#4",
+     9
+    ],
+    [
+     "C#5",
+     "G5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 8,
+    "within_60_cents": 7,
+    "octave_off": 1,
+    "other": 0,
+    "by_octave": {
+     "0": 7,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 80,
+   "envelope": {
+    "sustained": 10
+   },
+   "centroid_hz_median": 2252.0,
+   "level_db_median": -16.6,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.585,
+   "duration_s_median": 1.265,
+   "flags": {
+    "cut_off_ending": 10
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Oboes": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.75,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.82,
+   "pitch_range": [
+    "A#3",
+    "E6"
+   ],
+   "distinct_pitches": 9,
+   "gaps_over_4_semitones": [
+    [
+     "E4",
+     "A#4",
+     6
+    ],
+    [
+     "E5",
+     "A#5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "sustain": 11
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 9,
+    "within_60_cents": 9,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 9
+    }
+   },
+   "sfz_regions_seen": 132,
+   "envelope": {
+    "sustained": 11
+   },
+   "centroid_hz_median": 1930,
+   "level_db_median": -20.7,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 2.146,
+   "duration_s_median": 4.091,
+   "flags": {
+    "cut_off_ending": 11
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Percussion": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.17,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "articulations": {
+    "roll": 5
+   },
+   "sfz_regions_seen": 5,
+   "envelope": {
+    "sustained": 5
+   },
+   "centroid_hz_median": 562,
+   "level_db_median": -16.6,
+   "lead_silence_s_median": 0.022,
+   "attack_s_median": 0.865,
+   "duration_s_median": 2.002,
+   "flags": {
+    "cut_off_ending": 5
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Piccolo": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.74,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.82,
+   "pitch_range": [
+    "F#5",
+    "F#7"
+   ],
+   "distinct_pitches": 9,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 9,
+    "within_60_cents": 9,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 9
+    }
+   },
+   "sfz_regions_seen": 132,
+   "envelope": {
+    "sustained": 6,
+    "decaying": 4,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 2573,
+   "level_db_median": -14.9,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.386,
+   "duration_s_median": 3.789,
+   "flags": {
+    "cut_off_ending": 11
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Tenor Trombone": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.32,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E2",
+    "A#4"
+   ],
+   "distinct_pitches": 11,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 11,
+    "within_60_cents": 11,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 11
+    }
+   },
+   "sfz_regions_seen": 264,
+   "envelope": {
+    "sustained": 11
+   },
+   "centroid_hz_median": 1227,
+   "level_db_median": -20.2,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.778,
+   "duration_s_median": 1.697,
+   "flags": {
+    "cut_off_ending": 11
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Trombones": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.58,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E2",
+    "E5"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 312,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 1830,
+   "level_db_median": -21.0,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.849,
+   "duration_s_median": 2.566,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Trumpet": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.86,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E3",
+    "E6"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 312,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 1997,
+   "level_db_median": -15.8,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.398,
+   "duration_s_median": 4.079,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Trumpets": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.9,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.92,
+   "pitch_range": [
+    "E3",
+    "E6"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "E5",
+     "A#5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 12,
+    "within_60_cents": 12,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 12
+    }
+   },
+   "sfz_regions_seen": 312,
+   "envelope": {
+    "sustained": 13
+   },
+   "centroid_hz_median": 2101,
+   "level_db_median": -23.1,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.657,
+   "duration_s_median": 4.157,
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Tuba": {
+   "files": 12,
+   "errors": 0,
+   "minutes": 0.74,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E1",
+    "C#5"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "A#3",
+     "C#5",
+     15
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "sustain": 12
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 12,
+    "within_60_cents": 11,
+    "octave_off": 1,
+    "other": 0,
+    "by_octave": {
+     "0": 11,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 288,
+   "envelope": {
+    "sustained": 12
+   },
+   "centroid_hz_median": 553.5,
+   "level_db_median": -18.55,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 1.394,
+   "duration_s_median": 3.659,
+   "flags": {
+    "cut_off_ending": 12
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Violin": {
+   "files": 29,
+   "errors": 0,
+   "minutes": 2.74,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.93,
+   "pitch_range": [
+    "G3",
+    "C#8"
+   ],
+   "distinct_pitches": 19,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 26,
+    "within_60_cents": 14,
+    "octave_off": 12,
+    "other": 0,
+    "by_octave": {
+     "0": 14,
+     "1": 1,
+     "2": 11
+    }
+   },
+   "sfz_regions_seen": 140,
+   "envelope": {
+    "sustained": 27,
+    "decaying": 2
+   },
+   "centroid_hz_median": 3169,
+   "level_db_median": -27.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.246,
+   "duration_s_median": 4.644,
+   "flags": {
+    "cut_off_ending": 29
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples-looped/Violin 2": {
+   "files": 164,
+   "errors": 0,
+   "minutes": 12.47,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.85,
+   "pitch_range": [
+    "G3",
+    "C#8"
+   ],
+   "distinct_pitches": 54,
+   "files_per_pitch_median": 2.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "articulations": {
+    "vibrato": 164,
+    "arco": 82
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 140,
+    "within_60_cents": 90,
+    "octave_off": 50,
+    "other": 0,
+    "by_octave": {
+     "-1": 1,
+     "0": 90,
+     "1": 3,
+     "2": 46
+    }
+   },
+   "sfz_regions_seen": 1066,
+   "envelope": {
+    "sustained": 163,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 3473.5,
+   "level_db_median": -21.45,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.175,
+   "duration_s_median": 4.543,
+   "name_vs_pitch": {
+    "compared": 76,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 164,
+    "clipped_files": 8
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/1st Violins": {
+   "files": 135,
+   "errors": 0,
+   "minutes": 5.0,
+   "formats": [
+    "FLAC",
+    "WAV",
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.84,
+   "pitch_range": [
+    "G3",
+    "C#8"
+   ],
+   "distinct_pitches": 36,
+   "files_per_pitch_median": 2.0,
+   "name_dynamics": [
+    "f",
+    "p",
+    "pp"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 14
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 113,
+    "within_60_cents": 78,
+    "octave_off": 13,
+    "other": 22,
+    "by_octave": {
+     "0": 78,
+     "1": 3,
+     "2": 10
+    }
+   },
+   "sfz_regions_seen": 866,
+   "envelope": {
+    "percussive": 68,
+    "decaying": 25,
+    "sustained": 28,
+    "long-decay": 14
+   },
+   "centroid_hz_median": 2266,
+   "level_db_median": -20.7,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.118,
+   "duration_s_median": 1.059,
+   "flags": {
+    "cut_off_ending": 52
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/2nd Violins": {
+   "files": 98,
+   "errors": 0,
+   "minutes": 4.58,
+   "formats": [
+    "FLAC",
+    "WAV",
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.87,
+   "pitch_range": [
+    "G3",
+    "C#8"
+   ],
+   "distinct_pitches": 33,
+   "files_per_pitch_median": 2,
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 14
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 85,
+    "within_60_cents": 50,
+    "octave_off": 12,
+    "other": 23,
+    "by_octave": {
+     "0": 50,
+     "1": 1,
+     "2": 11
+    }
+   },
+   "sfz_regions_seen": 336,
+   "envelope": {
+    "sustained": 28,
+    "percussive": 47,
+    "decaying": 9,
+    "long-decay": 14
+   },
+   "centroid_hz_median": 2514.0,
+   "level_db_median": -19.0,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.128,
+   "duration_s_median": 0.988,
+   "flags": {
+    "cut_off_ending": 49
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Alto Flute": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.72,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.85,
+   "pitch_range": [
+    "G3",
+    "G#6"
+   ],
+   "distinct_pitches": 10,
+   "gaps_over_4_semitones": [
+    [
+     "A#3",
+     "E4",
+     6
+    ],
+    [
+     "G4",
+     "C#5",
+     6
+    ],
+    [
+     "C#5",
+     "G#5",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 11,
+    "within_60_cents": 10,
+    "octave_off": 0,
+    "other": 1,
+    "by_octave": {
+     "0": 10
+    }
+   },
+   "sfz_regions_seen": 468,
+   "envelope": {
+    "decaying": 13
+   },
+   "centroid_hz_median": 2438,
+   "level_db_median": -17.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.1,
+   "duration_s_median": 3.288,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Bass": {
+   "files": 60,
+   "errors": 0,
+   "minutes": 4.28,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.95,
+   "pitch_range": [
+    "C1",
+    "F#6"
+   ],
+   "distinct_pitches": 35,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 15
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 57,
+    "within_60_cents": 42,
+    "octave_off": 14,
+    "other": 1,
+    "by_octave": {
+     "0": 42,
+     "1": 1,
+     "2": 13
+    }
+   },
+   "sfz_regions_seen": 360,
+   "envelope": {
+    "sustained": 30,
+    "percussive": 7,
+    "decaying": 23
+   },
+   "centroid_hz_median": 526.0,
+   "level_db_median": -21.55,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.098,
+   "duration_s_median": 4.364,
+   "flags": {
+    "cut_off_ending": 32
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Bass Clarinet": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.61,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "D2",
+    "D5"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 104,
+   "envelope": {
+    "decaying": 11,
+    "percussive": 2
+   },
+   "centroid_hz_median": 2732,
+   "level_db_median": -16.8,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 1.236,
+   "duration_s_median": 2.823,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Bass Trombone": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 0.75,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E1",
+    "G4"
+   ],
+   "distinct_pitches": 14,
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 14,
+    "within_60_cents": 14,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 14
+    }
+   },
+   "sfz_regions_seen": 504,
+   "envelope": {
+    "decaying": 13,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 1097.0,
+   "level_db_median": -19.65,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.736,
+   "duration_s_median": 3.183,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Basses": {
+   "files": 89,
+   "errors": 0,
+   "minutes": 3.85,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.81,
+   "pitch_range": [
+    "C1",
+    "C#4"
+   ],
+   "distinct_pitches": 29,
+   "files_per_pitch_median": 2,
+   "name_dynamics": [
+    "f"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 14
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 71,
+    "within_60_cents": 47,
+    "octave_off": 2,
+    "other": 22,
+    "by_octave": {
+     "-1": 1,
+     "0": 47,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 580,
+   "envelope": {
+    "decaying": 51,
+    "percussive": 11,
+    "sustained": 27
+   },
+   "centroid_hz_median": 595,
+   "level_db_median": -16.6,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.149,
+   "duration_s_median": 1.307,
+   "flags": {
+    "cut_off_ending": 33
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Bassoon": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 0.7,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.93,
+   "pitch_range": [
+    "A#1",
+    "E5"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "C#3",
+     "G3",
+     6
+    ],
+    [
+     "A#3",
+     "G4",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 11,
+    "octave_off": 1,
+    "other": 1,
+    "by_octave": {
+     "0": 11,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 112,
+   "envelope": {
+    "decaying": 13,
+    "percussive": 1
+   },
+   "centroid_hz_median": 869.5,
+   "level_db_median": -14.45,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 1.083,
+   "duration_s_median": 2.976,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Bassoons": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 1.57,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.8,
+   "pitch_range": [
+    "A#1",
+    "E5"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "E2",
+     "A#2",
+     6
+    ],
+    [
+     "G3",
+     "C#4",
+     6
+    ],
+    [
+     "C#4",
+     "G4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "sustain": 15
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 12,
+    "within_60_cents": 10,
+    "octave_off": 0,
+    "other": 2,
+    "by_octave": {
+     "0": 10
+    }
+   },
+   "sfz_regions_seen": 225,
+   "envelope": {
+    "long-decay": 15
+   },
+   "centroid_hz_median": 834,
+   "level_db_median": -15.5,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 2.405,
+   "duration_s_median": 6.282,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Celeste": {
+   "files": 25,
+   "errors": 0,
+   "minutes": 2.9,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.96,
+   "pitch_range": [
+    "C4",
+    "A7"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "E7",
+     "A7",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 2.0,
+   "name_dynamics": [
+    "hard",
+    "soft"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 24,
+    "within_60_cents": 22,
+    "octave_off": 0,
+    "other": 2,
+    "by_octave": {
+     "0": 22
+    }
+   },
+   "sfz_regions_seen": 24,
+   "envelope": {
+    "long-decay": 3,
+    "decaying": 21,
+    "percussive": 1
+   },
+   "centroid_hz_median": 995,
+   "level_db_median": -24.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 6.242,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Celli": {
+   "files": 109,
+   "errors": 0,
+   "minutes": 3.9,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.84,
+   "pitch_range": [
+    "G1",
+    "C7"
+   ],
+   "distinct_pitches": 36,
+   "gaps_over_4_semitones": [
+    [
+     "G1",
+     "C2",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 2.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 85,
+    "within_60_cents": 51,
+    "octave_off": 12,
+    "other": 22,
+    "by_octave": {
+     "-1": 1,
+     "0": 51,
+     "2": 11
+    }
+   },
+   "sfz_regions_seen": 692,
+   "envelope": {
+    "percussive": 37,
+    "decaying": 33,
+    "sustained": 39
+   },
+   "centroid_hz_median": 1078,
+   "level_db_median": -18.6,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.109,
+   "duration_s_median": 1.158,
+   "flags": {
+    "cut_off_ending": 55
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Cello": {
+   "files": 47,
+   "errors": 0,
+   "minutes": 2.57,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.91,
+   "pitch_range": [
+    "C2",
+    "A5"
+   ],
+   "distinct_pitches": 39,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "name_round_robins": 2,
+   "sfz_root_vs_pitch": {
+    "compared": 43,
+    "within_60_cents": 42,
+    "octave_off": 0,
+    "other": 1,
+    "by_octave": {
+     "0": 42
+    }
+   },
+   "sfz_regions_seen": 224,
+   "envelope": {
+    "long-decay": 10,
+    "decaying": 14,
+    "percussive": 23
+   },
+   "centroid_hz_median": 713,
+   "level_db_median": -20.1,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.03,
+   "duration_s_median": 2.732,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Chorus": {
+   "files": 42,
+   "errors": 0,
+   "minutes": 6.19,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.86,
+   "pitch_range": [
+    "G2",
+    "C6"
+   ],
+   "distinct_pitches": 36,
+   "gaps_over_4_semitones": [
+    [
+     "A2",
+     "D3",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "envelope": {
+    "long-decay": 34,
+    "decaying": 4,
+    "percussive": 1,
+    "sustained": 3
+   },
+   "centroid_hz_median": 1762.0,
+   "level_db_median": -20.65,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.653,
+   "duration_s_median": 8.827,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Clarinet": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.6,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "D3",
+    "D6"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 104,
+   "envelope": {
+    "decaying": 11,
+    "percussive": 2
+   },
+   "centroid_hz_median": 2465,
+   "level_db_median": -13.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.47,
+   "duration_s_median": 2.742,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Clarinets": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 1.14,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "D3",
+    "D6"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "B3",
+     "F4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 12,
+    "octave_off": 0,
+    "other": 1,
+    "by_octave": {
+     "0": 12
+    }
+   },
+   "sfz_regions_seen": 195,
+   "envelope": {
+    "long-decay": 11,
+    "sustained": 2
+   },
+   "centroid_hz_median": 1453,
+   "level_db_median": -17.2,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 1.782,
+   "duration_s_median": 5.269,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Contrabassoon": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.47,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.92,
+   "pitch_range": [
+    "A#0",
+    "G3"
+   ],
+   "distinct_pitches": 12,
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 12,
+    "within_60_cents": 12,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 12
+    }
+   },
+   "sfz_regions_seen": 104,
+   "envelope": {
+    "decaying": 13
+   },
+   "centroid_hz_median": 575,
+   "level_db_median": -15.1,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.419,
+   "duration_s_median": 2.141,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Cor Anglais": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 0.58,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.78,
+   "pitch_range": [
+    "F3",
+    "F5"
+   ],
+   "distinct_pitches": 7,
+   "gaps_over_4_semitones": [
+    [
+     "G#3",
+     "D4",
+     6
+    ],
+    [
+     "B4",
+     "F5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 7,
+    "within_60_cents": 7,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 7
+    }
+   },
+   "sfz_regions_seen": 36,
+   "envelope": {
+    "long-decay": 1,
+    "decaying": 8
+   },
+   "centroid_hz_median": 1807,
+   "level_db_median": -22.8,
+   "lead_silence_s_median": 0.01,
+   "attack_s_median": 1.52,
+   "duration_s_median": 3.831,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Crotales": {
+   "files": 50,
+   "errors": 0,
+   "minutes": 7.89,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.28,
+   "pitch_range": [
+    "D#5",
+    "B7"
+   ],
+   "distinct_pitches": 11,
+   "gaps_over_4_semitones": [
+    [
+     "F5",
+     "G6",
+     14
+    ],
+    [
+     "B6",
+     "E7",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f",
+    "ff",
+    "pp"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 14,
+    "within_60_cents": 10,
+    "octave_off": 0,
+    "other": 4,
+    "by_octave": {
+     "0": 10
+    }
+   },
+   "sfz_regions_seen": 50,
+   "envelope": {
+    "percussive": 32,
+    "decaying": 18
+   },
+   "centroid_hz_median": 5831.5,
+   "level_db_median": -40.45,
+   "lead_silence_s_median": 0.022,
+   "attack_s_median": 0.044,
+   "duration_s_median": 8.154,
+   "flags": {
+    "dual_mono_files": 48,
+    "cut_off_ending": 26
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Flute": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 1.33,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C7"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 468,
+   "envelope": {
+    "long-decay": 7,
+    "decaying": 6
+   },
+   "centroid_hz_median": 2338,
+   "level_db_median": -15.6,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.53,
+   "duration_s_median": 6.188,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Flute 2": {
+   "files": 84,
+   "errors": 0,
+   "minutes": 7.21,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.9,
+   "pitch_range": [
+    "C#4",
+    "A#6"
+   ],
+   "distinct_pitches": 19,
+   "files_per_pitch_median": 4,
+   "name_dynamics": [
+    "ff",
+    "mf"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 48
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 76,
+    "within_60_cents": 76,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 76
+    }
+   },
+   "sfz_regions_seen": 720,
+   "envelope": {
+    "percussive": 37,
+    "long-decay": 43,
+    "decaying": 4
+   },
+   "centroid_hz_median": 2141.0,
+   "level_db_median": -17.0,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.449,
+   "duration_s_median": 8.381,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Flutes": {
+   "files": 36,
+   "errors": 0,
+   "minutes": 1.35,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.97,
+   "pitch_range": [
+    "C4",
+    "A#6"
+   ],
+   "distinct_pitches": 23,
+   "files_per_pitch_median": 2,
+   "name_dynamics": [
+    "f"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 12
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 34,
+    "within_60_cents": 24,
+    "octave_off": 0,
+    "other": 10,
+    "by_octave": {
+     "0": 24
+    }
+   },
+   "sfz_regions_seen": 264,
+   "envelope": {
+    "decaying": 14,
+    "percussive": 16,
+    "long-decay": 6
+   },
+   "centroid_hz_median": 1789.5,
+   "level_db_median": -15.65,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.113,
+   "duration_s_median": 1.05,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Grand Piano": {
+   "files": 226,
+   "errors": 0,
+   "minutes": 24.36,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.86,
+   "pitch_range": [
+    "B-1",
+    "G#7"
+   ],
+   "distinct_pitches": 60,
+   "gaps_over_4_semitones": [
+    [
+     "B-1",
+     "F0",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 4.0,
+   "sfz_root_vs_pitch": {
+    "compared": 193,
+    "within_60_cents": 189,
+    "octave_off": 4,
+    "other": 0,
+    "by_octave": {
+     "-1": 4,
+     "0": 189
+    }
+   },
+   "sfz_regions_seen": 358,
+   "envelope": {
+    "decaying": 121,
+    "percussive": 86,
+    "long-decay": 17,
+    "sustained": 2
+   },
+   "centroid_hz_median": 1146.5,
+   "level_db_median": -15.35,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 5.598,
+   "name_vs_pitch": {
+    "compared": 195,
+    "agree": 4,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 118
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Harp": {
+   "files": 21,
+   "errors": 0,
+   "minutes": 0.64,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.76,
+   "pitch_range": [
+    "C2",
+    "A6"
+   ],
+   "distinct_pitches": 16,
+   "gaps_over_4_semitones": [
+    [
+     "C2",
+     "F#3",
+     18
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 15,
+    "within_60_cents": 14,
+    "octave_off": 0,
+    "other": 1,
+    "by_octave": {
+     "0": 14
+    }
+   },
+   "sfz_regions_seen": 21,
+   "envelope": {
+    "percussive": 8,
+    "decaying": 13
+   },
+   "centroid_hz_median": 839,
+   "level_db_median": -14.2,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.029,
+   "duration_s_median": 1.727,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Harpsichord/Releases/High": {
+   "files": 26,
+   "errors": 0,
+   "minutes": 0.41,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "pitch_range": [
+    "F#1",
+    "C6"
+   ],
+   "distinct_pitches": 26,
+   "files_per_pitch_median": 1.0,
+   "name_round_robins": 1,
+   "articulations": {
+    "release": 26
+   },
+   "sfz_regions_seen": 50,
+   "envelope": {
+    "percussive": 24,
+    "decaying": 2
+   },
+   "centroid_hz_median": 1328.5,
+   "level_db_median": -46.3,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 0.881,
+   "flags": {
+    "cut_off_ending": 8
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Harpsichord/Releases/Low": {
+   "files": 28,
+   "errors": 0,
+   "minutes": 0.52,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.04,
+   "pitch_range": [
+    "F#0",
+    "C5"
+   ],
+   "distinct_pitches": 28,
+   "files_per_pitch_median": 1.0,
+   "name_round_robins": 1,
+   "articulations": {
+    "release": 28
+   },
+   "sfz_regions_seen": 56,
+   "envelope": {
+    "percussive": 22,
+    "decaying": 6
+   },
+   "centroid_hz_median": 1821.0,
+   "level_db_median": -48.65,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 0.995,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Harpsichord/Sustains/High": {
+   "files": 26,
+   "errors": 0,
+   "minutes": 2.87,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.96,
+   "pitch_range": [
+    "F#2",
+    "C7"
+   ],
+   "distinct_pitches": 25,
+   "files_per_pitch_median": 1,
+   "name_round_robins": 2,
+   "sfz_root_vs_pitch": {
+    "compared": 25,
+    "within_60_cents": 0,
+    "octave_off": 25,
+    "other": 0,
+    "by_octave": {
+     "1": 25
+    }
+   },
+   "sfz_regions_seen": 52,
+   "envelope": {
+    "decaying": 26
+   },
+   "centroid_hz_median": 3200.0,
+   "level_db_median": -30.55,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.03,
+   "duration_s_median": 5.835,
+   "name_vs_pitch": {
+    "compared": 25,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Harpsichord/Sustains/Low": {
+   "files": 28,
+   "errors": 0,
+   "minutes": 4.15,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F#1",
+    "C6"
+   ],
+   "distinct_pitches": 27,
+   "files_per_pitch_median": 1,
+   "name_round_robins": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 28,
+    "within_60_cents": 27,
+    "octave_off": 1,
+    "other": 0,
+    "by_octave": {
+     "0": 27,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 56,
+   "envelope": {
+    "long-decay": 13,
+    "decaying": 13,
+    "percussive": 2
+   },
+   "centroid_hz_median": 2869.0,
+   "level_db_median": -27.85,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.065,
+   "duration_s_median": 8.398,
+   "name_vs_pitch": {
+    "compared": 28,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Horn": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.76,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E2",
+    "E5"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 338,
+   "envelope": {
+    "long-decay": 6,
+    "decaying": 7
+   },
+   "centroid_hz_median": 765,
+   "level_db_median": -15.4,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.508,
+   "duration_s_median": 3.424,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Horns": {
+   "files": 48,
+   "errors": 0,
+   "minutes": 2.37,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.83,
+   "pitch_range": [
+    "E2",
+    "E5"
+   ],
+   "distinct_pitches": 21,
+   "files_per_pitch_median": 2,
+   "name_dynamics": [
+    "ff",
+    "mp"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 26
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 40,
+    "within_60_cents": 32,
+    "octave_off": 0,
+    "other": 8,
+    "by_octave": {
+     "0": 32
+    }
+   },
+   "sfz_regions_seen": 598,
+   "envelope": {
+    "percussive": 15,
+    "decaying": 12,
+    "sustained": 3,
+    "long-decay": 18
+   },
+   "centroid_hz_median": 1043.5,
+   "level_db_median": -17.0,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.281,
+   "duration_s_median": 3.263,
+   "flags": {
+    "cut_off_ending": 8
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Marimba": {
+   "files": 203,
+   "errors": 0,
+   "minutes": 14.15,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.94,
+   "pitch_range": [
+    "C2",
+    "C7"
+   ],
+   "distinct_pitches": 61,
+   "files_per_pitch_median": 3,
+   "name_dynamics": [
+    "ff",
+    "mf",
+    "pp"
+   ],
+   "articulations": {
+    "roll": 20
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 190,
+    "within_60_cents": 190,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 190
+    }
+   },
+   "sfz_regions_seen": 223,
+   "envelope": {
+    "long-decay": 13,
+    "percussive": 85,
+    "decaying": 105
+   },
+   "centroid_hz_median": 680,
+   "level_db_median": -21.0,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.029,
+   "duration_s_median": 3.784,
+   "flags": {
+    "dual_mono_files": 203,
+    "cut_off_ending": 6
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Oboe": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 0.36,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.8,
+   "pitch_range": [
+    "A#3",
+    "E6"
+   ],
+   "distinct_pitches": 8,
+   "gaps_over_4_semitones": [
+    [
+     "C#4",
+     "A#4",
+     9
+    ],
+    [
+     "C#5",
+     "G5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 8,
+    "within_60_cents": 7,
+    "octave_off": 1,
+    "other": 0,
+    "by_octave": {
+     "0": 7,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 80,
+   "envelope": {
+    "decaying": 10
+   },
+   "centroid_hz_median": 2252.0,
+   "level_db_median": -16.6,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.493,
+   "duration_s_median": 2.119,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Oboes": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.87,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.82,
+   "pitch_range": [
+    "A#3",
+    "E6"
+   ],
+   "distinct_pitches": 9,
+   "gaps_over_4_semitones": [
+    [
+     "E4",
+     "A#4",
+     6
+    ],
+    [
+     "E5",
+     "A#5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "sustain": 11
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 9,
+    "within_60_cents": 9,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 9
+    }
+   },
+   "sfz_regions_seen": 165,
+   "envelope": {
+    "long-decay": 11
+   },
+   "centroid_hz_median": 1928,
+   "level_db_median": -20.7,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 1.524,
+   "duration_s_median": 4.74,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-bourdon16ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.7,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C1",
+    "F#5"
+   ],
+   "distinct_pitches": 19,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 19,
+    "within_60_cents": 0,
+    "octave_off": 19,
+    "other": 0,
+    "by_octave": {
+     "-1": 19
+    }
+   },
+   "sfz_regions_seen": 152,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 523,
+   "level_db_median": -33.9,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 0.505,
+   "duration_s_median": 8.43,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-dulciana8ft": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 2.2,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.93,
+   "pitch_range": [
+    "C3",
+    "F#6"
+   ],
+   "distinct_pitches": 14,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "F#4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 14,
+    "within_60_cents": 14,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 14
+    }
+   },
+   "sfz_regions_seen": 90,
+   "envelope": {
+    "long-decay": 15
+   },
+   "centroid_hz_median": 883,
+   "level_db_median": -41.0,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.577,
+   "duration_s_median": 8.841,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-fifteenth2ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.66,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C8"
+   ],
+   "distinct_pitches": 17,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 19,
+    "within_60_cents": 0,
+    "octave_off": 19,
+    "other": 0,
+    "by_octave": {
+     "1": 2,
+     "2": 17
+    }
+   },
+   "sfz_regions_seen": 228,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 2397,
+   "level_db_median": -33.8,
+   "lead_silence_s_median": 0.015,
+   "attack_s_median": 0.284,
+   "duration_s_median": 8.453,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-flute4ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.8,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C3",
+    "F#7"
+   ],
+   "distinct_pitches": 19,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 19,
+    "within_60_cents": 0,
+    "octave_off": 19,
+    "other": 0,
+    "by_octave": {
+     "1": 19
+    }
+   },
+   "sfz_regions_seen": 190,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 930,
+   "level_db_median": -31.6,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.696,
+   "duration_s_median": 8.783,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-opendiapason8ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.84,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.79,
+   "pitch_range": [
+    "A2",
+    "F#6"
+   ],
+   "distinct_pitches": 15,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "F#3",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 15,
+    "within_60_cents": 15,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 15
+    }
+   },
+   "sfz_regions_seen": 266,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 687,
+   "level_db_median": -24.5,
+   "lead_silence_s_median": 0.024,
+   "attack_s_median": 0.252,
+   "duration_s_median": 9.051,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-principal4ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.76,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.95,
+   "pitch_range": [
+    "C3",
+    "F#7"
+   ],
+   "distinct_pitches": 18,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "F#3",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 18,
+    "within_60_cents": 0,
+    "octave_off": 18,
+    "other": 0,
+    "by_octave": {
+     "1": 18
+    }
+   },
+   "sfz_regions_seen": 266,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 1300,
+   "level_db_median": -29.2,
+   "lead_silence_s_median": 0.018,
+   "attack_s_median": 0.262,
+   "duration_s_median": 8.851,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-stoppeddiapason8ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.74,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C2",
+    "F#6"
+   ],
+   "distinct_pitches": 19,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 19,
+    "within_60_cents": 19,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 19
+    }
+   },
+   "sfz_regions_seen": 152,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 708,
+   "level_db_median": -30.1,
+   "lead_silence_s_median": 0.017,
+   "attack_s_median": 0.489,
+   "duration_s_median": 8.61,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/great-twelfth3ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.89,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "G3",
+    "C#8"
+   ],
+   "distinct_pitches": 18,
+   "gaps_over_4_semitones": [
+    [
+     "G5",
+     "C#6",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 19,
+    "within_60_cents": 0,
+    "octave_off": 0,
+    "other": 19,
+    "by_octave": {}
+   },
+   "sfz_regions_seen": 114,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 1769,
+   "level_db_median": -35.7,
+   "lead_silence_s_median": 0.009,
+   "attack_s_median": 0.232,
+   "duration_s_median": 9.062,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/pedal-bourdon16ft": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 1.47,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C1",
+    "D#3"
+   ],
+   "distinct_pitches": 10,
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 10,
+    "within_60_cents": 0,
+    "octave_off": 10,
+    "other": 0,
+    "by_octave": {
+     "-1": 10
+    }
+   },
+   "sfz_regions_seen": 120,
+   "envelope": {
+    "long-decay": 10
+   },
+   "centroid_hz_median": 299.0,
+   "level_db_median": -32.75,
+   "lead_silence_s_median": 0.011,
+   "attack_s_median": 0.93,
+   "duration_s_median": 8.454,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/pedal-violon16ft": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 1.49,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C1",
+    "D#3"
+   ],
+   "distinct_pitches": 10,
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 10,
+    "within_60_cents": 0,
+    "octave_off": 10,
+    "other": 0,
+    "by_octave": {
+     "-1": 10
+    }
+   },
+   "sfz_regions_seen": 100,
+   "envelope": {
+    "long-decay": 10
+   },
+   "centroid_hz_median": 118.5,
+   "level_db_median": -22.75,
+   "lead_silence_s_median": 0.014,
+   "attack_s_median": 1.304,
+   "duration_s_median": 9.054,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/swell-gamba8ft": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 2.11,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.93,
+   "pitch_range": [
+    "C3",
+    "A6"
+   ],
+   "distinct_pitches": 14,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "F#3",
+     6
+    ],
+    [
+     "F#5",
+     "C6",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "swell": 15
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 14,
+    "within_60_cents": 13,
+    "octave_off": 1,
+    "other": 0,
+    "by_octave": {
+     "0": 13,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 150,
+   "envelope": {
+    "long-decay": 15
+   },
+   "centroid_hz_median": 1299,
+   "level_db_median": -42.1,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.725,
+   "duration_s_median": 8.378,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/swell-gedact8ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.79,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.95,
+   "pitch_range": [
+    "C2",
+    "F#6"
+   ],
+   "distinct_pitches": 18,
+   "gaps_over_4_semitones": [
+    [
+     "F#3",
+     "C4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "swell": 19
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 18,
+    "within_60_cents": 18,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 18
+    }
+   },
+   "sfz_regions_seen": 304,
+   "envelope": {
+    "long-decay": 18,
+    "percussive": 1
+   },
+   "centroid_hz_median": 628,
+   "level_db_median": -35.4,
+   "lead_silence_s_median": 0.012,
+   "attack_s_median": 0.248,
+   "duration_s_median": 8.766,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/swell-oboe8ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.84,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C2",
+    "F#6"
+   ],
+   "distinct_pitches": 19,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "swell": 19
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 19,
+    "within_60_cents": 19,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 19
+    }
+   },
+   "sfz_regions_seen": 190,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 1455,
+   "level_db_median": -29.7,
+   "lead_silence_s_median": 0.014,
+   "attack_s_median": 0.14,
+   "duration_s_median": 9.066,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Organ/swell-octave4ft": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 2.68,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C3",
+    "F#7"
+   ],
+   "distinct_pitches": 17,
+   "gaps_over_4_semitones": [
+    [
+     "A3",
+     "F#4",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "swell": 19
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 19,
+    "within_60_cents": 0,
+    "octave_off": 19,
+    "other": 0,
+    "by_octave": {
+     "1": 17,
+     "2": 2
+    }
+   },
+   "sfz_regions_seen": 228,
+   "envelope": {
+    "long-decay": 19
+   },
+   "centroid_hz_median": 1502,
+   "level_db_median": -33.3,
+   "lead_silence_s_median": 0.014,
+   "attack_s_median": 0.5,
+   "duration_s_median": 8.535,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Percussion": {
+   "files": 130,
+   "errors": 0,
+   "minutes": 5.6,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.15,
+   "pitch_range": [
+    "F1",
+    "C8"
+   ],
+   "distinct_pitches": 17,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "F#2",
+     13
+    ],
+    [
+     "F#2",
+     "F4",
+     23
+    ],
+    [
+     "F4",
+     "D5",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f",
+    "ff",
+    "mf",
+    "p"
+   ],
+   "name_round_robins": 3,
+   "articulations": {
+    "roll": 17,
+    "bell": 1,
+    "shake": 1
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 20,
+    "within_60_cents": 0,
+    "octave_off": 13,
+    "other": 7,
+    "by_octave": {
+     "-1": 1,
+     "1": 1,
+     "2": 11
+    }
+   },
+   "sfz_regions_seen": 161,
+   "envelope": {
+    "decaying": 69,
+    "percussive": 56,
+    "long-decay": 5
+   },
+   "centroid_hz_median": 3540.0,
+   "level_db_median": -18.9,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.037,
+   "duration_s_median": 1.897,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Piccolo": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.83,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.82,
+   "pitch_range": [
+    "F#5",
+    "F#7"
+   ],
+   "distinct_pitches": 9,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 9,
+    "within_60_cents": 9,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 9
+    }
+   },
+   "sfz_regions_seen": 396,
+   "envelope": {
+    "long-decay": 8,
+    "decaying": 3
+   },
+   "centroid_hz_median": 2573,
+   "level_db_median": -14.9,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.386,
+   "duration_s_median": 4.541,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Tenor Trombone": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.52,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E2",
+    "A#4"
+   ],
+   "distinct_pitches": 11,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 11,
+    "within_60_cents": 11,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 11
+    }
+   },
+   "sfz_regions_seen": 286,
+   "envelope": {
+    "decaying": 11
+   },
+   "centroid_hz_median": 1170,
+   "level_db_median": -20.2,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.778,
+   "duration_s_median": 2.856,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Trombones": {
+   "files": 39,
+   "errors": 0,
+   "minutes": 1.23,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.92,
+   "pitch_range": [
+    "E2",
+    "F5"
+   ],
+   "distinct_pitches": 24,
+   "files_per_pitch_median": 1.5,
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 36,
+    "within_60_cents": 25,
+    "octave_off": 0,
+    "other": 11,
+    "by_octave": {
+     "0": 25
+    }
+   },
+   "sfz_regions_seen": 364,
+   "envelope": {
+    "percussive": 23,
+    "decaying": 8,
+    "long-decay": 7,
+    "sustained": 1
+   },
+   "centroid_hz_median": 1429,
+   "level_db_median": -19.4,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.118,
+   "duration_s_median": 0.906,
+   "flags": {
+    "cut_off_ending": 5
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Trumpet": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 1.07,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E3",
+    "E6"
+   ],
+   "distinct_pitches": 13,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 338,
+   "envelope": {
+    "long-decay": 13
+   },
+   "centroid_hz_median": 1991,
+   "level_db_median": -15.8,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.398,
+   "duration_s_median": 4.954,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Trumpets": {
+   "files": 39,
+   "errors": 0,
+   "minutes": 1.45,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100,
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.97,
+   "pitch_range": [
+    "E3",
+    "F6"
+   ],
+   "distinct_pitches": 26,
+   "files_per_pitch_median": 1.0,
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 38,
+    "within_60_cents": 25,
+    "octave_off": 0,
+    "other": 13,
+    "by_octave": {
+     "0": 25
+    }
+   },
+   "sfz_regions_seen": 364,
+   "envelope": {
+    "percussive": 26,
+    "long-decay": 13
+   },
+   "centroid_hz_median": 2004,
+   "level_db_median": -18.9,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.098,
+   "duration_s_median": 0.954,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Tuba": {
+   "files": 36,
+   "errors": 0,
+   "minutes": 1.38,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.83,
+   "pitch_range": [
+    "E1",
+    "C#5"
+   ],
+   "distinct_pitches": 22,
+   "gaps_over_4_semitones": [
+    [
+     "D4",
+     "C#5",
+     11
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 12
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 30,
+    "within_60_cents": 20,
+    "octave_off": 1,
+    "other": 9,
+    "by_octave": {
+     "0": 20,
+     "1": 1
+    }
+   },
+   "sfz_regions_seen": 336,
+   "envelope": {
+    "percussive": 20,
+    "decaying": 4,
+    "long-decay": 12
+   },
+   "centroid_hz_median": 540.0,
+   "level_db_median": -17.55,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.096,
+   "duration_s_median": 0.991,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Vibraphone": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 3.05,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.87,
+   "pitch_range": [
+    "C3",
+    "F6"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "A3",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 15,
+   "envelope": {
+    "long-decay": 14,
+    "decaying": 1
+   },
+   "centroid_hz_median": 1090,
+   "level_db_median": -13.4,
+   "lead_silence_s_median": 0.018,
+   "attack_s_median": 0.019,
+   "duration_s_median": 12.827,
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Viola": {
+   "files": 53,
+   "errors": 0,
+   "minutes": 2.7,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.77,
+   "pitch_range": [
+    "C1",
+    "C8"
+   ],
+   "distinct_pitches": 31,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "C2",
+     12
+    ],
+    [
+     "C2",
+     "C3",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "f"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 41,
+    "within_60_cents": 25,
+    "octave_off": 14,
+    "other": 2,
+    "by_octave": {
+     "0": 25,
+     "1": 1,
+     "2": 13
+    }
+   },
+   "sfz_regions_seen": 316,
+   "envelope": {
+    "sustained": 26,
+    "percussive": 26,
+    "decaying": 1
+   },
+   "centroid_hz_median": 1282,
+   "level_db_median": -24.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 2.722,
+   "flags": {
+    "cut_off_ending": 26
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Violas": {
+   "files": 105,
+   "errors": 0,
+   "minutes": 4.23,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.73,
+   "pitch_range": [
+    "C3",
+    "C8"
+   ],
+   "distinct_pitches": 34,
+   "files_per_pitch_median": 2.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "name_round_robins": 2,
+   "articulations": {
+    "sustain": 13
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 72,
+    "within_60_cents": 44,
+    "octave_off": 11,
+    "other": 17,
+    "by_octave": {
+     "0": 44,
+     "2": 11
+    }
+   },
+   "sfz_regions_seen": 632,
+   "envelope": {
+    "decaying": 13,
+    "percussive": 55,
+    "sustained": 36,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 1620,
+   "level_db_median": -19.9,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.107,
+   "duration_s_median": 1.069,
+   "flags": {
+    "cut_off_ending": 54
+   }
+  },
+  "Sonatina Symphonic Orchestra/Samples/Violin": {
+   "files": 47,
+   "errors": 0,
+   "minutes": 2.42,
+   "formats": [
+    "FLAC",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.96,
+   "pitch_range": [
+    "G3",
+    "C7"
+   ],
+   "distinct_pitches": 36,
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "spiccato": 31
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 43,
+    "within_60_cents": 43,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 43
+    }
+   },
+   "sfz_regions_seen": 326,
+   "envelope": {
+    "long-decay": 16,
+    "percussive": 30,
+    "decaying": 1
+   },
+   "centroid_hz_median": 2416,
+   "level_db_median": -19.6,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.092,
+   "duration_s_median": 1.486,
+   "name_vs_pitch": {
+    "compared": 29,
+    "agree": 29,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {}
+  },
+  "Sonatina Symphonic Orchestra/Samples/Violin 2": {
+   "files": 246,
+   "errors": 0,
+   "minutes": 17.64,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.85,
+   "pitch_range": [
+    "G3",
+    "C7"
+   ],
+   "distinct_pitches": 42,
+   "files_per_pitch_median": 5.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "articulations": {
+    "vibrato": 164,
+    "arco": 82,
+    "pizzicato": 82,
+    "spiccato": 41,
+    "tremolo": 41
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 122,
+    "within_60_cents": 122,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 122
+    }
+   },
+   "sfz_regions_seen": 604,
+   "envelope": {
+    "sustained": 94,
+    "long-decay": 18,
+    "percussive": 122,
+    "decaying": 12
+   },
+   "centroid_hz_median": 2087.0,
+   "level_db_median": -17.45,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.085,
+   "duration_s_median": 5.328,
+   "name_vs_pitch": {
+    "compared": 122,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 133
+   }
+  }
+ }
+}

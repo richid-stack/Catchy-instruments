@@ -1,0 +1,163 @@
+{
+ "pack": "sonic-pi-samples",
+ "tier": "research-private",
+ "summary": {
+  "files": 191,
+  "errors": 0,
+  "minutes": 6.46,
+  "formats": [
+   "OGG"
+  ],
+  "subtypes": [
+   "OPUS"
+  ],
+  "sample_rates": [
+   48000
+  ],
+  "channels": [
+   1,
+   2
+  ],
+  "pitched_ratio": 0.18,
+  "pitch_range": [
+   "C1",
+   "A7"
+  ],
+  "distinct_pitches": 22,
+  "gaps_over_4_semitones": [
+   [
+    "C1",
+    "F1",
+    5
+   ],
+   [
+    "D#3",
+    "C4",
+    9
+   ],
+   [
+    "D#4",
+    "B4",
+    8
+   ],
+   [
+    "A5",
+    "G#7",
+    23
+   ]
+  ],
+  "files_per_pitch_median": 1.0,
+  "name_dynamics": [
+   "f",
+   "hard",
+   "medium",
+   "soft"
+  ],
+  "articulations": {
+   "bell": 3,
+   "closed": 1,
+   "open": 1,
+   "roll": 1,
+   "pop": 1,
+   "slide": 1,
+   "harmonic": 1
+  },
+  "envelope": {
+   "decaying": 48,
+   "sustained": 22,
+   "long-decay": 7,
+   "percussive": 114
+  },
+  "centroid_hz_median": 2345,
+  "level_db_median": -16.3,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.02,
+  "duration_s_median": 0.85,
+  "flags": {
+   "dual_mono_files": 8,
+   "cut_off_ending": 110,
+   "clipped_files": 49
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "samples": {
+   "files": 191,
+   "errors": 0,
+   "minutes": 6.46,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.18,
+   "pitch_range": [
+    "C1",
+    "A7"
+   ],
+   "distinct_pitches": 22,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "F1",
+     5
+    ],
+    [
+     "D#3",
+     "C4",
+     9
+    ],
+    [
+     "D#4",
+     "B4",
+     8
+    ],
+    [
+     "A5",
+     "G#7",
+     23
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "f",
+    "hard",
+    "medium",
+    "soft"
+   ],
+   "articulations": {
+    "bell": 3,
+    "closed": 1,
+    "open": 1,
+    "roll": 1,
+    "pop": 1,
+    "slide": 1,
+    "harmonic": 1
+   },
+   "envelope": {
+    "decaying": 48,
+    "sustained": 22,
+    "long-decay": 7,
+    "percussive": 114
+   },
+   "centroid_hz_median": 2345,
+   "level_db_median": -16.3,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 0.85,
+   "flags": {
+    "dual_mono_files": 8,
+    "cut_off_ending": 110,
+    "clipped_files": 49
+   }
+  }
+ }
+}

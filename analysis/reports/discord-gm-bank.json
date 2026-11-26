@@ -1,0 +1,963 @@
+{
+ "pack": "discord-gm-bank",
+ "tier": "research-private",
+ "summary": {
+  "files": 461,
+  "errors": 0,
+  "minutes": 27.3,
+  "formats": [
+   "AIFF",
+   "FLAC",
+   "WAV",
+   "WAVEX"
+  ],
+  "subtypes": [
+   "PCM_16",
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100,
+   48000,
+   96000
+  ],
+  "channels": [
+   1,
+   2
+  ],
+  "pitched_ratio": 0.55,
+  "pitch_range": [
+   "C0",
+   "C#8"
+  ],
+  "distinct_pitches": 75,
+  "files_per_pitch_median": 3,
+  "name_velocity_layers": 9,
+  "name_dynamics": [
+   "ff",
+   "medium"
+  ],
+  "name_round_robins": 6,
+  "articulations": {
+   "open": 16,
+   "pizzicato": 16,
+   "tremolo": 15,
+   "sustain": 14,
+   "bell": 6,
+   "muted": 2,
+   "slap": 2
+  },
+  "sfz_root_vs_pitch": {
+   "compared": 221,
+   "within_60_cents": 177,
+   "octave_off": 13,
+   "other": 31,
+   "by_octave": {
+    "-2": 1,
+    "-4": 7,
+    "0": 177,
+    "1": 5
+   }
+  },
+  "sfz_regions_seen": 1939,
+  "envelope": {
+   "percussive": 180,
+   "decaying": 186,
+   "sustained": 36,
+   "long-decay": 59
+  },
+  "centroid_hz_median": 1828,
+  "level_db_median": -24.6,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.01,
+  "duration_s_median": 3.311,
+  "name_vs_pitch": {
+   "compared": 90,
+   "agree": 58,
+   "octave_shift_mode": 0,
+   "mismatch": 0
+  },
+  "flags": {
+   "dual_mono_files": 23,
+   "cut_off_ending": 116,
+   "clipped_files": 2
+  },
+  "sfz_files": 149,
+  "sfz_root_files": 10,
+  "sfz_orphan_fragments_skipped": 127,
+  "sfz_regions": 1939,
+  "sfz_layers": {
+   "velocity_layers_max": 16,
+   "velocity_layers_median": 1,
+   "round_robins_max": 6,
+   "keys_with_regions": 97
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 55
+ },
+ "groups": {
+  "Discord GM/Drums/001-Standard Kit": {
+   "files": 224,
+   "errors": 0,
+   "minutes": 9.48,
+   "formats": [
+    "AIFF",
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100,
+    48000,
+    96000
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.17,
+   "pitch_range": [
+    "F1",
+    "C#8"
+   ],
+   "distinct_pitches": 24,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "C2",
+     7
+    ],
+    [
+     "G#2",
+     "C#3",
+     5
+    ],
+    [
+     "D4",
+     "B4",
+     9
+    ],
+    [
+     "B4",
+     "E5",
+     5
+    ],
+    [
+     "F5",
+     "C6",
+     7
+    ],
+    [
+     "C6",
+     "F6",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_velocity_layers": 8,
+   "name_dynamics": [
+    "ff",
+    "medium"
+   ],
+   "name_round_robins": 6,
+   "articulations": {
+    "open": 16,
+    "bell": 6,
+    "muted": 2,
+    "slap": 2
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 39,
+    "within_60_cents": 0,
+    "octave_off": 8,
+    "other": 31,
+    "by_octave": {
+     "-2": 1,
+     "-4": 7
+    }
+   },
+   "sfz_regions_seen": 645,
+   "envelope": {
+    "percussive": 153,
+    "decaying": 70,
+    "sustained": 1
+   },
+   "centroid_hz_median": 2854.0,
+   "level_db_median": -35.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.005,
+   "duration_s_median": 1.286,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 15,
+    "clipped_files": 1
+   }
+  },
+  "Discord GM/Melodic/001-Acoustic Grand Piano": {
+   "files": 16,
+   "errors": 0,
+   "minutes": 1.61,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.94,
+   "pitch_range": [
+    "C1",
+    "A7"
+   ],
+   "distinct_pitches": 16,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "F#1",
+     6
+    ],
+    [
+     "F#1",
+     "C2",
+     6
+    ],
+    [
+     "C2",
+     "F#2",
+     6
+    ],
+    [
+     "A2",
+     "D#3",
+     6
+    ],
+    [
+     "D#3",
+     "A3",
+     6
+    ],
+    [
+     "C4",
+     "F#4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_velocity_layers": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 15,
+    "within_60_cents": 15,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 15
+    }
+   },
+   "sfz_regions_seen": 68,
+   "envelope": {
+    "sustained": 3,
+    "decaying": 8,
+    "percussive": 5
+   },
+   "centroid_hz_median": 1094.0,
+   "level_db_median": -14.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 5.996,
+   "name_vs_pitch": {
+    "compared": 15,
+    "agree": 15,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 7
+   }
+  },
+  "Discord GM/Melodic/002-Bright Acoustic Piano": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 0.97,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.93,
+   "pitch_range": [
+    "C0",
+    "G7"
+   ],
+   "distinct_pitches": 14,
+   "gaps_over_4_semitones": [
+    [
+     "C0",
+     "G1",
+     19
+    ],
+    [
+     "G1",
+     "C2",
+     5
+    ],
+    [
+     "C2",
+     "G2",
+     7
+    ],
+    [
+     "G2",
+     "C3",
+     5
+    ],
+    [
+     "C3",
+     "G3",
+     7
+    ],
+    [
+     "G3",
+     "C4",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_velocity_layers": 1,
+   "name_round_robins": 1,
+   "articulations": {
+    "sustain": 14
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 13,
+    "within_60_cents": 13,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 13
+    }
+   },
+   "sfz_regions_seen": 60,
+   "envelope": {
+    "decaying": 10,
+    "percussive": 4
+   },
+   "centroid_hz_median": 1382.0,
+   "level_db_median": -21.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.03,
+   "duration_s_median": 3.851,
+   "name_vs_pitch": {
+    "compared": 13,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 7
+   }
+  },
+  "Discord GM/Melodic/003-Electric Grand Piano": {
+   "files": 18,
+   "errors": 0,
+   "minutes": 1.0,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "D#1",
+    "B7"
+   ],
+   "distinct_pitches": 18,
+   "gaps_over_4_semitones": [
+    [
+     "D#1",
+     "B1",
+     8
+    ],
+    [
+     "B1",
+     "F#2",
+     7
+    ],
+    [
+     "A#2",
+     "F3",
+     7
+    ],
+    [
+     "C4",
+     "F4",
+     5
+    ],
+    [
+     "G#5",
+     "C#6",
+     5
+    ],
+    [
+     "E6",
+     "B6",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 18,
+    "within_60_cents": 18,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 18
+    }
+   },
+   "sfz_regions_seen": 72,
+   "envelope": {
+    "sustained": 6,
+    "decaying": 9,
+    "long-decay": 2,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1449.5,
+   "level_db_median": -10.05,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 2.946,
+   "name_vs_pitch": {
+    "compared": 18,
+    "agree": 18,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 14
+   }
+  },
+  "Discord GM/Melodic/005-Electric Piano 1": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 1.17,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F1",
+    "C7"
+   ],
+   "distinct_pitches": 15,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "B1",
+     6
+    ],
+    [
+     "B1",
+     "E2",
+     5
+    ],
+    [
+     "E2",
+     "A2",
+     5
+    ],
+    [
+     "A2",
+     "D3",
+     5
+    ],
+    [
+     "D3",
+     "G3",
+     5
+    ],
+    [
+     "F4",
+     "B4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 15,
+    "within_60_cents": 15,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 15
+    }
+   },
+   "sfz_regions_seen": 90,
+   "envelope": {
+    "sustained": 10,
+    "decaying": 3,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 533,
+   "level_db_median": -8.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 5.105,
+   "name_vs_pitch": {
+    "compared": 15,
+    "agree": 15,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 15
+   }
+  },
+  "Discord GM/Melodic/026-Acoustic Guitar (steel)": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 0.6,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.67,
+   "pitch_range": [
+    "E2",
+    "B5"
+   ],
+   "distinct_pitches": 15,
+   "files_per_pitch_median": 1,
+   "sfz_root_vs_pitch": {
+    "compared": 10,
+    "within_60_cents": 10,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 10
+    }
+   },
+   "sfz_regions_seen": 90,
+   "envelope": {
+    "decaying": 13,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 1962,
+   "level_db_median": -19.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 2.014,
+   "name_vs_pitch": {
+    "compared": 10,
+    "agree": 10,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 15
+   }
+  },
+  "Discord GM/Melodic/034-Electric Bass (finger)": {
+   "files": 45,
+   "errors": 0,
+   "minutes": 2.83,
+   "formats": [
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C1",
+    "A4"
+   ],
+   "distinct_pitches": 9,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "F#1",
+     6
+    ],
+    [
+     "F#1",
+     "C2",
+     6
+    ],
+    [
+     "C2",
+     "F#2",
+     6
+    ],
+    [
+     "F#2",
+     "C3",
+     6
+    ],
+    [
+     "C3",
+     "F#3",
+     6
+    ],
+    [
+     "F#3",
+     "C4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 5,
+   "name_velocity_layers": 5,
+   "sfz_root_vs_pitch": {
+    "compared": 45,
+    "within_60_cents": 45,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 45
+    }
+   },
+   "sfz_regions_seen": 180,
+   "envelope": {
+    "decaying": 21,
+    "percussive": 6,
+    "long-decay": 18
+   },
+   "centroid_hz_median": 372,
+   "level_db_median": -19.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 3.731,
+   "flags": {
+    "cut_off_ending": 6
+   }
+  },
+  "Discord GM/Melodic/045-Tremolo Strings": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 0.95,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.53,
+   "pitch_range": [
+    "E0",
+    "C6"
+   ],
+   "distinct_pitches": 15,
+   "gaps_over_4_semitones": [
+    [
+     "C2",
+     "G#2",
+     8
+    ],
+    [
+     "G#2",
+     "E3",
+     8
+    ],
+    [
+     "E3",
+     "C4",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "tremolo": 15
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 8,
+    "within_60_cents": 8,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 8
+    }
+   },
+   "sfz_regions_seen": 60,
+   "envelope": {
+    "decaying": 12,
+    "percussive": 2,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 1873,
+   "level_db_median": -26.7,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 2.26,
+   "duration_s_median": 3.81,
+   "name_vs_pitch": {
+    "compared": 8,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Discord GM/Melodic/046-Pizzicato Strings": {
+   "files": 16,
+   "errors": 0,
+   "minutes": 0.55,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.69,
+   "pitch_range": [
+    "E1",
+    "E5"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "G#3",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "pizzicato": 16
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 11,
+    "within_60_cents": 11,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 11
+    }
+   },
+   "sfz_regions_seen": 64,
+   "envelope": {
+    "decaying": 8,
+    "percussive": 8
+   },
+   "centroid_hz_median": 688.0,
+   "level_db_median": -22.0,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.059,
+   "duration_s_median": 2.327,
+   "name_vs_pitch": {
+    "compared": 11,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {}
+  },
+  "Discord GM/Melodic/105-Sitar": {
+   "files": 45,
+   "errors": 0,
+   "minutes": 3.63,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.98,
+   "pitch_range": [
+    "D2",
+    "G5"
+   ],
+   "distinct_pitches": 25,
+   "files_per_pitch_median": 2,
+   "sfz_root_vs_pitch": {
+    "compared": 25,
+    "within_60_cents": 25,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 25
+    }
+   },
+   "sfz_regions_seen": 390,
+   "envelope": {
+    "long-decay": 12,
+    "decaying": 32,
+    "percussive": 1
+   },
+   "centroid_hz_median": 2769,
+   "level_db_median": -19.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 4.443,
+   "flags": {
+    "cut_off_ending": 18,
+    "clipped_files": 1
+   }
+  },
+  "Discord GM/Melodic/110-Bagpipe": {
+   "files": 16,
+   "errors": 0,
+   "minutes": 2.19,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.81,
+   "pitch_range": [
+    "A2",
+    "A6"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "A2",
+     "E3",
+     7
+    ],
+    [
+     "E3",
+     "A#4",
+     18
+    ],
+    [
+     "A5",
+     "A6",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_round_robins": 1,
+   "envelope": {
+    "sustained": 16
+   },
+   "centroid_hz_median": 2845.5,
+   "level_db_median": -24.6,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 0.231,
+   "duration_s_median": 7.663,
+   "flags": {
+    "cut_off_ending": 16
+   }
+  },
+  "Discord GM/Melodic/112-Shanai": {
+   "files": 22,
+   "errors": 0,
+   "minutes": 2.31,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C3",
+    "C7"
+   ],
+   "distinct_pitches": 22,
+   "gaps_over_4_semitones": [
+    [
+     "E5",
+     "F6",
+     13
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 22,
+    "within_60_cents": 17,
+    "octave_off": 5,
+    "other": 0,
+    "by_octave": {
+     "0": 17,
+     "1": 5
+    }
+   },
+   "sfz_regions_seen": 220,
+   "envelope": {
+    "long-decay": 22
+   },
+   "centroid_hz_median": 3202.0,
+   "level_db_median": -15.85,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.203,
+   "duration_s_median": 5.757,
+   "flags": {
+    "dual_mono_files": 22
+   }
+  }
+ }
+}

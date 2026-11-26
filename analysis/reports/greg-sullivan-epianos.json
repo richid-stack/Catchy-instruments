@@ -1,0 +1,295 @@
+{
+ "pack": "greg-sullivan-epianos",
+ "tier": "clean",
+ "summary": {
+  "files": 172,
+  "errors": 0,
+  "minutes": 17.42,
+  "formats": [
+   "FLAC"
+  ],
+  "subtypes": [
+   "PCM_16"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   1
+  ],
+  "pitched_ratio": 0.95,
+  "pitch_range": [
+   "D#1",
+   "B7"
+  ],
+  "distinct_pitches": 47,
+  "gaps_over_4_semitones": [
+   [
+    "C#7",
+    "F#7",
+    5
+   ],
+   [
+    "F#7",
+    "B7",
+    5
+   ]
+  ],
+  "files_per_pitch_median": 3,
+  "articulations": {
+   "release": 16
+  },
+  "sfz_root_vs_pitch": {
+   "compared": 155,
+   "within_60_cents": 155,
+   "octave_off": 0,
+   "other": 0,
+   "by_octave": {
+    "0": 155
+   }
+  },
+  "sfz_regions_seen": 178,
+  "envelope": {
+   "sustained": 61,
+   "decaying": 60,
+   "long-decay": 30,
+   "percussive": 21
+  },
+  "centroid_hz_median": 662.5,
+  "level_db_median": -9.6,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.009,
+  "duration_s_median": 4.516,
+  "name_vs_pitch": {
+   "compared": 155,
+   "agree": 155,
+   "octave_shift_mode": 0,
+   "mismatch": 0
+  },
+  "flags": {
+   "cut_off_ending": 113,
+   "clipped_files": 4
+  },
+  "sfz_files": 3,
+  "sfz_root_files": 3,
+  "sfz_regions": 178,
+  "sfz_layers": {
+   "velocity_layers_max": 4,
+   "velocity_layers_median": 4,
+   "round_robins_max": 1,
+   "keys_with_regions": 88
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 0
+ },
+ "groups": {
+  "CP80/Samples": {
+   "files": 81,
+   "errors": 0,
+   "minutes": 8.52,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.99,
+   "pitch_range": [
+    "D#1",
+    "B7"
+   ],
+   "distinct_pitches": 23,
+   "gaps_over_4_semitones": [
+    [
+     "D#1",
+     "A#1",
+     7
+    ],
+    [
+     "B1",
+     "F#2",
+     7
+    ],
+    [
+     "C#7",
+     "F#7",
+     5
+    ],
+    [
+     "F#7",
+     "B7",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 4,
+   "sfz_root_vs_pitch": {
+    "compared": 80,
+    "within_60_cents": 80,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 80
+    }
+   },
+   "sfz_regions_seen": 81,
+   "envelope": {
+    "sustained": 26,
+    "decaying": 38,
+    "long-decay": 12,
+    "percussive": 5
+   },
+   "centroid_hz_median": 958,
+   "level_db_median": -10.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 5.213,
+   "name_vs_pitch": {
+    "compared": 80,
+    "agree": 80,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 58,
+    "clipped_files": 2
+   }
+  },
+  "Pianet T/Samples": {
+   "files": 49,
+   "errors": 0,
+   "minutes": 7.22,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.84,
+   "pitch_range": [
+    "F1",
+    "E6"
+   ],
+   "distinct_pitches": 18,
+   "files_per_pitch_median": 3.0,
+   "articulations": {
+    "release": 16
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 33,
+    "within_60_cents": 33,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 33
+    }
+   },
+   "sfz_regions_seen": 49,
+   "envelope": {
+    "long-decay": 18,
+    "percussive": 16,
+    "decaying": 15
+   },
+   "centroid_hz_median": 441,
+   "level_db_median": -10.7,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.009,
+   "duration_s_median": 6.572,
+   "name_vs_pitch": {
+    "compared": 33,
+    "agree": 33,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 13
+   }
+  },
+  "Wurlitzer EP200/Samples": {
+   "files": 42,
+   "errors": 0,
+   "minutes": 1.68,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "A1",
+    "G#6"
+   ],
+   "distinct_pitches": 20,
+   "gaps_over_4_semitones": [
+    [
+     "G#3",
+     "C#4",
+     5
+    ],
+    [
+     "C#5",
+     "G5",
+     6
+    ],
+    [
+     "G5",
+     "C#6",
+     6
+    ],
+    [
+     "C#6",
+     "G#6",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 2.0,
+   "sfz_root_vs_pitch": {
+    "compared": 42,
+    "within_60_cents": 42,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 42
+    }
+   },
+   "sfz_regions_seen": 48,
+   "envelope": {
+    "sustained": 35,
+    "decaying": 7
+   },
+   "centroid_hz_median": 674.0,
+   "level_db_median": -8.6,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.014,
+   "duration_s_median": 2.278,
+   "name_vs_pitch": {
+    "compared": 42,
+    "agree": 42,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 42,
+    "clipped_files": 2
+   }
+  }
+ }
+}

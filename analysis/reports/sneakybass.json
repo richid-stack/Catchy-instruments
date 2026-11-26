@@ -1,0 +1,314 @@
+{
+ "pack": "sneakybass",
+ "tier": "clean",
+ "summary": {
+  "files": 660,
+  "errors": 0,
+  "minutes": 26.13,
+  "formats": [
+   "WAVEX"
+  ],
+  "subtypes": [
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.09,
+  "pitch_range": [
+   "B0",
+   "C4"
+  ],
+  "distinct_pitches": 17,
+  "gaps_over_4_semitones": [
+   [
+    "F1",
+    "A#1",
+    5
+   ],
+   [
+    "B2",
+    "B3",
+    12
+   ]
+  ],
+  "files_per_pitch_median": 3,
+  "name_round_robins": 4,
+  "articulations": {
+   "muted": 148,
+   "ghost": 144
+  },
+  "sfz_root_vs_pitch": {
+   "compared": 58,
+   "within_60_cents": 3,
+   "octave_off": 51,
+   "other": 4,
+   "by_octave": {
+    "-1": 51,
+    "0": 3
+   }
+  },
+  "sfz_regions_seen": 9120,
+  "envelope": {
+   "percussive": 526,
+   "decaying": 131,
+   "long-decay": 3
+  },
+  "centroid_hz_median": 159.0,
+  "level_db_median": -30.25,
+  "lead_silence_s_median": 0.001,
+  "attack_s_median": 0.043,
+  "duration_s_median": 2.075,
+  "flags": {
+   "cut_off_ending": 48
+  },
+  "sfz_files": 27,
+  "sfz_root_files": 6,
+  "sfz_regions": 9120,
+  "sfz_layers": {
+   "velocity_layers_max": 1,
+   "velocity_layers_median": 1,
+   "round_robins_max": 4,
+   "keys_with_regions": 40
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 0
+ },
+ "groups": {
+  "Samples/finger": {
+   "files": 148,
+   "errors": 0,
+   "minutes": 5.96,
+   "formats": [
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.08,
+   "pitch_range": [
+    "C1",
+    "D2"
+   ],
+   "distinct_pitches": 5,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "B1",
+     11
+    ]
+   ],
+   "files_per_pitch_median": 2,
+   "name_round_robins": 4,
+   "sfz_root_vs_pitch": {
+    "compared": 12,
+    "within_60_cents": 0,
+    "octave_off": 11,
+    "other": 1,
+    "by_octave": {
+     "-1": 11
+    }
+   },
+   "sfz_regions_seen": 2560,
+   "envelope": {
+    "percussive": 91,
+    "decaying": 57
+   },
+   "centroid_hz_median": 129.0,
+   "level_db_median": -30.25,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.089,
+   "duration_s_median": 2.325,
+   "flags": {
+    "cut_off_ending": 11
+   }
+  },
+  "Samples/ghost": {
+   "files": 144,
+   "errors": 0,
+   "minutes": 4.86,
+   "formats": [
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.03,
+   "pitch_range": [
+    "B1",
+    "C#2"
+   ],
+   "distinct_pitches": 2,
+   "files_per_pitch_median": 2.5,
+   "name_round_robins": 4,
+   "articulations": {
+    "ghost": 144
+   },
+   "sfz_root_vs_pitch": {
+    "compared": 5,
+    "within_60_cents": 2,
+    "octave_off": 0,
+    "other": 3,
+    "by_octave": {
+     "0": 2
+    }
+   },
+   "sfz_regions_seen": 1920,
+   "envelope": {
+    "percussive": 139,
+    "decaying": 5
+   },
+   "centroid_hz_median": 158.5,
+   "level_db_median": -22.05,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.03,
+   "duration_s_median": 2.078,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Samples/mute": {
+   "files": 148,
+   "errors": 0,
+   "minutes": 4.47,
+   "formats": [
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_round_robins": 4,
+   "articulations": {
+    "muted": 148
+   },
+   "sfz_regions_seen": 1920,
+   "envelope": {
+    "percussive": 145,
+    "decaying": 3
+   },
+   "centroid_hz_median": 148.0,
+   "level_db_median": -32.55,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.03,
+   "duration_s_median": 1.804,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Samples/noise": {
+   "files": 72,
+   "errors": 0,
+   "minutes": 1.42,
+   "formats": [
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_round_robins": 2,
+   "sfz_regions_seen": 1440,
+   "envelope": {
+    "percussive": 71,
+    "decaying": 1
+   },
+   "centroid_hz_median": 296.5,
+   "level_db_median": -42.35,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.121,
+   "duration_s_median": 1.188,
+   "flags": {
+    "cut_off_ending": 31
+   }
+  },
+  "Samples/pluck": {
+   "files": 148,
+   "errors": 0,
+   "minutes": 9.41,
+   "formats": [
+    "WAVEX"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.28,
+   "pitch_range": [
+    "B0",
+    "C4"
+   ],
+   "distinct_pitches": 16,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "A#1",
+     5
+    ],
+    [
+     "B2",
+     "B3",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 2.5,
+   "name_round_robins": 4,
+   "sfz_root_vs_pitch": {
+    "compared": 41,
+    "within_60_cents": 1,
+    "octave_off": 40,
+    "other": 0,
+    "by_octave": {
+     "-1": 40,
+     "0": 1
+    }
+   },
+   "sfz_regions_seen": 1280,
+   "envelope": {
+    "percussive": 80,
+    "decaying": 65,
+    "long-decay": 3
+   },
+   "centroid_hz_median": 165.0,
+   "level_db_median": -19.4,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.034,
+   "duration_s_median": 3.383,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  }
+ }
+}

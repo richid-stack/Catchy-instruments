@@ -1,0 +1,983 @@
+{
+ "pack": "drum-machines",
+ "tier": "research-private",
+ "summary": {
+  "files": 241,
+  "errors": 0,
+  "minutes": 3.41,
+  "formats": [
+   "MP3",
+   "OGG"
+  ],
+  "subtypes": [
+   "MPEG_LAYER_III",
+   "OPUS"
+  ],
+  "sample_rates": [
+   44100,
+   48000
+  ],
+  "channels": [
+   1,
+   2
+  ],
+  "pitched_ratio": 0.29,
+  "pitch_range": [
+   "G1",
+   "D7"
+  ],
+  "distinct_pitches": 35,
+  "gaps_over_4_semitones": [
+   [
+    "B4",
+    "G#5",
+    9
+   ],
+   [
+    "A#5",
+    "D7",
+    16
+   ]
+  ],
+  "files_per_pitch_median": 1,
+  "name_dynamics": [
+   "medium"
+  ],
+  "articulations": {
+   "open": 9,
+   "closed": 3,
+   "rimshot": 3
+  },
+  "envelope": {
+   "decaying": 48,
+   "percussive": 192,
+   "sustained": 1
+  },
+  "centroid_hz_median": 3848,
+  "level_db_median": -17.2,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.0,
+  "duration_s_median": 0.5,
+  "flags": {
+   "dual_mono_files": 6,
+   "cut_off_ending": 72,
+   "clipped_files": 31
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "808-mini": {
+   "files": 26,
+   "errors": 0,
+   "minutes": 0.35,
+   "formats": [
+    "MP3",
+    "OGG"
+   ],
+   "subtypes": [
+    "MPEG_LAYER_III",
+    "OPUS"
+   ],
+   "sample_rates": [
+    44100,
+    48000
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.31,
+   "pitch_range": [
+    "G#1",
+    "F#3"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "G#1",
+     "F#2",
+     10
+    ],
+    [
+     "F#2",
+     "C3",
+     6
+    ],
+    [
+     "C3",
+     "F#3",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 2.0,
+   "name_dynamics": [
+    "medium"
+   ],
+   "envelope": {
+    "decaying": 4,
+    "percussive": 22
+   },
+   "centroid_hz_median": 5487.0,
+   "level_db_median": -17.95,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.594,
+   "flags": {
+    "dual_mono_files": 6,
+    "cut_off_ending": 2,
+    "clipped_files": 4
+   }
+  },
+  "Casio-RZ1": {
+   "files": 12,
+   "errors": 0,
+   "minutes": 0.06,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "closed": 1,
+    "open": 1
+   },
+   "envelope": {
+    "percussive": 9,
+    "decaying": 3
+   },
+   "centroid_hz_median": 3325.0,
+   "level_db_median": -16.4,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.238,
+   "flags": {
+    "cut_off_ending": 12,
+    "clipped_files": 1
+   }
+  },
+  "Casio-SK1": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.01,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "A#3",
+    "A#5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "A#3",
+     "A#5",
+     24
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "open": 1
+   },
+   "envelope": {
+    "percussive": 6
+   },
+   "centroid_hz_median": 5976.5,
+   "level_db_median": -15.35,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.097,
+   "flags": {
+    "cut_off_ending": 6,
+    "clipped_files": 4
+   }
+  },
+  "LM-2": {
+   "files": 29,
+   "errors": 0,
+   "minutes": 0.17,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.1,
+   "pitch_range": [
+    "D#4",
+    "B4"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "D#4",
+     "B4",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1.5,
+   "envelope": {
+    "percussive": 24,
+    "decaying": 5
+   },
+   "centroid_hz_median": 2529,
+   "level_db_median": -13.3,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.203,
+   "flags": {
+    "cut_off_ending": 29,
+    "clipped_files": 13
+   }
+  },
+  "MFB-512": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 0.07,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "name_dynamics": [
+    "medium"
+   ],
+   "articulations": {
+    "closed": 1,
+    "open": 1
+   },
+   "envelope": {
+    "percussive": 8,
+    "decaying": 1
+   },
+   "centroid_hz_median": 4313,
+   "level_db_median": -15.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.269,
+   "flags": {
+    "cut_off_ending": 6,
+    "clipped_files": 1
+   }
+  },
+  "Micro-Rhythmer-12": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.03,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 3
+   },
+   "centroid_hz_median": 11298,
+   "level_db_median": -20.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.928,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Roland-CR-8000": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.08,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.46,
+   "pitch_range": [
+    "A#1",
+    "D7"
+   ],
+   "distinct_pitches": 6,
+   "gaps_over_4_semitones": [
+    [
+     "A#1",
+     "G#2",
+     10
+    ],
+    [
+     "G#2",
+     "G3",
+     11
+    ],
+    [
+     "G3",
+     "D#4",
+     8
+    ],
+    [
+     "D#4",
+     "G#5",
+     17
+    ],
+    [
+     "G#5",
+     "D7",
+     18
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "closed": 1,
+    "open": 1,
+    "rimshot": 1
+   },
+   "envelope": {
+    "percussive": 13
+   },
+   "centroid_hz_median": 2921,
+   "level_db_median": -15.6,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.007,
+   "duration_s_median": 0.424,
+   "flags": {
+    "cut_off_ending": 5,
+    "clipped_files": 2
+   }
+  },
+  "Sequential-Circuits-Drumtraks": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.15,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.08,
+   "pitch_range": [
+    "A4",
+    "A4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "rimshot": 1
+   },
+   "envelope": {
+    "percussive": 9,
+    "decaying": 4
+   },
+   "centroid_hz_median": 5001,
+   "level_db_median": -14.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.354,
+   "flags": {
+    "cut_off_ending": 1,
+    "clipped_files": 4
+   }
+  },
+  "TR-808/clap": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.03,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 4165,
+   "level_db_median": -23.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.03,
+   "duration_s_median": 2.0,
+   "flags": {}
+  },
+  "TR-808/clave": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.0,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 3360,
+   "level_db_median": -24.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.25,
+   "flags": {}
+  },
+  "TR-808/conga-hi": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.04,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F#4",
+    "A#4"
+   ],
+   "distinct_pitches": 5,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 5
+   },
+   "centroid_hz_median": 586,
+   "level_db_median": -17.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.5,
+   "flags": {}
+  },
+  "TR-808/conga-low": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.04,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F#3",
+    "A3"
+   ],
+   "distinct_pitches": 4,
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 5
+   },
+   "centroid_hz_median": 273,
+   "level_db_median": -15.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.5,
+   "flags": {}
+  },
+  "TR-808/conga-mid": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.04,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "D#4"
+   ],
+   "distinct_pitches": 4,
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 5
+   },
+   "centroid_hz_median": 496,
+   "level_db_median": -20.8,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.5,
+   "flags": {}
+  },
+  "TR-808/cowbell": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.03,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "G#5",
+    "G#5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 2543,
+   "level_db_median": -22.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 1.5,
+   "flags": {}
+  },
+  "TR-808/cymbal": {
+   "files": 25,
+   "errors": 0,
+   "minutes": 1.13,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 10,
+    "decaying": 15
+   },
+   "centroid_hz_median": 9299,
+   "level_db_median": -20.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 2.5,
+   "flags": {}
+  },
+  "TR-808/hihat-close": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.0,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 11689,
+   "level_db_median": -30.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.25,
+   "flags": {}
+  },
+  "TR-808/hihat-open": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.04,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "open": 5
+   },
+   "envelope": {
+    "percussive": 3,
+    "decaying": 2
+   },
+   "centroid_hz_median": 9513,
+   "level_db_median": -16.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.5,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "TR-808/kick": {
+   "files": 25,
+   "errors": 0,
+   "minutes": 0.6,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.2,
+   "pitch_range": [
+    "G1",
+    "G1"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 5,
+   "envelope": {
+    "percussive": 11,
+    "decaying": 14
+   },
+   "centroid_hz_median": 107,
+   "level_db_median": -12.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 1.5,
+   "flags": {}
+  },
+  "TR-808/maraca": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.0,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 10946,
+   "level_db_median": -24.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.25,
+   "flags": {}
+  },
+  "TR-808/mid-tom": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.08,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "B2",
+    "D#3"
+   ],
+   "distinct_pitches": 5,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 5
+   },
+   "centroid_hz_median": 282,
+   "level_db_median": -16.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 1.0,
+   "flags": {}
+  },
+  "TR-808/rimshot": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.0,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "rimshot": 1
+   },
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 3584,
+   "level_db_median": -26.9,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.25,
+   "flags": {}
+  },
+  "TR-808/snare": {
+   "files": 25,
+   "errors": 0,
+   "minutes": 0.17,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.28,
+   "pitch_range": [
+    "F3",
+    "F3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 7,
+   "envelope": {
+    "percussive": 25
+   },
+   "centroid_hz_median": 6418,
+   "level_db_median": -23.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.5,
+   "flags": {}
+  },
+  "TR-808/tom-hi": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.08,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F3",
+    "G#3"
+   ],
+   "distinct_pitches": 3,
+   "files_per_pitch_median": 2,
+   "envelope": {
+    "percussive": 5
+   },
+   "centroid_hz_median": 357,
+   "level_db_median": -16.6,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 1.0,
+   "flags": {}
+  },
+  "TR-808/tom-low": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.08,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "E2",
+    "G2"
+   ],
+   "distinct_pitches": 4,
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 5
+   },
+   "centroid_hz_median": 204,
+   "level_db_median": -15.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 1.0,
+   "flags": {}
+  },
+  "Yamaha-MR10": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 0.09,
+   "formats": [
+    "OGG"
+   ],
+   "subtypes": [
+    "OPUS"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.43,
+   "pitch_range": [
+    "C2",
+    "A#3"
+   ],
+   "distinct_pitches": 5,
+   "gaps_over_4_semitones": [
+    [
+     "E2",
+     "A2",
+     5
+    ],
+    [
+     "A2",
+     "E3",
+     7
+    ],
+    [
+     "E3",
+     "A#3",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 13,
+    "sustained": 1
+   },
+   "centroid_hz_median": 9214.0,
+   "level_db_median": -17.65,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.262,
+   "flags": {
+    "cut_off_ending": 9,
+    "clipped_files": 2
+   }
+  }
+ }
+}

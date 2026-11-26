@@ -1,0 +1,141 @@
+{
+ "pack": "splendid-grand-piano",
+ "tier": "clean",
+ "summary": {
+  "files": 226,
+  "errors": 0,
+  "minutes": 24.36,
+  "formats": [
+   "FLAC"
+  ],
+  "subtypes": [
+   "PCM_16"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.86,
+  "pitch_range": [
+   "B-1",
+   "G#7"
+  ],
+  "distinct_pitches": 60,
+  "gaps_over_4_semitones": [
+   [
+    "B-1",
+    "F0",
+    6
+   ]
+  ],
+  "files_per_pitch_median": 4.0,
+  "sfz_root_vs_pitch": {
+   "compared": 195,
+   "within_60_cents": 191,
+   "octave_off": 4,
+   "other": 0,
+   "by_octave": {
+    "-1": 4,
+    "0": 191
+   }
+  },
+  "sfz_regions_seen": 360,
+  "envelope": {
+   "decaying": 121,
+   "percussive": 86,
+   "long-decay": 17,
+   "sustained": 2
+  },
+  "centroid_hz_median": 1146.5,
+  "level_db_median": -15.35,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.02,
+  "duration_s_median": 5.598,
+  "name_vs_pitch": {
+   "compared": 195,
+   "agree": 4,
+   "octave_shift_mode": 1,
+   "mismatch": 0
+  },
+  "flags": {
+   "cut_off_ending": 118
+  },
+  "sfz_files": 1,
+  "sfz_root_files": 1,
+  "sfz_regions": 360,
+  "sfz_layers": {
+   "velocity_layers_max": 5,
+   "velocity_layers_median": 5,
+   "round_robins_max": 1,
+   "keys_with_regions": 88
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 0
+ },
+ "groups": {
+  "Samples": {
+   "files": 226,
+   "errors": 0,
+   "minutes": 24.36,
+   "formats": [
+    "FLAC"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.86,
+   "pitch_range": [
+    "B-1",
+    "G#7"
+   ],
+   "distinct_pitches": 60,
+   "gaps_over_4_semitones": [
+    [
+     "B-1",
+     "F0",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 4.0,
+   "sfz_root_vs_pitch": {
+    "compared": 195,
+    "within_60_cents": 191,
+    "octave_off": 4,
+    "other": 0,
+    "by_octave": {
+     "-1": 4,
+     "0": 191
+    }
+   },
+   "sfz_regions_seen": 360,
+   "envelope": {
+    "decaying": 121,
+    "percussive": 86,
+    "long-decay": 17,
+    "sustained": 2
+   },
+   "centroid_hz_median": 1146.5,
+   "level_db_median": -15.35,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.02,
+   "duration_s_median": 5.598,
+   "name_vs_pitch": {
+    "compared": 195,
+    "agree": 4,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 118
+   }
+  }
+ }
+}

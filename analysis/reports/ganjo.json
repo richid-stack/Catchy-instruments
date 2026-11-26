@@ -1,0 +1,121 @@
+{
+ "pack": "ganjo",
+ "tier": "clean",
+ "summary": {
+  "files": 61,
+  "errors": 0,
+  "minutes": 1.16,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.92,
+  "pitch_range": [
+   "D#2",
+   "C#5"
+  ],
+  "distinct_pitches": 28,
+  "files_per_pitch_median": 1.0,
+  "sfz_root_vs_pitch": {
+   "compared": 52,
+   "within_60_cents": 52,
+   "octave_off": 0,
+   "other": 0,
+   "by_octave": {
+    "0": 52
+   }
+  },
+  "sfz_regions_seen": 58,
+  "envelope": {
+   "percussive": 52,
+   "decaying": 9
+  },
+  "centroid_hz_median": 927,
+  "level_db_median": -17.7,
+  "lead_silence_s_median": 0.007,
+  "attack_s_median": 0.007,
+  "duration_s_median": 1.171,
+  "name_vs_pitch": {
+   "compared": 56,
+   "agree": 0,
+   "octave_shift_mode": -1,
+   "mismatch": 1
+  },
+  "flags": {
+   "cut_off_ending": 1
+  },
+  "sfz_files": 1,
+  "sfz_root_files": 1,
+  "sfz_regions": 58,
+  "sfz_layers": {
+   "velocity_layers_max": 1,
+   "velocity_layers_median": 1,
+   "round_robins_max": 11,
+   "keys_with_regions": 35
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 3
+ },
+ "groups": {
+  "Common": {
+   "files": 61,
+   "errors": 0,
+   "minutes": 1.16,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.92,
+   "pitch_range": [
+    "D#2",
+    "C#5"
+   ],
+   "distinct_pitches": 28,
+   "files_per_pitch_median": 1.0,
+   "sfz_root_vs_pitch": {
+    "compared": 52,
+    "within_60_cents": 52,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 52
+    }
+   },
+   "sfz_regions_seen": 58,
+   "envelope": {
+    "percussive": 52,
+    "decaying": 9
+   },
+   "centroid_hz_median": 927,
+   "level_db_median": -17.7,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 0.007,
+   "duration_s_median": 1.171,
+   "name_vs_pitch": {
+    "compared": 56,
+    "agree": 0,
+    "octave_shift_mode": -1,
+    "mismatch": 1
+   },
+   "flags": {
+    "cut_off_ending": 1
+   }
+  }
+ }
+}

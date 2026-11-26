@@ -1,0 +1,143 @@
+{
+ "pack": "weresax",
+ "tier": "clean",
+ "summary": {
+  "files": 256,
+  "errors": 0,
+  "minutes": 25.4,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   1
+  ],
+  "pitched_ratio": 0.98,
+  "pitch_range": [
+   "C#2",
+   "G#5"
+  ],
+  "distinct_pitches": 35,
+  "gaps_over_4_semitones": [
+   [
+    "E2",
+    "C#3",
+    9
+   ]
+  ],
+  "files_per_pitch_median": 8,
+  "name_dynamics": [
+   "f",
+   "p"
+  ],
+  "name_round_robins": 2,
+  "sfz_root_vs_pitch": {
+   "compared": 244,
+   "within_60_cents": 244,
+   "octave_off": 0,
+   "other": 0,
+   "by_octave": {
+    "0": 244
+   }
+  },
+  "sfz_regions_seen": 892,
+  "envelope": {
+   "sustained": 256
+  },
+  "centroid_hz_median": 1994.5,
+  "level_db_median": -15.5,
+  "lead_silence_s_median": 0.001,
+  "attack_s_median": 0.193,
+  "duration_s_median": 5.968,
+  "name_vs_pitch": {
+   "compared": 252,
+   "agree": 0,
+   "octave_shift_mode": 1,
+   "mismatch": 0
+  },
+  "flags": {
+   "cut_off_ending": 256
+  },
+  "sfz_files": 13,
+  "sfz_root_files": 4,
+  "sfz_regions": 892,
+  "sfz_layers": {
+   "velocity_layers_max": 2,
+   "velocity_layers_median": 1,
+   "round_robins_max": 2,
+   "keys_with_regions": 52
+  },
+  "sfz_missing_samples": 0,
+  "audio_not_in_any_sfz": 0
+ },
+ "groups": {
+  "Samples/alto": {
+   "files": 256,
+   "errors": 0,
+   "minutes": 25.4,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1
+   ],
+   "pitched_ratio": 0.98,
+   "pitch_range": [
+    "C#2",
+    "G#5"
+   ],
+   "distinct_pitches": 35,
+   "gaps_over_4_semitones": [
+    [
+     "E2",
+     "C#3",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 8,
+   "name_dynamics": [
+    "f",
+    "p"
+   ],
+   "name_round_robins": 2,
+   "sfz_root_vs_pitch": {
+    "compared": 244,
+    "within_60_cents": 244,
+    "octave_off": 0,
+    "other": 0,
+    "by_octave": {
+     "0": 244
+    }
+   },
+   "sfz_regions_seen": 892,
+   "envelope": {
+    "sustained": 256
+   },
+   "centroid_hz_median": 1994.5,
+   "level_db_median": -15.5,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.193,
+   "duration_s_median": 5.968,
+   "name_vs_pitch": {
+    "compared": 252,
+    "agree": 0,
+    "octave_shift_mode": 1,
+    "mismatch": 0
+   },
+   "flags": {
+    "cut_off_ending": 256
+   }
+  }
+ }
+}

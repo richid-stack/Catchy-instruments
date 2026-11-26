@@ -2,3 +2,6 @@
 datasets/clean/*/
 datasets/research-private/
 datasets/.tmp.*/
+
+__pycache__/
+*.pyc
