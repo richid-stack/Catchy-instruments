@@ -1,0 +1,158 @@
+{
+ "patches": {
+  "grand": {
+   "pack": "salamander-grand",
+   "sfz": "Salamander Grand Piano V3.sfz",
+   "regions_in_sfz": 1121,
+   "zones": 480,
+   "skipped": {
+    "other keyswitch": 480,
+    "release trigger": 157,
+    "controller-gated": 4
+   },
+   "sfz_warnings": [],
+   "keys": [
+    21,
+    108
+   ],
+   "velocity_layers": 16,
+   "round_robin_groups": 0,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-26": -20.9,
+    "27-34": -16.7,
+    "35-36": -14.2,
+    "37-43": -12.3,
+    "44-46": -10.7,
+    "47-50": -9.6,
+    "51-56": -8.9,
+    "57-64": -8.2,
+    "65-72": -7.7,
+    "73-80": -6.5,
+    "81-88": -5.6,
+    "89-96": -4.8,
+    "97-104": -4.1,
+    "105-112": -2.6,
+    "113-120": -1.1,
+    "121-127": 0.0
+   },
+   "loops": {},
+   "declared_vs_detected_pitch": {
+    "compared": 439,
+    "within_60_cents": 439,
+    "octave_off": 0,
+    "other": 0,
+    "median_abs_cents": 6.0,
+    "p95_abs_cents": 26.0,
+    "mean_cents": 6.8
+   },
+   "measured_rms_db_before_trim": -26.75,
+   "auto_gain_db": 2.75
+  },
+  "electric-grand": {
+   "pack": "greg-sullivan-epianos",
+   "sfz": "CP80/CP80.sfz",
+   "regions_in_sfz": 81,
+   "zones": 81,
+   "skipped": {},
+   "sfz_warnings": [],
+   "keys": [
+    21,
+    108
+   ],
+   "velocity_layers": 4,
+   "round_robin_groups": 0,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-49": -1.4,
+    "50-81": 0.0,
+    "82-103": -0.6,
+    "104-127": -0.8
+   },
+   "loops": {
+    "auto failed": 5,
+    "auto found": 21
+   },
+   "declared_vs_detected_pitch": {
+    "compared": 80,
+    "within_60_cents": 80,
+    "octave_off": 0,
+    "other": 0,
+    "median_abs_cents": 6.5,
+    "p95_abs_cents": 40.0,
+    "mean_cents": 9.2
+   },
+   "measured_rms_db_before_trim": -17.57,
+   "auto_gain_db": -6.43
+  },
+  "wurlitzer": {
+   "pack": "greg-sullivan-epianos",
+   "sfz": "Wurlitzer EP200/Wurlitzer EP200.sfz",
+   "regions_in_sfz": 48,
+   "zones": 48,
+   "skipped": {},
+   "sfz_warnings": [],
+   "keys": [
+    33,
+    96
+   ],
+   "velocity_layers": 4,
+   "round_robin_groups": 0,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-37": 0.0,
+    "38-65": -2.1,
+    "66-89": -3.1,
+    "90-127": -3.4
+   },
+   "loops": {
+    "auto found": 30,
+    "auto failed": 8
+   },
+   "declared_vs_detected_pitch": {
+    "compared": 48,
+    "within_60_cents": 48,
+    "octave_off": 0,
+    "other": 0,
+    "median_abs_cents": 1.0,
+    "p95_abs_cents": 6.0,
+    "mean_cents": 0.4
+   },
+   "measured_rms_db_before_trim": -15.62,
+   "auto_gain_db": -8.38
+  },
+  "pianet": {
+   "pack": "greg-sullivan-epianos",
+   "sfz": "Pianet T/Pianet T.sfz",
+   "regions_in_sfz": 49,
+   "zones": 33,
+   "skipped": {
+    "release trigger": 16
+   },
+   "sfz_warnings": [],
+   "keys": [
+    29,
+    88
+   ],
+   "velocity_layers": 2,
+   "round_robin_groups": 0,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-82": 0.0,
+    "83-127": -0.9
+   },
+   "loops": {},
+   "declared_vs_detected_pitch": {
+    "compared": 33,
+    "within_60_cents": 33,
+    "octave_off": 0,
+    "other": 0,
+    "median_abs_cents": 1.0,
+    "p95_abs_cents": 4.0,
+    "mean_cents": -0.5
+   },
+   "measured_rms_db_before_trim": -19.15,
+   "auto_gain_db": -4.85
+  }
+ }
+}

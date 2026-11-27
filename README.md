@@ -17,12 +17,37 @@ Run `scripts/fetch_datasets.sh`. It is safe to re-run and skips datasets already
 
 Put each pack in its own folder under `datasets/research-private/<pack-name>/`, with a `SOURCE.txt` giving the URL it came from and its license if known. After a license is verified, move the pack to `datasets/clean/` and update the manifest.
 
+## Building and playing an instrument
+
+```
+python3 -I analysis/inventory.py                      # analyze the packs (once; results are in analysis/inventory)
+python3 -I instrument-builder/build.py --spec generated-instruments/afrobeat/piano/spec.json \
+        --out generated-instruments/afrobeat/piano    # map the packs into zones, write instrument.json
+python3 -I audio-engine/render.py --instrument generated-instruments/afrobeat/piano/instrument.json \
+        --patch wurlitzer --midi generated-instruments/afrobeat/piano/demo/afrobeat-comp-108bpm.mid --out demo.wav
+python3 -I -m unittest discover -s tests
+```
+
+An instrument is a set of patches. Each patch is one sample pack program mapped into zones (key range,
+velocity range, root pitch, loop). Zones start from the pack's own SFZ mapping. The analysis then
+sets root pitch from the detected pitch when it is within 50 cents of the declared one (this puts
+naturally tuned recordings in equal temperament), trims leading silence, loops sustained samples
+that end while still audible, and records each velocity layer's level. The builder matches patch
+loudness by rendering test notes. Loudness follows a per-patch velocity curve whatever level the
+layers were recorded at.
+
+Known limits of the reference engine: no key-release or pedal-noise samples yet, no effects, and loops
+are checked by measurement (seam continuity) but not by ear.
+
+A manifest that uses `research-private` samples is only built with `--allow-private`, is written as
+`instrument.private.json`, and is kept out of git.
+
 ## Layout
 
-- `analysis/`: pitch, velocity-layer, round-robin and loop-point detection
-- `sample-mapping/`: SFZ generation
-- `instrument-builder/`: instrument definitions per genre
-- `audio-engine/`: standalone engine and VST3
-- `generated-instruments/`: build output
-- `tests/`: MIDI render tests
+- `analysis/`: inventory of every sample (pitch, envelope, velocity layers, round robins, SFZ links)
+- `sample-mapping/`: turns an analyzed pack into zones (loop finding, tuning, velocity layers)
+- `instrument-builder/`: builds instrument manifests from specs; demo MIDI generators
+- `audio-engine/`: reference sampler engine (MIDI to audio); the VST3 comes later
+- `generated-instruments/`: specs, built manifests and demo MIDI per genre
+- `tests/`: unit tests and render tests
 - `licenses/`: copies of the original license texts

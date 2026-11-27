@@ -5,3 +5,6 @@ datasets/.tmp.*/
 
 __pycache__/
 *.pyc
+
+# instruments built from research-private samples never go in git
+generated-instruments/**/*.private.json
