@@ -296,6 +296,167 @@ class SyntheticPackTests(unittest.TestCase):
             eng.load_sample("clean/../../etc/passwd")
 
 
+def band_db(x, freq, lo_s, hi_s, sr=SR):
+    """Level (dB) of a sine-like component near freq in x[lo_s:hi_s]."""
+    seg = np.asarray(x[int(lo_s * sr):int(hi_s * sr)], dtype=np.float64)
+    spec = np.abs(np.fft.rfft(seg * np.hanning(len(seg)))) / len(seg)
+    f = np.fft.rfftfreq(len(seg), 1 / sr)
+    m = (f > freq * 0.97) & (f < freq * 1.03)
+    return 20 * math.log10(max(float(spec[m].max()), 1e-9))
+
+
+class FeatureTests(unittest.TestCase):
+    """Mono playing, one-shots, choke groups, and the mapper options that feed them."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        base = Path(cls.tmp.name)
+        cls.datasets = base / "datasets"
+        pack = cls.datasets / "clean" / "featpack"
+        (pack / "Samples").mkdir(parents=True)
+        t = np.arange(int(2.0 * SR)) / SR
+        sf.write(pack / "Samples" / "tone_a.wav", (0.3 * np.sin(2 * np.pi * 220.0 * t)).astype(np.float32), SR)
+        sf.write(pack / "Samples" / "tone_b.wav", (0.3 * np.sin(2 * np.pi * 440.0 * t)).astype(np.float32), SR)
+        sf.write(pack / "Samples" / "hat_open.wav", (0.3 * np.sin(2 * np.pi * 1000.0 * t[:SR])).astype(np.float32), SR)
+        sf.write(pack / "Samples" / "hat_closed.wav", (0.3 * np.sin(2 * np.pi * 2000.0 * t[:SR // 5])).astype(np.float32), SR)
+        # a bass written an octave above where it sounds: the audio is MIDI 40 (E2), the SFZ says 52
+        sf.write(pack / "Samples" / "oct.wav", harmonic(midi_hz(40.0), 2.0, amp=0.4, decay=1.5), SR, subtype="PCM_24")
+        (pack / "feat.sfz").write_text(
+            "<control> default_path=Samples/ set_cc100=0\n"
+            "<region> sample=oct.wav lokey=50 hikey=54 pitch_keycenter=52\n"
+            "<region> sample=tone_a.wav key=60 volume=-6\n"
+            "<region> sample=hat_open.wav key=46 loop_mode=one_shot group=1 off_by=2\n"
+            "<region> sample=hat_closed.wav key=42 loop_mode=one_shot group=2 off_by=1\n"
+            "<group> locc100=1\n<region> sample=tone_b.wav key=62\n")
+        cls.inv = base / "inventory"
+        inventory.process_pack("clean", "featpack", str(pack), str(cls.inv), str(base / "reports"), 1, True)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def _zones(self, **opts):
+        return build_zones(str(self.datasets), "clean", "featpack", "feat.sfz", str(self.inv), opts)
+
+    def _engine(self, zones, **voice):
+        v = {"attack_s": 0.002, "release_s": 0.1, "gain_db": 0.0, "dynamic_range_db": 30.0, "velocity_curve": 1.0,
+             "loop_decay_s": None, **voice}
+        manifest = {"format": FORMAT, "name": "t", "patches": [{"id": "p", "voice": v, "zones": zones}]}
+        return Engine(Instrument(manifest), str(self.datasets), sr=SR)
+
+    @staticmethod
+    def _zone(sample, key, root, **kw):
+        return {"s": f"clean/featpack/Samples/{sample}", "lk": key, "hk": key, "lv": 1, "hv": 127, "root": root, **kw}
+
+    # --- mapper -------------------------------------------------------------------------------
+    def test_pack_written_an_octave_off_is_moved_to_its_sounding_pitch(self):
+        zones, rep = self._zones(include="oct")
+        self.assertEqual(rep["pack_octave"], -1)
+        z = zones[0]
+        self.assertEqual((z["lk"], z["hk"]), (38, 42))
+        self.assertAlmostEqual(z["root"], 40.0, delta=0.06)
+        # asking for the pack's own key map keeps the author's octave
+        zones, rep = self._zones(include="oct", pitch_convention="pack")
+        self.assertEqual((zones[0]["lk"], zones[0]["hk"]), (50, 54))
+        self.assertAlmostEqual(zones[0]["root"], 52.0, delta=0.06)
+
+    def test_sounding_key_plays_the_pitch_it_is_named_after(self):
+        zones, _ = self._zones(include="oct")
+        eng = self._engine(zones)
+        for key in (38, 40, 42):
+            audio, _ = eng.render([Note(0.0, 0.8, key, 100)], tail_s=0.1, peak_limit=1e9)
+            res = detect_pitch(audio.mean(axis=1), SR, int(0.05 * SR))
+            self.assertTrue(res.get("pitched"), key)
+            self.assertLess(abs(res["pitch_midi"] - key) * 100, 10.0, (key, res))
+
+    def test_unpitched_or_scattered_detections_do_not_move_the_key_map(self):
+        zones, rep = self._zones()        # whole pack: tones, hats and the octave-off bass disagree
+        self.assertEqual(rep["pack_octave"], 0)
+        self.assertEqual(rep["key_shift_semitones"], 0)
+
+    def test_volume_one_shot_and_choke_fields_are_carried_into_zones(self):
+        zones, _ = self._zones(pitch_convention="pack", refine_tuning=False)
+        by = {z["s"].split("/")[-1]: z for z in zones}
+        self.assertEqual(by["tone_a.wav"]["g"], -6.0)
+        self.assertEqual((by["hat_open.wav"]["os"], by["hat_open.wav"]["grp"], by["hat_open.wav"]["off_by"]), (1, 1, 2))
+        self.assertEqual((by["hat_closed.wav"]["grp"], by["hat_closed.wav"]["off_by"]), (2, 1))
+        zones, _ = self._zones(pitch_convention="pack", refine_tuning=False, sfz_volume=False)
+        self.assertEqual({z["g"] for z in zones if "tone_a" in z["s"]}, {0.0})
+
+    def test_controller_gated_samples_follow_the_cc_option(self):
+        names = lambda **o: {z["s"].split("/")[-1] for z in self._zones(**o)[0]}  # noqa: E731
+        self.assertNotIn("tone_b.wav", names())
+        self.assertIn("tone_b.wav", names(cc={100: 5}))
+
+    def test_key_range_clips_and_drops_zones(self):
+        zones, rep = self._zones(include="oct", key_range=[40, 41])
+        self.assertEqual((zones[0]["lk"], zones[0]["hk"]), (40, 41))
+        zones, rep = self._zones(include="oct", key_range=[60, 70])
+        self.assertEqual(zones, [])
+        self.assertEqual(rep["skipped"].get("outside key_range"), 1)
+
+    # --- engine -------------------------------------------------------------------------------
+    def test_mono_patch_cuts_the_sounding_note_and_poly_does_not(self):
+        zones = [self._zone("tone_a.wav", 57, 57.0), self._zone("tone_b.wav", 69, 69.0)]
+        notes = [Note(0.0, 1.6, 57, 100), Note(0.5, 1.0, 69, 100)]
+        poly, st_poly = self._engine(zones).render(notes, tail_s=0.2, peak_limit=1e9)
+        mono, st_mono = self._engine(zones, mono=True, mono_release_s=0.04).render(notes, tail_s=0.2, peak_limit=1e9)
+        held = band_db(poly.mean(axis=1), 220.0, 0.8, 1.4)
+        cut = band_db(mono.mean(axis=1), 220.0, 0.8, 1.4)
+        self.assertEqual((st_poly["mono_cuts"], st_mono["mono_cuts"]), (0, 1))
+        self.assertGreater(held, -45.0)
+        self.assertLess(cut, held - 40.0)
+        self.assertGreater(band_db(mono.mean(axis=1), 440.0, 0.8, 1.4), -45.0)   # the new note sounds
+        self.assertGreater(band_db(mono.mean(axis=1), 220.0, 0.1, 0.45), -45.0)  # and the old one sounded before it
+
+    def test_mono_chord_notes_at_the_same_time_all_sound(self):
+        zones = [self._zone("tone_a.wav", 57, 57.0), self._zone("tone_b.wav", 69, 69.0)]
+        audio, st = self._engine(zones, mono=True).render([Note(0.0, 1.0, 57, 100), Note(0.0, 1.0, 69, 100)],
+                                                           tail_s=0.2, peak_limit=1e9)
+        self.assertEqual(st["mono_cuts"], 0)
+        self.assertGreater(band_db(audio.mean(axis=1), 220.0, 0.2, 0.8), -45.0)
+        self.assertGreater(band_db(audio.mean(axis=1), 440.0, 0.2, 0.8), -45.0)
+
+    def test_one_shot_plays_to_the_end_whatever_the_note_length(self):
+        normal = self._zone("tone_b.wav", 69, 69.0)
+        shot = self._zone("tone_b.wav", 69, 69.0, os=1)
+        short = [Note(0.0, 0.05, 69, 100)]
+        a, _ = self._engine([normal]).render(short, tail_s=1.5, peak_limit=1e9)
+        b, _ = self._engine([shot]).render(short, tail_s=1.5, peak_limit=1e9)
+        self.assertLess(band_db(a.mean(axis=1), 440.0, 0.5, 1.0), -80.0)
+        self.assertGreater(band_db(b.mean(axis=1), 440.0, 0.5, 1.0), -45.0)
+        self.assertGreater(b.shape[0], int(1.9 * SR))        # the render grew to hold the whole sample
+
+    def test_choke_group_cuts_the_open_hat_when_the_closed_hat_plays(self):
+        zones = [self._zone("hat_open.wav", 46, 46.0, os=1, grp=1, off_by=2),
+                 self._zone("hat_closed.wav", 42, 42.0, os=1, grp=2, off_by=1)]
+        eng = self._engine(zones, choke_s=0.02)
+        open_only, _ = eng.render([Note(0.0, 0.1, 46, 100)], tail_s=0.3, peak_limit=1e9)
+        both, st = eng.render([Note(0.0, 0.1, 46, 100), Note(0.3, 0.1, 42, 100)], tail_s=0.3, peak_limit=1e9)
+        self.assertEqual(st["choked"], 1)
+        self.assertGreater(band_db(open_only.mean(axis=1), 1000.0, 0.5, 0.9), -45.0)   # rings on its own
+        self.assertLess(band_db(both.mean(axis=1), 1000.0, 0.5, 0.9), -80.0)            # choked at 0.3 s
+        self.assertGreater(band_db(both.mean(axis=1), 1000.0, 0.1, 0.28), -45.0)        # sounded until then
+        # a note outside the choke relationship does not cut it
+        other, st2 = eng.render([Note(0.0, 0.1, 46, 100), Note(0.3, 0.1, 46, 100)], tail_s=0.3, peak_limit=1e9)
+        self.assertEqual(st2["choked"], 0)
+
+    def test_key_balance_reduces_level_differences_between_keys(self):
+        quiet = self._zone("tone_a.wav", 57, 57.0, g=-12.0)
+        loud = self._zone("tone_b.wav", 69, 69.0, g=0.0)
+        spec = {"name": "t", "balance": {"keys": [57, 69], "max_db": 12, "strength": 1.0}, "match_loudness": False,
+                "patches": []}
+        from instrument_builder.build import balance_keys
+        patch = {"id": "p", "voice": {"attack_s": 0.002, "release_s": 0.1, "gain_db": 0.0, "dynamic_range_db": 30.0,
+                                      "velocity_curve": 1.0, "loop_decay_s": None}, "zones": [quiet, loud]}
+        manifest = {"format": FORMAT, "name": "t", "patches": [patch]}
+        info = balance_keys(manifest, patch, str(self.datasets), [57, 69], max_db=12.0, strength=1.0)
+        self.assertGreater(info["before_spread_db"], 10.0)
+        self.assertLess(info["after_spread_db"], 1.5)
+        del spec
+
+
 @unittest.skipUnless((ROOT / "datasets" / "clean" / "salamander-grand").is_dir()
                      and (ROOT / "generated-instruments" / "afrobeat" / "piano" / "instrument.json").exists(),
                      "sample packs are not downloaded here (see scripts/fetch_datasets.sh)")
@@ -326,6 +487,61 @@ class AfrobeatPianoTests(unittest.TestCase):
         packs = {c["pack"]: c for c in self.inst.manifest["credits"]}
         self.assertEqual(set(packs), {"salamander-grand", "greg-sullivan-epianos"})
         self.assertTrue(all("CC-BY" in c["license"] for c in packs.values()))
+        self.assertTrue(self.inst.manifest["distributable"])
+
+
+@unittest.skipUnless((ROOT / "datasets" / "clean" / "pastabass").is_dir()
+                     and (ROOT / "generated-instruments" / "afrobeat" / "bass" / "instrument.json").exists(),
+                     "sample packs are not downloaded here (see scripts/fetch_datasets.sh)")
+class AfrobeatBassTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.inst = Instrument.load(str(ROOT / "generated-instruments" / "afrobeat" / "bass" / "instrument.json"))
+        cls.eng = Engine(cls.inst, str(ROOT / "datasets"), sr=SR)
+
+    @staticmethod
+    def _autocorr(x, lag):
+        a, b = x[:-lag], x[lag:]
+        return float(np.dot(a, b) / math.sqrt(float(np.dot(a, a) * np.dot(b, b)) + 1e-12))
+
+    def test_electric_patches_play_in_tune_and_in_the_right_octave(self):
+        for pid in ("finger", "pick", "muted", "round", "hollow", "short-scale"):
+            for key in (36, 43, 48):
+                audio, _ = self.eng.render([Note(0.0, 1.0, key, 100)], patch=pid, tail_s=0.2, peak_limit=1e9)
+                mono = audio.mean(axis=1)
+                res = detect_pitch(mono, SR, int(0.1 * SR))
+                self.assertTrue(res.get("pitched"), (pid, key))
+                self.assertLess(abs(res["pitch_midi"] - key) * 100, 12.0, (pid, key, res))
+                # an independent look: the waveform repeats at the period of the key
+                seg = mono[int(0.1 * SR):int(0.6 * SR)]
+                lag = SR / midi_hz(key)
+                best = max(self._autocorr(seg, int(round(lag * f))) for f in (0.99, 1.0, 1.01))
+                self.assertGreater(best, 0.8, (pid, key, best))
+
+    def test_every_patch_is_monophonic(self):
+        for pid in self.inst.patches:
+            _, st = self.eng.render([Note(0.0, 1.0, 36, 100), Note(0.4, 0.5, 43, 100)], patch=pid, tail_s=0.1)
+            self.assertEqual(st["mono_cuts"], 1, pid)
+
+    def test_velocity_is_monotonic_on_every_patch(self):
+        for pid in self.inst.patches:
+            levels = []
+            for vel in range(10, 128, 12):
+                audio, _ = self.eng.render([Note(0.0, 0.8, 40, vel)], patch=pid, tail_s=0.1, peak_limit=1e9)
+                levels.append(rms_db(audio.mean(axis=1)[: int(0.4 * SR)]))
+            self.assertTrue(all(b > a for a, b in zip(levels, levels[1:])), (pid, levels))
+
+    def test_levels_are_balanced_across_the_keyboard(self):
+        for pid in self.inst.patches:
+            levels = []
+            for key in range(30, 51, 4):
+                audio, _ = self.eng.render([Note(0.0, 1.0, key, 100)], patch=pid, tail_s=0.1, peak_limit=1e9)
+                levels.append(rms_db(audio.mean(axis=1)[int(0.02 * SR):int(0.52 * SR)]))
+            self.assertLess(max(levels) - min(levels), 7.0, (pid, [round(v, 1) for v in levels]))
+
+    def test_credits_and_licences(self):
+        packs = {c["pack"] for c in self.inst.manifest["credits"]}
+        self.assertEqual(packs, {"pastabass", "black-and-blue-basses", "sneakybass"})
         self.assertTrue(self.inst.manifest["distributable"])
 
 

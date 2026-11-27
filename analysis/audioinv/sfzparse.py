@@ -245,12 +245,15 @@ def _emit(regions, merged, ctrl, sfz_rel, main_dir_rel, warnings):
         "seq_length": _int(merged.get("seq_length"), 1),
     }
     for name in ("loop_mode", "trigger", "group", "off_by", "transpose", "tune", "offset", "end",
-                 "loop_start", "loop_end", "sw_last", "sw_lokey", "sw_hikey", "sw_previous"):
+                 "loop_start", "loop_end", "sw_last", "sw_lokey", "sw_hikey", "sw_previous",
+                 "volume", "ampeg_release"):
         if name in merged:
             region[name] = merged[name]
     cc = {n: _int(v, None) for n, v in merged.items() if n.startswith(("locc", "hicc"))}
     if cc:
         region["cc"] = cc
+        region["cc_set"] = {int(n[6:]): _int(v, 0) for n, v in ctrl.items()
+                            if n.startswith("set_cc") and n[6:].isdigit()}
     regions.append(region)
 
 
@@ -314,3 +317,26 @@ def parse_sfz(sfz_path: str, pack_root: str, defines=None, included=None):
             _opcodes(tok, cur)
     flush()
     return regions, warnings[:20]
+
+
+def cc_active(region, overrides=None) -> bool:
+    """True if the region's controller ranges (locc/hicc) admit the controller values in force.
+
+    Values come from the pack's own set_cc defaults (zero when unset), then from overrides
+    ({cc_number: value}). This is how a pack's blend, voice-count and mic switches choose which
+    regions play.
+    """
+    cc = region.get("cc")
+    if not cc:
+        return True
+    values = dict(region.get("cc_set") or {})
+    values.update(overrides or {})
+    for name, bound in cc.items():
+        if bound is None or not name[4:].isdigit():
+            continue
+        now = values.get(int(name[4:]), 0)
+        if name.startswith("locc") and now < bound:
+            return False
+        if name.startswith("hicc") and now > bound:
+            return False
+    return True

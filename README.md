@@ -25,8 +25,12 @@ python3 -I instrument-builder/build.py --spec generated-instruments/afrobeat/pia
         --out generated-instruments/afrobeat/piano    # map the packs into zones, write instrument.json
 python3 -I audio-engine/render.py --instrument generated-instruments/afrobeat/piano/instrument.json \
         --patch wurlitzer --midi generated-instruments/afrobeat/piano/demo/afrobeat-comp-108bpm.mid --out demo.wav
+python3 -I audio-engine/audition.py --instrument generated-instruments/afrobeat/bass/instrument.json \
+        --midi generated-instruments/afrobeat/bass/demo/afrobeat-bass-108bpm.mid --seconds 9 --out bass-audition.wav
 python3 -I -m unittest discover -s tests
 ```
+
+`audition.py` plays one MIDI part through every patch of an instrument in turn and prints where each patch starts.
 
 An instrument is a set of patches. Each patch is one sample pack program mapped into zones (key range,
 velocity range, root pitch, loop). Zones start from the pack's own SFZ mapping. The analysis then
@@ -35,6 +39,14 @@ naturally tuned recordings in equal temperament), trims leading silence, loops s
 that end while still audible, and records each velocity layer's level. The builder matches patch
 loudness by rendering test notes. Loudness follows a per-patch velocity curve whatever level the
 layers were recorded at.
+
+Spec options worth knowing (see `generated-instruments/afrobeat/bass/spec.json`):
+`pitch_convention` ("sounding" moves a pack written an octave off, such as bass guitar, so each key plays
+the pitch it is named after), `cc` (controller values to play an SFZ with, e.g. to pick acoustic or electric),
+`include`/`exclude` (regex on sample paths), `key_range`, `level_scope` ("key" keeps velocity layers
+smooth key by key), `balance` (evens out recording-level differences between keys, verified by rendering)
+and the voice option `mono` (a new note cuts the last, for bass lines). One-shot samples and choke groups
+(open and closed hi-hat) come from the SFZ.
 
 Known limits of the reference engine: no key-release or pedal-noise samples yet, no effects, and loops
 are checked by measurement (seam continuity) but not by ear.

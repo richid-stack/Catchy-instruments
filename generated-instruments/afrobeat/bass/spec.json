@@ -1,0 +1,181 @@
+{
+  "name": "Afrobeat Bass",
+  "genre": "afrobeat",
+  "type": "bass",
+  "description": "Electric and upright basses for Afrobeat and highlife grooves: warm fingered bass, picked bass, a muted dub-style bass, a bright roundwound funk bass, a hollow-body bass, an upright and a short-scale bass. All patches are monophonic (a new note cuts the last) with short releases so lines stay tight.",
+  "default_patch": "finger",
+  "match_loudness": true,
+  "target_rms_db": -24.0,
+  "measure": {
+    "keys": [
+      31,
+      55,
+      4
+    ],
+    "vel": 100,
+    "dur": 0.9
+  },
+  "patches": [
+    {
+      "id": "finger",
+      "name": "Finger Bass",
+      "note": "Squier Bass VI with flatwound strings, fingered, neck pickup (Pastabass 'fetuccine'). 4 velocity layers x 4 round robins. The warm all-round Afrobeat bass.",
+      "source": {
+        "pack": "pastabass",
+        "sfz": "fetuccine.sfz",
+        "options": {
+          "level_scope": "key"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.15,
+        "highpass_hz": 28,
+        "dynamic_range_db": 24,
+        "mono": true,
+        "mono_release_s": 0.05
+      }
+    },
+    {
+      "id": "pick",
+      "name": "Pick Bass",
+      "note": "Flatwound strings, picked, bridge pickup (Pastabass 'linguine'). 3 velocity layers x 4 round robins. More attack for driving lines.",
+      "source": {
+        "pack": "pastabass",
+        "sfz": "linguine.sfz",
+        "options": {
+          "level_scope": "key"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.12,
+        "highpass_hz": 28,
+        "dynamic_range_db": 24,
+        "mono": true,
+        "mono_release_s": 0.04
+      }
+    },
+    {
+      "id": "muted",
+      "name": "Muted Bass",
+      "note": "Flatwound, picked and muted, pickup combo (Pastabass 'tagliatelle'). Short, dry notes for dub-leaning and highlife-style grooves.",
+      "source": {
+        "pack": "pastabass",
+        "sfz": "tagliatelle.sfz",
+        "options": {
+          "level_scope": "key"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.08,
+        "highpass_hz": 28,
+        "dynamic_range_db": 24,
+        "mono": true,
+        "mono_release_s": 0.03
+      }
+    },
+    {
+      "id": "round",
+      "name": "Roundwound Funk Bass",
+      "note": "Roundwound strings (Pastabass 'spaghetti'). Brighter and more cutting, for afro-funk.",
+      "source": {
+        "pack": "pastabass",
+        "sfz": "spaghetti.sfz",
+        "options": {
+          "level_scope": "key"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.12,
+        "highpass_hz": 28,
+        "dynamic_range_db": 24,
+        "mono": true,
+        "mono_release_s": 0.04
+      }
+    },
+    {
+      "id": "hollow",
+      "name": "Hollow-body Bass",
+      "note": "Washburn AB95 hollow-body bass, plucked (Black And Blue Basses 'darkblack pluck'). 4 velocity layers x 4 round robins. Round and woody.",
+      "source": {
+        "pack": "black-and-blue-basses",
+        "sfz": "Programs/05-darkblack_pluck.sfz",
+        "options": {
+          "level_scope": "key"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.18,
+        "highpass_hz": 28,
+        "dynamic_range_db": 24,
+        "mono": true,
+        "mono_release_s": 0.05
+      }
+    },
+    {
+      "id": "upright",
+      "name": "Upright Bass",
+      "note": "1958 Otto Rubner double bass, pizzicato, played quietly (Sneakybass). One velocity layer, so loudness follows velocity but the tone does not change. Playable range E1 to F3: the pack's notes above that are drowned in low-frequency room noise, so they are left out.",
+      "source": {
+        "pack": "sneakybass",
+        "sfz": "Programs/02-sneakybass_pluck.sfz",
+        "options": {
+          "key_range": [
+            21,
+            53
+          ],
+          "level_scope": "key"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.22,
+        "highpass_hz": 38,
+        "dynamic_range_db": 20,
+        "mono": true,
+        "mono_release_s": 0.06,
+        "extend_semitones": 5
+      },
+      "balance": {
+        "keys": [
+          28,
+          53
+        ],
+        "max_db": 9,
+        "strength": 0.85
+      }
+    },
+    {
+      "id": "short-scale",
+      "name": "Short-scale Bass",
+      "note": "Short-scale bass, warm voicing (Black And Blue Basses 'babyblue warm'). One velocity layer.",
+      "source": {
+        "pack": "black-and-blue-basses",
+        "sfz": "Programs/04-babyblue_warm.sfz",
+        "options": {
+          "level_scope": "key"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.15,
+        "highpass_hz": 28,
+        "dynamic_range_db": 20,
+        "mono": true,
+        "mono_release_s": 0.05
+      }
+    }
+  ],
+  "balance": {
+    "keys": [
+      28,
+      55
+    ],
+    "max_db": 9,
+    "strength": 0.85
+  }
+}

@@ -7,6 +7,7 @@ import numpy as np
 import soundfile as sf
 
 from .dsp import bake_loop, cubic_read, one_pole, release_curve
+from .midi import Note
 
 
 class Engine:
@@ -36,14 +37,18 @@ class Engine:
         self.cache_bytes += data.nbytes
         return self.cache[rel]
 
-    def _voice(self, patch, zone, note):
+    def _voice(self, patch, zone, note, release_s=None):
         v = patch.voice
         data, sr_src = self.load_sample(zone["s"])
         sr = self.sr
         ratio = 2.0 ** ((note.key - zone["root"]) / 12.0) * sr_src / sr
         start_src = zone.get("st", 0.0) * sr_src
-        rel_n = max(int(v["release_s"] * sr), 1)
+        oneshot = bool(zone.get("os"))
+        rel_n = max(int((v["release_s"] if release_s is None else release_s) * sr), 1)
         hold_n = max(int(note.dur * sr), 1)
+        if oneshot:   # plays to the end of the recording whatever the key does
+            hold_n = max(int((data.shape[0] - 4 - start_src) / ratio), 1)
+            rel_n = 1
         total = hold_n + rel_n
         loop = zone.get("loop")
         looped = False
@@ -68,7 +73,11 @@ class Engine:
             env[:a] = np.linspace(0.0, 1.0, a, dtype=np.float32)
         if n > hold_n:
             env[hold_n:] = release_curve(rel_n)[: n - hold_n]
-        if not looped and avail < total:  # the recording ended before the note did
+        if oneshot:
+            f = min(int(0.01 * sr), n // 4)
+            if f > 1:
+                env[n - f:] *= np.linspace(1.0, 0.0, f, dtype=np.float32)
+        elif not looped and avail < total:  # the recording ended before the note did
             f = min(int(0.02 * sr), n // 4)
             env[n - f:] *= np.linspace(1.0, 0.0, f, dtype=np.float32)
         if looped and v.get("loop_decay_s"):
@@ -82,32 +91,80 @@ class Engine:
         db = max(-60.0, min(24.0, db))
         return buf * (env[:, None] * np.float32(10.0 ** (db / 20.0)))
 
+    def _mono_cuts(self, notes, cut_s):
+        """Monophonic patches: a later note ends the sounding one. Returns [(Note, release_s or None)]."""
+        ordered = sorted(notes, key=lambda n: (n.time, n.key))
+        times = sorted({n.time for n in ordered})
+        out, cuts = [], 0
+        for n in ordered:
+            later = [t for t in times if t > n.time + 1e-6]
+            if later and later[0] < n.time + n.dur:
+                out.append((Note(n.time, later[0] - n.time, n.key, n.vel, getattr(n, "channel", 0)), cut_s))
+                cuts += 1
+            else:
+                out.append((n, None))
+        return out, cuts
+
+    @staticmethod
+    def _apply_chokes(voices, choke_s, sr):
+        """A voice whose zone has off_by=g is cut when a later voice of group g starts."""
+        choked = 0
+        live = []
+        for v in voices:   # voices are in start order
+            g = v["grp"]
+            if g is not None:
+                for o in live:
+                    if o["off_by"] == g and o["end"] > v["start"] and o["start"] < v["start"]:
+                        cut = v["start"] - o["start"]
+                        fade = min(int(choke_s * sr), o["buf"].shape[0] - cut)
+                        o["buf"] = o["buf"][: cut + fade].copy()
+                        if fade > 1:
+                            o["buf"][cut:] *= np.linspace(1.0, 0.0, fade, dtype=np.float32)[:, None]
+                        o["end"] = o["start"] + o["buf"].shape[0]
+                        choked += 1
+            live = [o for o in live if o["end"] > v["start"]]
+            live.append(v)
+        return choked
+
     def render(self, notes, patch=None, tail_s=1.0, peak_limit=0.95):
         """Render notes (objects with time, dur, key, vel) to a (frames, 2) float32 array.
 
         Returns (audio, stats). If the mix would exceed peak_limit it is scaled down as a whole
         (never clipped); stats['scale'] records the factor.
+
+        Patch voice options used here: mono (a new note cuts the last one over mono_release_s),
+        choke_s (fade of a voice cut by a choke group). One-shot zones ignore note length.
         """
         p = self.inst.patches[patch or self.inst.default_patch]
         p.reset_round_robin()
         sr = self.sr
-        end = max((n.time + n.dur for n in notes), default=0.0) + p.voice["release_s"] + tail_s
-        out = np.zeros((int(end * sr) + 1, 2), dtype=np.float32)
-        played = skipped = 0
-        for note in sorted(notes, key=lambda n: (n.time, n.key)):
+        v = p.voice
+        if v.get("mono"):
+            plan, mono_cuts = self._mono_cuts(notes, float(v.get("mono_release_s", 0.04)))
+        else:
+            plan, mono_cuts = [(n, None) for n in sorted(notes, key=lambda n: (n.time, n.key))], 0
+        voices, played, skipped = [], 0, 0
+        for note, rel in plan:
             zones = p.pick(note.key, note.vel)
             if not zones:
                 skipped += 1
                 continue
             start = int(round(note.time * sr))
             for zone in zones:
-                buf = self._voice(p, zone, note)
+                buf = self._voice(p, zone, note, release_s=rel)
                 if buf is None:
                     continue
-                stop = min(start + buf.shape[0], out.shape[0])
-                out[start:stop] += buf[: stop - start]
+                voices.append({"start": start, "buf": buf, "end": start + buf.shape[0],
+                               "grp": zone.get("grp"), "off_by": zone.get("off_by")})
             played += 1
-        v = p.voice
+        voices.sort(key=lambda o: o["start"])
+        choked = self._apply_chokes(voices, float(v.get("choke_s", 0.02)), sr) if any(
+            o["grp"] is not None for o in voices) else 0
+        nominal = max((n.time + n.dur for n in notes), default=0.0) + v["release_s"] + tail_s
+        frames = max([int(nominal * sr) + 1] + [o["end"] + int(0.05 * sr) for o in voices])
+        out = np.zeros((frames, 2), dtype=np.float32)
+        for o in voices:
+            out[o["start"]:o["end"]] += o["buf"]
         if v.get("highpass_hz"):
             out = one_pole(out, v["highpass_hz"], sr, "hp")
         if v.get("lowpass_hz"):
@@ -118,6 +175,7 @@ class Engine:
             scale = peak_limit / peak
             out *= np.float32(scale)
         return out, {"patch": p.id, "notes_played": played, "notes_without_sample": skipped,
+                     "mono_cuts": mono_cuts, "choked": choked,
                      "peak": round(peak * scale, 4), "scale": round(scale, 4), "seconds": round(out.shape[0] / sr, 2)}
 
 

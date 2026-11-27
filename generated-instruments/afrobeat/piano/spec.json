@@ -1,35 +1,81 @@
 {
- "name": "Afrobeat Piano",
- "genre": "afrobeat",
- "type": "piano",
- "description": "Piano and electric piano sounds for Afrobeat comping: a bright grand, an electric grand, a Wurlitzer and a Pianet. Short releases and a light low cut keep stabs tight and leave room for the bass.",
- "default_patch": "grand",
- "match_loudness": true,
- "target_rms_db": -24.0,
- "patches": [
-  {
-   "id": "grand", "name": "Bright Grand",
-   "note": "Yamaha C5 grand (Salamander), 16 velocity layers. Natural-tuned recordings moved to equal temperament.",
-   "source": {"pack": "salamander-grand", "sfz": "Salamander Grand Piano V3.sfz", "options": {"sw_last": "C0"}},
-   "voice": {"attack_s": 0.002, "release_s": 0.28, "highpass_hz": 45}
-  },
-  {
-   "id": "electric-grand", "name": "Electric Grand",
-   "note": "Yamaha CP80 electric grand, 4 velocity layers. Cut-off samples are looped where a loop could be found.",
-   "source": {"pack": "greg-sullivan-epianos", "sfz": "CP80/CP80.sfz"},
-   "voice": {"attack_s": 0.002, "release_s": 0.22, "highpass_hz": 45, "loop_decay_s": 5.0}
-  },
-  {
-   "id": "wurlitzer", "name": "Wurlitzer EP200",
-   "note": "Wurlitzer EP200, 4 velocity layers. Reed tones are looped so held chords keep sounding.",
-   "source": {"pack": "greg-sullivan-epianos", "sfz": "Wurlitzer EP200/Wurlitzer EP200.sfz"},
-   "voice": {"attack_s": 0.002, "release_s": 0.18, "highpass_hz": 55, "loop_decay_s": 6.0}
-  },
-  {
-   "id": "pianet", "name": "Pianet T",
-   "note": "Hohner Pianet T, 2 velocity layers. Key-release noise samples are not played yet.",
-   "source": {"pack": "greg-sullivan-epianos", "sfz": "Pianet T/Pianet T.sfz"},
-   "voice": {"attack_s": 0.002, "release_s": 0.12, "highpass_hz": 60}
-  }
- ]
+  "name": "Afrobeat Piano",
+  "genre": "afrobeat",
+  "type": "piano",
+  "description": "Piano and electric piano sounds for Afrobeat comping: a bright grand, an electric grand, a Wurlitzer and a Pianet. Short releases and a light low cut keep stabs tight and leave room for the bass.",
+  "default_patch": "grand",
+  "match_loudness": true,
+  "target_rms_db": -24.0,
+  "patches": [
+    {
+      "id": "grand",
+      "name": "Bright Grand",
+      "note": "Yamaha C5 grand (Salamander), 16 velocity layers. Natural-tuned recordings moved to equal temperament.",
+      "source": {
+        "pack": "salamander-grand",
+        "sfz": "Salamander Grand Piano V3.sfz",
+        "options": {
+          "sw_last": "C0"
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.28,
+        "highpass_hz": 45
+      }
+    },
+    {
+      "id": "electric-grand",
+      "name": "Electric Grand",
+      "note": "Yamaha CP80 electric grand, 4 velocity layers. Cut-off samples are looped where a loop could be found.",
+      "source": {
+        "pack": "greg-sullivan-epianos",
+        "sfz": "CP80/CP80.sfz",
+        "options": {
+          "sfz_volume": false
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.22,
+        "highpass_hz": 45,
+        "loop_decay_s": 5.0
+      }
+    },
+    {
+      "id": "wurlitzer",
+      "name": "Wurlitzer EP200",
+      "note": "Wurlitzer EP200, 4 velocity layers. Reed tones are looped so held chords keep sounding.",
+      "source": {
+        "pack": "greg-sullivan-epianos",
+        "sfz": "Wurlitzer EP200/Wurlitzer EP200.sfz",
+        "options": {
+          "sfz_volume": false
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.18,
+        "highpass_hz": 55,
+        "loop_decay_s": 6.0
+      }
+    },
+    {
+      "id": "pianet",
+      "name": "Pianet T",
+      "note": "Hohner Pianet T, 2 velocity layers. Key-release noise samples are not played yet.",
+      "source": {
+        "pack": "greg-sullivan-epianos",
+        "sfz": "Pianet T/Pianet T.sfz",
+        "options": {
+          "sfz_volume": false
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.12,
+        "highpass_hz": 60
+      }
+    }
+  ]
 }

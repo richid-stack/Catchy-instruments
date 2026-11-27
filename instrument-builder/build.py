@@ -59,7 +59,9 @@ def main():
     for p in manifest["patches"]:
         r = report["patches"][p["id"]]
         print(f"{p['id']}: {r['zones']} zones, {r['velocity_layers']} velocity layers, keys {r['keys']}, "
-              f"measured {r.get('measured_rms_db_before_trim')} dB, trim {r['auto_gain_db']} dB, loops {r['loops']}")
+              f"measured {r.get('measured_rms_db_before_trim')} dB, trim {r['auto_gain_db']} dB, loops {r['loops']}"
+              + (f", key balance {r['key_balance']['before_spread_db']} -> {r['key_balance']['after_spread_db']} dB spread"
+                 if "key_balance" in r else ""))
     print(f"wrote {os.path.join(args.out, name)}")
 
 

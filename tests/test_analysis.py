@@ -13,7 +13,7 @@ from audioinv import features  # noqa: E402
 from audioinv.features import analyze_file, yin  # noqa: E402
 from audioinv.nameparse import midi_to_name, parse_name  # noqa: E402
 from audioinv.link import AudioIndex, layer_stats  # noqa: E402
-from audioinv.sfzparse import key_to_midi, parse_sfz, read_bank_defines  # noqa: E402
+from audioinv.sfzparse import cc_active, key_to_midi, parse_sfz, read_bank_defines  # noqa: E402
 
 SR = 44100
 
@@ -190,6 +190,21 @@ class SfzTests(unittest.TestCase):
             regions, warnings = parse_sfz(str(root / "loop.sfz"), str(root))
         self.assertLess(len(regions), 10_000)
         self.assertTrue(warnings)
+
+    def test_controller_gating_uses_pack_defaults_and_overrides(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / "a.sfz").write_text(
+                "<control> set_cc100=0 set_cc107=0\n"
+                "<group> hicc100=126 hicc107=25\n<region> sample=electric.wav key=60\n"
+                "<group> locc100=1\n<region> sample=acoustic.wav key=60\n"
+                "<group> locc107=26\n<region> sample=voice_two.wav key=60\n"
+                "<group>\n<region> sample=plain.wav key=61\n")
+            regions, _ = parse_sfz(str(root / "a.sfz"), str(root))
+        names = lambda ov=None: sorted(r["sample"] for r in regions if cc_active(r, ov))  # noqa: E731
+        self.assertEqual(names(), ["electric.wav", "plain.wav"])
+        self.assertEqual(names({100: 127}), ["acoustic.wav", "plain.wav"])
+        self.assertEqual(names({107: 40}), ["plain.wav", "voice_two.wav"])
 
 
 class LinkTests(unittest.TestCase):

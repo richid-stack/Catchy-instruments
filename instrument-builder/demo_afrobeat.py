@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Write a short Afrobeat keys demo as a MIDI file (108 BPM, A minor, eight bars).
+"""Write short Afrobeat demo parts as MIDI files (108 BPM, A minor, eight bars: Am9 Am9 D9 Am9, twice).
 
-    python3 -I instrument-builder/demo_afrobeat.py generated-instruments/afrobeat/piano/demo/afrobeat-comp-108bpm.mid
+    python3 -I instrument-builder/demo_afrobeat.py [keys|bass] OUT.mid
 
-Syncopated chord stabs with ghost notes, a bass line in the left hand, and a pentatonic lick in
-the second half. Velocities are humanized with a fixed seed so the file is reproducible.
+keys (the default): syncopated chord stabs with ghost notes, a bass line in the left hand and a
+pentatonic lick in the second half. bass: a syncopated root/octave/fifth line with passing notes,
+some of them overlapping so monophonic patches show their note cutting. Velocities are humanized
+with a fixed seed so the files are reproducible.
 """
 import os
 import sys
@@ -33,10 +35,41 @@ def lcg(seed):
         yield state / 2 ** 31
 
 
+BASS_NOTES = {   # sounding MIDI keys: root, octave, fifth, third, seventh, fourth/passing
+    "Am9": {"r": 33, "o": 45, "f": 40, "t": 36, "s": 43, "p": 38},
+    "D9": {"r": 38, "o": 50, "f": 45, "t": 42, "s": 48, "p": 40},
+}
+# (step, length in steps, note name, velocity); two bar shapes that alternate.
+BASS_BAR_A = [(0, 3, "r", 100), (3, 1, "o", 70), (6, 2, "f", 92), (8, 2, "r", 98), (10, 1, "t", 80), (11, 3, "o", 94), (14, 2, "s", 86)]
+BASS_BAR_B = [(0, 2, "r", 104), (2, 1, "r", 66), (4, 3, "f", 90), (7, 1, "p", 72), (8, 3, "r", 98), (11, 2, "o", 88), (13, 1, "s", 76), (14, 2, "f", 90)]
+
+
+def bass_part(rnd, bars):
+    notes = []
+    for bar, name in enumerate(bars):
+        shape = BASS_BAR_A if bar % 2 == 0 else BASS_BAR_B
+        for step, length, which, vel in shape:
+            jitter = (next(rnd) - 0.5) * 0.02
+            vel = max(1, min(127, int(vel + (next(rnd) - 0.5) * 8)))
+            # Some notes run a little into the next one, as a bassist plays legato.
+            overlap = 1.15 if (step + bar) % 5 == 0 else 0.92
+            notes.append((max(bar * 4 + step * STEP + jitter, 0.0), length * STEP * overlap, BASS_NOTES[name][which], vel))
+    return notes
+
+
 def main():
-    if len(sys.argv) != 2:
+    if len(sys.argv) not in (2, 3):
         sys.exit(__doc__)
+    kind = sys.argv[1] if len(sys.argv) == 3 else "keys"
+    out = sys.argv[-1]
     rnd = lcg(7)
+    if kind == "bass":
+        notes = bass_part(rnd, BARS)
+        write_midi(out, notes, bpm=BPM)
+        print(f"wrote {out}: {len(notes)} bass notes, {len(BARS)} bars at {BPM:g} BPM")
+        return
+    if kind != "keys":
+        sys.exit(f"unknown part {kind!r}\n{__doc__}")
     notes = []
 
     def add(bar, step, dur_steps, key, vel):
@@ -58,8 +91,8 @@ def main():
         if bar >= 4:
             for step, key in LICK:
                 add(bar, step, 2, key + 12 * (bar == 7), 100)
-    write_midi(sys.argv[1], notes, bpm=BPM)
-    print(f"wrote {sys.argv[1]}: {len(notes)} notes, {len(BARS)} bars at {BPM:g} BPM")
+    write_midi(out, notes, bpm=BPM)
+    print(f"wrote {out}: {len(notes)} notes, {len(BARS)} bars at {BPM:g} BPM")
 
 
 if __name__ == "__main__":

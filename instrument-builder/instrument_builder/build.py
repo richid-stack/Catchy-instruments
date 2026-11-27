@@ -44,18 +44,61 @@ def read_pack_table(datasets_root):
     return table
 
 
-def measure_loudness_db(manifest, patch_id, datasets_root, keys=range(48, 73, 4), vel=100):
+def measure_loudness_db(manifest, patch_id, datasets_root, keys=range(48, 73, 4), vel=100, dur=0.9):
     """Render mid-keyboard notes at forte and return their mean-square level in dBFS.
 
     This is a rendered measurement, not an estimate from file levels, so it includes the layer
     chosen for the velocity, pitch shifting, loops and the patch's own filters.
     """
     engine = Engine(Instrument(manifest), datasets_root, sr=44100)
-    notes = [Note(time=i * 2.2, dur=0.9, key=k, vel=vel) for i, k in enumerate(keys)]
+    notes = [Note(time=i * 2.2, dur=dur, key=k, vel=vel) for i, k in enumerate(keys)]
     audio, _ = engine.render(notes, patch=patch_id, tail_s=0.5, peak_limit=1e9)
     mono = audio.mean(axis=1)
     sq = np.concatenate([mono[int(n.time * 44100):int((n.time + 1.5) * 44100)] ** 2 for n in notes])
     return float(10.0 * np.log10(max(float(np.mean(sq)), 1e-12)))
+
+
+def _key_levels_db(manifest, patch_id, datasets_root, keys, vel, window_s, repeats):
+    """Rendered level (dBFS, mean-square over the first window_s) of each key; round robins are averaged."""
+    sr = 44100
+    inst = Instrument(manifest)
+    notes, slots = [], []
+    for k in keys:
+        for _ in range(repeats):
+            slots.append((k, len(notes) * 2.2))
+            notes.append(Note(time=len(notes) * 2.2, dur=1.0, key=k, vel=vel))
+    audio, _ = Engine(inst, datasets_root, sr=sr).render(notes, patch=patch_id, tail_s=0.3, peak_limit=1e9)
+    mono = audio.mean(axis=1)
+    power = {}
+    for k, t in slots:
+        seg = mono[int((t + 0.02) * sr):int((t + 0.02 + window_s) * sr)]
+        power.setdefault(k, []).append(float(np.mean(seg ** 2)))
+    return {k: float(10.0 * np.log10(max(float(np.mean(v)), 1e-12))) for k, v in power.items()}
+
+
+def balance_keys(manifest, patch, datasets_root, keys, max_db=9.0, strength=0.85, vel=100, window_s=0.5):
+    """Even out recording-level differences between keys by adjusting zone gains.
+
+    Each key is rendered at the same velocity and its level is compared with the median level of
+    the range; every zone is moved towards that median by `strength` of the difference, at most
+    max_db. Returns {'before_spread_db', 'after_spread_db', 'max_correction_db'} measured from
+    renders, so the effect is verified rather than assumed.
+    """
+    ks = list(keys)
+    repeats = max([z["rr"][1] for z in patch["zones"] if "rr" in z] or [1])
+    before = _key_levels_db(manifest, patch["id"], datasets_root, ks, vel, window_s, repeats)
+    ref = float(np.median(list(before.values())))
+    corr_of = {k: max(-max_db, min(max_db, strength * (ref - lvl))) for k, lvl in before.items()}
+    lo, hi = min(ks), max(ks)
+    applied = 0.0
+    for z in patch["zones"]:
+        k = int(round(max(lo, min(hi, z["root"]))))
+        c = corr_of.get(k, 0.0)
+        z["g"] = round(z.get("g", 0.0) + c, 2)
+        applied = max(applied, abs(c))
+    after = _key_levels_db(manifest, patch["id"], datasets_root, ks, vel, window_s, repeats)
+    spread = lambda d: round(max(d.values()) - min(d.values()), 1)  # noqa: E731
+    return {"before_spread_db": spread(before), "after_spread_db": spread(after), "max_correction_db": round(applied, 1)}
 
 
 def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
@@ -85,11 +128,26 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
         report["patches"][p["id"]] = rep
 
     trial = {"format": FORMAT, "name": spec["name"], "patches": built}
+    by_id = {p["id"]: p for p in patches_in}
     target = spec.get("target_rms_db", -24.0)
     for b in built:
         trim = 0.0
+        bal = {**(spec.get("balance") or {}), **(by_id[b["id"]].get("balance") or {})}
+        if bal.get("keys"):
+            lo, hi = bal["keys"][0], bal["keys"][1]
+            report["patches"][b["id"]]["key_balance"] = balance_keys(
+                trial, b, datasets_root, range(int(lo), int(hi) + 1), max_db=bal.get("max_db", 9.0),
+                strength=bal.get("strength", 0.85))
         if spec.get("match_loudness", True):
-            measured = measure_loudness_db(trial, b["id"], datasets_root)
+            m = {**(spec.get("measure") or {}), **(by_id[b["id"]].get("measure") or {})}
+            kw = {}
+            if "keys" in m:
+                lo, hi, step = (list(m["keys"]) + [4])[:3] if len(m["keys"]) == 2 else m["keys"]
+                kw["keys"] = range(int(lo), int(hi) + 1, int(step))
+            for name in ("vel", "dur"):
+                if name in m:
+                    kw[name] = m[name]
+            measured = measure_loudness_db(trial, b["id"], datasets_root, **kw)
             trim = max(-12.0, min(12.0, target - measured))
             report["patches"][b["id"]]["measured_rms_db_before_trim"] = round(measured, 2)
         b["voice"]["gain_db"] = round(b["voice"]["gain_db"] + trim, 2)

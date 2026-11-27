@@ -24,11 +24,9 @@ def _corr(a, b):
     return float(np.dot(a, b) / (na * nb))
 
 
-def _best_for_length(mono, sr, f0_hz, length_s, tail_guard_s, max_level_step_db):
-    n = len(mono)
+def _best_for_length(mono, sr, f0_hz, length_s, end_limit, max_level_step_db):
     period = sr / f0_hz
     xf = int(min(max(0.03 * sr, 2 * period), 0.1 * sr))
-    end_limit = n - int(tail_guard_s * sr)
     k = max(1, int(round(length_s * f0_hz)))
     target = k * period
     start_min = max(int(0.15 * sr), xf)
@@ -57,8 +55,37 @@ def _best_for_length(mono, sr, f0_hz, length_s, tail_guard_s, max_level_step_db)
     return {"start": best[1], "end": best[2], "xfade": xf, "score": round(best[3], 3)}
 
 
+def _steadiest_end(mono, sr, window_s=0.8):
+    """End point (frames) of the steadiest stretch of a tone, away from its attack and its release.
+
+    Used for blown and bowed sounds, whose sustain sits in the middle of the file and whose end
+    is a release. Steadiness is the spread of the level in dB over a sliding window.
+    """
+    hop = max(int(0.02 * sr), 1)
+    n = len(mono) // hop
+    if n < 10:
+        return None
+    env = 20.0 * np.log10(np.maximum(np.sqrt(np.mean(mono[: n * hop].reshape(n, hop) ** 2, axis=1)), 1e-6))
+    w = max(int(window_s / 0.02), 5)
+    lo = int(0.25 / 0.02) + w
+    hi = int(0.85 * n)
+    if hi - lo < 3:
+        return None
+    best = None
+    for end in range(lo, hi):
+        seg = env[end - w:end]
+        if seg.max() < env.max() - 25.0:
+            continue
+        spread = float(np.std(seg - np.linspace(seg[0], seg[-1], w)))
+        slope = abs(float(seg[-1] - seg[0]))
+        score = spread + 0.5 * slope
+        if best is None or score < best[0]:
+            best = (score, end)
+    return None if best is None else best[1] * hop
+
+
 def find_loop(mono, sr, f0_hz, lengths_s=(1.0, 0.7, 0.5, 0.35, 0.25), tail_guard_s=0.05,
-              min_score=0.85, max_level_step_db=2.5):
+              min_score=0.85, max_level_step_db=2.5, stable_region=False):
     """Pick loop start/end frames near the end of a held tone.
 
     The loop spans a whole number of pitch periods. Both points sit on upward zero crossings,
@@ -66,15 +93,20 @@ def find_loop(mono, sr, f0_hz, lengths_s=(1.0, 0.7, 0.5, 0.35, 0.25), tail_guard
     start point, so the wrap does not click. The level at the two points must also agree to
     within max_level_step_db, otherwise a decaying tone would pulse once per loop. Longer loops
     are tried first and shorter ones are used when the tone decays too fast for a long loop.
+    With stable_region=True the loop sits in the steadiest stretch of the tone instead of at the
+    end of the file (for sounds whose end is a release).
     Returns {'start', 'end', 'xfade', 'score'} in frames, or None when no good loop exists.
     """
     n = len(mono)
     if not f0_hz or f0_hz <= 0 or n < int(0.6 * sr):
         return None
+    end_limit = n - int(tail_guard_s * sr)
+    if stable_region:
+        end_limit = _steadiest_end(mono, sr) or end_limit
     for length_s in lengths_s:
         if length_s > 0.45 * n / sr:
             continue
-        found = _best_for_length(mono, sr, f0_hz, length_s, tail_guard_s, max_level_step_db)
+        found = _best_for_length(mono, sr, f0_hz, length_s, end_limit, max_level_step_db)
         if found and found["score"] >= min_score:
             return found
     return None

@@ -1,0 +1,295 @@
+{
+ "patches": {
+  "finger": {
+   "pack": "pastabass",
+   "sfz": "fetuccine.sfz",
+   "regions_in_sfz": 256,
+   "zones": 256,
+   "skipped": {},
+   "sfz_warnings": [],
+   "keys": [
+    21,
+    89
+   ],
+   "velocity_layers": 4,
+   "round_robin_groups": 64,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-47": -19.8,
+    "48-95": -9.2,
+    "96-120": -3.6,
+    "121-127": 0.0
+   },
+   "loops": {
+    "auto failed": 20
+   },
+   "pack_octave": -1,
+   "key_shift_semitones": -12,
+   "declared_vs_detected_pitch": {
+    "compared": 256,
+    "within_60_cents": 256,
+    "octave_shifted": 256,
+    "other": 0,
+    "median_abs_cents": 3.0,
+    "p95_abs_cents": 13.0,
+    "mean_cents": 3.2
+   },
+   "key_balance": {
+    "before_spread_db": 5.7,
+    "after_spread_db": 1.0,
+    "max_correction_db": 3.2
+   },
+   "measured_rms_db_before_trim": -25.35,
+   "auto_gain_db": 1.35
+  },
+  "pick": {
+   "pack": "pastabass",
+   "sfz": "linguine.sfz",
+   "regions_in_sfz": 204,
+   "zones": 204,
+   "skipped": {},
+   "sfz_warnings": [],
+   "keys": [
+    21,
+    89
+   ],
+   "velocity_layers": 3,
+   "round_robin_groups": 51,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-47": -10.3,
+    "48-95": -5.8,
+    "96-127": 0.0
+   },
+   "loops": {},
+   "pack_octave": -1,
+   "key_shift_semitones": -12,
+   "declared_vs_detected_pitch": {
+    "compared": 204,
+    "within_60_cents": 204,
+    "octave_shifted": 204,
+    "other": 0,
+    "median_abs_cents": 6.0,
+    "p95_abs_cents": 23.0,
+    "mean_cents": 8.0
+   },
+   "key_balance": {
+    "before_spread_db": 5.2,
+    "after_spread_db": 1.1,
+    "max_correction_db": 2.9
+   },
+   "measured_rms_db_before_trim": -24.36,
+   "auto_gain_db": 0.36
+  },
+  "muted": {
+   "pack": "pastabass",
+   "sfz": "tagliatelle.sfz",
+   "regions_in_sfz": 153,
+   "zones": 153,
+   "skipped": {},
+   "sfz_warnings": [],
+   "keys": [
+    21,
+    89
+   ],
+   "velocity_layers": 3,
+   "round_robin_groups": 51,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-42": -6.1,
+    "43-85": -3.5,
+    "86-127": 0.0
+   },
+   "loops": {
+    "auto failed": 5
+   },
+   "pack_octave": -1,
+   "key_shift_semitones": -12,
+   "declared_vs_detected_pitch": {
+    "compared": 153,
+    "within_60_cents": 153,
+    "octave_shifted": 153,
+    "other": 0,
+    "median_abs_cents": 3.0,
+    "p95_abs_cents": 19.0,
+    "mean_cents": 4.4
+   },
+   "key_balance": {
+    "before_spread_db": 5.4,
+    "after_spread_db": 1.0,
+    "max_correction_db": 2.7
+   },
+   "measured_rms_db_before_trim": -24.72,
+   "auto_gain_db": 0.72
+  },
+  "round": {
+   "pack": "pastabass",
+   "sfz": "spaghetti.sfz",
+   "regions_in_sfz": 153,
+   "zones": 153,
+   "skipped": {},
+   "sfz_warnings": [],
+   "keys": [
+    21,
+    89
+   ],
+   "velocity_layers": 3,
+   "round_robin_groups": 51,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-42": -9.0,
+    "43-85": -3.0,
+    "86-127": 0.0
+   },
+   "loops": {
+    "auto failed": 1
+   },
+   "pack_octave": -1,
+   "key_shift_semitones": -12,
+   "declared_vs_detected_pitch": {
+    "compared": 153,
+    "within_60_cents": 153,
+    "octave_shifted": 153,
+    "other": 0,
+    "median_abs_cents": 4.0,
+    "p95_abs_cents": 13.0,
+    "mean_cents": 5.0
+   },
+   "key_balance": {
+    "before_spread_db": 2.9,
+    "after_spread_db": 0.6,
+    "max_correction_db": 1.4
+   },
+   "measured_rms_db_before_trim": -22.25,
+   "auto_gain_db": -1.75
+  },
+  "hollow": {
+   "pack": "black-and-blue-basses",
+   "sfz": "Programs/05-darkblack_pluck.sfz",
+   "regions_in_sfz": 4200,
+   "zones": 656,
+   "skipped": {
+    "no root key": 16,
+    "controller-gated": 3360,
+    "release trigger": 168
+   },
+   "sfz_warnings": [],
+   "keys": [
+    23,
+    64
+   ],
+   "velocity_layers": 4,
+   "round_robin_groups": 164,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-31": -15.8,
+    "32-63": -12.4,
+    "64-95": -4.2,
+    "96-127": 0.0
+   },
+   "loops": {
+    "auto failed": 15
+   },
+   "pack_octave": -1,
+   "key_shift_semitones": -12,
+   "declared_vs_detected_pitch": {
+    "compared": 656,
+    "within_60_cents": 656,
+    "octave_shifted": 656,
+    "other": 0,
+    "median_abs_cents": 5.0,
+    "p95_abs_cents": 20.0,
+    "mean_cents": -3.0
+   },
+   "key_balance": {
+    "before_spread_db": 5.7,
+    "after_spread_db": 0.8,
+    "max_correction_db": 3.0
+   },
+   "measured_rms_db_before_trim": -22.78,
+   "auto_gain_db": -1.22
+  },
+  "upright": {
+   "pack": "sneakybass",
+   "sfz": "Programs/02-sneakybass_pluck.sfz",
+   "regions_in_sfz": 1040,
+   "zones": 128,
+   "skipped": {
+    "no root key": 4,
+    "controller-gated": 800,
+    "release trigger": 80,
+    "outside key_range": 28
+   },
+   "sfz_warnings": [],
+   "keys": [
+    21,
+    53
+   ],
+   "velocity_layers": 1,
+   "round_robin_groups": 32,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-127": 0.0
+   },
+   "loops": {},
+   "pack_octave": -1,
+   "key_shift_semitones": -12,
+   "declared_vs_detected_pitch": {
+    "compared": 43,
+    "within_60_cents": 43,
+    "octave_shifted": 42,
+    "other": 0,
+    "median_abs_cents": 9.0,
+    "p95_abs_cents": 31.0,
+    "mean_cents": -10.8
+   },
+   "key_balance": {
+    "before_spread_db": 23.1,
+    "after_spread_db": 6.0,
+    "max_correction_db": 9
+   },
+   "measured_rms_db_before_trim": -29.18,
+   "auto_gain_db": 5.18
+  },
+  "short-scale": {
+   "pack": "black-and-blue-basses",
+   "sfz": "Programs/04-babyblue_warm.sfz",
+   "regions_in_sfz": 2544,
+   "zones": 376,
+   "skipped": {
+    "no root key": 8,
+    "controller-gated": 2160
+   },
+   "sfz_warnings": [],
+   "keys": [
+    16,
+    63
+   ],
+   "velocity_layers": 1,
+   "round_robin_groups": 47,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-127": 0.0
+   },
+   "loops": {},
+   "pack_octave": -1,
+   "key_shift_semitones": -12,
+   "declared_vs_detected_pitch": {
+    "compared": 336,
+    "within_60_cents": 336,
+    "octave_shifted": 336,
+    "other": 0,
+    "median_abs_cents": 9.0,
+    "p95_abs_cents": 19.0,
+    "mean_cents": -0.4
+   },
+   "key_balance": {
+    "before_spread_db": 4.2,
+    "after_spread_db": 0.6,
+    "max_correction_db": 2.0
+   },
+   "measured_rms_db_before_trim": -19.03,
+   "auto_gain_db": -4.97
+  }
+ }
+}
