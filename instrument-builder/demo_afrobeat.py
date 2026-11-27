@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Write short Afrobeat demo parts as MIDI files (108 BPM, A minor, eight bars: Am9 Am9 D9 Am9, twice).
 
-    python3 -I instrument-builder/demo_afrobeat.py [keys|bass] OUT.mid
+    python3 -I instrument-builder/demo_afrobeat.py [keys|bass|guitar] OUT.mid
 
 keys (the default): syncopated chord stabs with ghost notes, a bass line in the left hand and a
-pentatonic lick in the second half. bass: a syncopated root/octave/fifth line with passing notes,
+pentatonic lick in the second half. guitar: sixteenth-note muted chops on the off-beats with ghost notes
+and a high pentatonic lick in the second half. bass: a syncopated root/octave/fifth line with passing notes,
 some of them overlapping so monophonic patches show their note cutting. Velocities are humanized
 with a fixed seed so the files are reproducible.
 """
@@ -57,6 +58,25 @@ def bass_part(rnd, bars):
     return notes
 
 
+GUITAR_CHORDS = {"Am9": [57, 60, 64, 67], "D9": [54, 57, 60, 64]}
+GUITAR_CHOPS = [(0, 96), (2, 58), (3, 88), (6, 92), (8, 98), (10, 56), (11, 90), (14, 86)]   # (step, velocity)
+GUITAR_LICK = [(2, 69), (4, 72), (7, 74), (9, 76), (12, 79), (14, 76)]
+
+
+def guitar_part(rnd, bars):
+    notes = []
+    for bar, name in enumerate(bars):
+        for step, vel in GUITAR_CHOPS:
+            for i, key in enumerate(GUITAR_CHORDS[name]):     # a quick down-strum, 6 ms between strings
+                jitter = (next(rnd) - 0.5) * 0.015
+                v = max(1, min(127, int(vel + (next(rnd) - 0.5) * 10)))
+                notes.append((max(bar * 4 + step * STEP + i * 0.011 + jitter, 0.0), 0.16 if vel < 70 else 0.2, key, v))
+        if bar >= 4:
+            for step, key in GUITAR_LICK:
+                notes.append((bar * 4 + step * STEP + (next(rnd) - 0.5) * 0.015, 0.4, key, 104))
+    return notes
+
+
 def main():
     if len(sys.argv) not in (2, 3):
         sys.exit(__doc__)
@@ -67,6 +87,11 @@ def main():
         notes = bass_part(rnd, BARS)
         write_midi(out, notes, bpm=BPM)
         print(f"wrote {out}: {len(notes)} bass notes, {len(BARS)} bars at {BPM:g} BPM")
+        return
+    if kind == "guitar":
+        notes = guitar_part(rnd, BARS)
+        write_midi(out, notes, bpm=BPM)
+        print(f"wrote {out}: {len(notes)} guitar notes, {len(BARS)} bars at {BPM:g} BPM")
         return
     if kind != "keys":
         sys.exit(f"unknown part {kind!r}\n{__doc__}")

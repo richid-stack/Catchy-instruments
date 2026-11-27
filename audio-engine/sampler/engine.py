@@ -73,6 +73,8 @@ class Engine:
             env[:a] = np.linspace(0.0, 1.0, a, dtype=np.float32)
         if n > hold_n:
             env[hold_n:] = release_curve(rel_n)[: n - hold_n]
+        if v.get("decay_s"):   # a faster decay than the recording's, as a palm-muted string has
+            env *= np.exp(-np.arange(n, dtype=np.float32) / (sr * float(v["decay_s"])))
         if oneshot:
             f = min(int(0.01 * sr), n // 4)
             if f > 1:

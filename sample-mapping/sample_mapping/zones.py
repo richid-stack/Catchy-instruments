@@ -36,7 +36,8 @@ DEFAULTS = {
     "include": None,          # regex: keep only samples whose pack-relative path matches
     "exclude": None,          # regex: drop samples whose pack-relative path matches
     "pitch_convention": "sounding",   # "sounding": a key plays its own pitch; "pack": keep the author's octave
-    "refine_tuning": True,    # use the detected pitch as root when it is within 50 cents of the declared one
+    "refine_tuning": True,    # use the detected pitch as root when it is close to the declared one
+    "refine_limit": 0.5,      # ...meaning within this many semitones (an instrument tuned well off A440 needs more)
     "auto_loop": True,        # find loops for samples that end while still audible
     "trim_lead": True,        # skip leading silence
     "sfz_volume": True,       # apply the SFZ author's per-region volume (dB) as zone gain
@@ -215,7 +216,7 @@ def build_zones(datasets_root, tier, pack_id, sfz_rel, inventory_dir, options=No
         shift = 12 * pack_octave if opts["pitch_convention"] == "sounding" else 0
         sounding = declared + 12 * pack_octave        # where the sample really sits if undetected
         root = declared + shift
-        if det is not None and opts["refine_tuning"] and abs(residual) <= 0.5:
+        if det is not None and opts["refine_tuning"] and abs(residual) <= opts["refine_limit"]:
             root = det - 12 * octave + shift
         lo_key, hi_key = max(r["lokey"] + shift, 0), min(r["hikey"] + shift, 127)
         if lo_key > hi_key:

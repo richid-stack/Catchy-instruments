@@ -545,5 +545,63 @@ class AfrobeatBassTests(unittest.TestCase):
         self.assertTrue(self.inst.manifest["distributable"])
 
 
+@unittest.skipUnless((ROOT / "datasets" / "clean" / "shinyguitar").is_dir()
+                     and (ROOT / "generated-instruments" / "afrobeat" / "guitar" / "instrument.json").exists(),
+                     "sample packs are not downloaded here (see scripts/fetch_datasets.sh)")
+class AfrobeatGuitarTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.inst = Instrument.load(str(ROOT / "generated-instruments" / "afrobeat" / "guitar" / "instrument.json"))
+        cls.eng = Engine(cls.inst, str(ROOT / "datasets"), sr=SR)
+
+    def test_every_patch_plays_in_tune(self):
+        # the guitar-banjo was recorded about 40 cents sharp and must be corrected; its plucks are hard for a
+        # pitch detector, so it is checked on the keys where the detector locks on
+        keys = {"ganjo": (46, 52, 58, 64, 67)}
+        for pid in self.inst.patches:
+            for key in keys.get(pid, (45, 52, 60, 67)):
+                audio, _ = self.eng.render([Note(0.0, 1.0, key, 100)], patch=pid, tail_s=0.2, peak_limit=1e9)
+                res = detect_pitch(audio.mean(axis=1), SR, int(0.05 * SR))
+                self.assertTrue(res.get("pitched"), (pid, key))
+                self.assertLess(abs(res["pitch_midi"] - key) * 100, 10.0, (pid, key, res))
+
+    def test_velocity_is_monotonic_on_every_patch(self):
+        for pid in self.inst.patches:
+            levels = []
+            for vel in range(10, 128, 12):
+                audio, _ = self.eng.render([Note(0.0, 0.8, 52, vel)], patch=pid, tail_s=0.1, peak_limit=1e9)
+                levels.append(rms_db(audio.mean(axis=1)[: int(0.4 * SR)]))
+            self.assertTrue(all(b > a for a, b in zip(levels, levels[1:])), (pid, levels))
+
+    def test_pickup_and_microphone_patches_use_different_recordings(self):
+        def folders(pid):
+            return {z["s"].split("/")[-2] for z in self.inst.manifest["patches"][[p["id"] for p in self.inst.manifest["patches"]].index(pid)]["zones"]}
+        self.assertEqual(folders("clean"), {"electric"})
+        self.assertEqual(folders("mic"), {"acoustic"})
+
+    def test_chop_starts_like_the_clean_patch_and_dies_away_much_faster(self):
+        levels = {}
+        for pid in ("clean", "chop"):
+            audio, _ = self.eng.render([Note(0.0, 2.0, 57, 100)], patch=pid, tail_s=0.3, peak_limit=1e9)
+            m = audio.mean(axis=1)
+            levels[pid] = (rms_db(m[int(0.05 * SR):int(0.15 * SR)]), rms_db(m[int(0.8 * SR):int(0.9 * SR)]))
+        self.assertLess(abs(levels["clean"][0] - levels["chop"][0]), 3.0)
+        self.assertLess(levels["chop"][1], levels["clean"][1] - 25.0)
+
+    def test_levels_are_balanced_across_the_keyboard(self):
+        for pid in self.inst.patches:
+            levels = []
+            for key in range(43, 77, 4):
+                if key not in self.inst.patches[pid].by_key:
+                    continue
+                audio, _ = self.eng.render([Note(0.0, 1.0, key, 100)], patch=pid, tail_s=0.1, peak_limit=1e9)
+                levels.append(rms_db(audio.mean(axis=1)[int(0.02 * SR):int(0.52 * SR)]))
+            self.assertLess(max(levels) - min(levels), 7.0, (pid, [round(v, 1) for v in levels]))
+
+    def test_credits(self):
+        self.assertEqual({c["pack"] for c in self.inst.manifest["credits"]}, {"shinyguitar", "ganjo"})
+        self.assertTrue(self.inst.manifest["distributable"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,36 @@
+{
+  "name": "Afrobeat Guitar",
+  "genre": "afrobeat",
+  "type": "guitar",
+  "description": "Guitars for Afrobeat and highlife: a clean archtop through its pickup, the same archtop on its microphone, a palm-muted chop for sixteenth-note scratching, and a guitar-banjo for bright plucked lines.",
+  "default_patch": "clean",
+  "match_loudness": true,
+  "target_rms_db": -24.0,
+  "balance": {"keys": [40, 76], "max_db": 8, "strength": 0.85},
+  "patches": [
+    {
+      "id": "clean", "name": "Clean Archtop",
+      "note": "Archtop guitar, magnetic pickup (Shinyguitar, one-voice program). 4 velocity layers x 4 round robins. The main rhythm and lead guitar.",
+      "source": {"pack": "shinyguitar", "sfz": "Programs/electric_one.sfz", "options": {"level_scope": "key"}},
+      "voice": {"attack_s": 0.002, "release_s": 0.18, "highpass_hz": 70, "dynamic_range_db": 26}
+    },
+    {
+      "id": "mic", "name": "Archtop Mic",
+      "note": "The same archtop recorded with a microphone (Shinyguitar, blend control at full microphone). Airier and more acoustic, for open chords and fingerpicking.",
+      "source": {"pack": "shinyguitar", "sfz": "Programs/acoustic_one.sfz", "options": {"cc": {"100": 127}, "level_scope": "key"}},
+      "voice": {"attack_s": 0.002, "release_s": 0.22, "highpass_hz": 70, "dynamic_range_db": 26}
+    },
+    {
+      "id": "chop", "name": "Funk Chop",
+      "note": "The clean archtop with a fast decay and a darker tone, standing in for a palm-muted string. This is an emulation on the engine side (the pack has no palm-mute samples), so it is best for short chords and scratches.",
+      "source": {"pack": "shinyguitar", "sfz": "Programs/electric_one.sfz", "options": {"level_scope": "key"}},
+      "voice": {"attack_s": 0.001, "release_s": 0.05, "highpass_hz": 90, "lowpass_hz": 3800, "decay_s": 0.16, "dynamic_range_db": 26}
+    },
+    {
+      "id": "ganjo", "name": "Guitar Banjo",
+      "note": "SX six-string guitar banjo (Ganjo), 1 velocity layer with round robins. Tuned up to equal temperament from about 40 cents sharp.",
+      "source": {"pack": "ganjo", "sfz": "ganjo.sfz", "options": {"refine_limit": 0.7}},
+      "voice": {"attack_s": 0.001, "release_s": 0.2, "highpass_hz": 90, "dynamic_range_db": 22}
+    }
+  ]
+}

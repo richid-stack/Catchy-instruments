@@ -1,0 +1,169 @@
+{
+ "patches": {
+  "clean": {
+   "pack": "shinyguitar",
+   "sfz": "Programs/electric_one.sfz",
+   "regions_in_sfz": 272,
+   "zones": 256,
+   "skipped": {
+    "no root key": 16
+   },
+   "sfz_warnings": [],
+   "keys": [
+    33,
+    91
+   ],
+   "velocity_layers": 4,
+   "round_robin_groups": 64,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-32": -11.2,
+    "33-64": -7.2,
+    "65-96": -3.0,
+    "97-127": 0.0
+   },
+   "loops": {},
+   "pack_octave": 0,
+   "key_shift_semitones": 0,
+   "declared_vs_detected_pitch": {
+    "compared": 256,
+    "within_60_cents": 256,
+    "octave_shifted": 0,
+    "other": 0,
+    "median_abs_cents": 3.0,
+    "p95_abs_cents": 12.0,
+    "mean_cents": 2.7
+   },
+   "key_balance": {
+    "before_spread_db": 6.5,
+    "after_spread_db": 1.3,
+    "max_correction_db": 3.3
+   },
+   "measured_rms_db_before_trim": -30.31,
+   "auto_gain_db": 6.31
+  },
+  "mic": {
+   "pack": "shinyguitar",
+   "sfz": "Programs/acoustic_one.sfz",
+   "regions_in_sfz": 272,
+   "zones": 256,
+   "skipped": {
+    "no root key": 16
+   },
+   "sfz_warnings": [],
+   "keys": [
+    33,
+    91
+   ],
+   "velocity_layers": 4,
+   "round_robin_groups": 64,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-32": -9.1,
+    "33-64": -5.4,
+    "65-96": -2.3,
+    "97-127": 0.0
+   },
+   "loops": {},
+   "pack_octave": 0,
+   "key_shift_semitones": 0,
+   "declared_vs_detected_pitch": {
+    "compared": 254,
+    "within_60_cents": 254,
+    "octave_shifted": 0,
+    "other": 0,
+    "median_abs_cents": 3.0,
+    "p95_abs_cents": 12.0,
+    "mean_cents": 2.8
+   },
+   "key_balance": {
+    "before_spread_db": 11.3,
+    "after_spread_db": 2.0,
+    "max_correction_db": 5.3
+   },
+   "measured_rms_db_before_trim": -29.73,
+   "auto_gain_db": 5.73
+  },
+  "chop": {
+   "pack": "shinyguitar",
+   "sfz": "Programs/electric_one.sfz",
+   "regions_in_sfz": 272,
+   "zones": 256,
+   "skipped": {
+    "no root key": 16
+   },
+   "sfz_warnings": [],
+   "keys": [
+    33,
+    91
+   ],
+   "velocity_layers": 4,
+   "round_robin_groups": 64,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-32": -11.2,
+    "33-64": -7.2,
+    "65-96": -3.0,
+    "97-127": 0.0
+   },
+   "loops": {},
+   "pack_octave": 0,
+   "key_shift_semitones": 0,
+   "declared_vs_detected_pitch": {
+    "compared": 256,
+    "within_60_cents": 256,
+    "octave_shifted": 0,
+    "other": 0,
+    "median_abs_cents": 3.0,
+    "p95_abs_cents": 12.0,
+    "mean_cents": 2.7
+   },
+   "key_balance": {
+    "before_spread_db": 6.0,
+    "after_spread_db": 1.2,
+    "max_correction_db": 2.8
+   },
+   "measured_rms_db_before_trim": -35.31,
+   "auto_gain_db": 11.31
+  },
+  "ganjo": {
+   "pack": "ganjo",
+   "sfz": "ganjo.sfz",
+   "regions_in_sfz": 58,
+   "zones": 57,
+   "skipped": {
+    "no root key": 1
+   },
+   "sfz_warnings": [],
+   "keys": [
+    38,
+    72
+   ],
+   "velocity_layers": 1,
+   "round_robin_groups": 11,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-127": 0.0
+   },
+   "loops": {},
+   "pack_octave": 0,
+   "key_shift_semitones": 0,
+   "declared_vs_detected_pitch": {
+    "compared": 52,
+    "within_60_cents": 52,
+    "octave_shifted": 0,
+    "other": 0,
+    "median_abs_cents": 42.5,
+    "p95_abs_cents": 53.0,
+    "mean_cents": 38.1
+   },
+   "key_balance": {
+    "before_spread_db": 12.7,
+    "after_spread_db": 3.8,
+    "max_correction_db": 8
+   },
+   "measured_rms_db_before_trim": -29.2,
+   "auto_gain_db": 5.2
+  }
+ }
+}
