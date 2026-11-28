@@ -1,0 +1,1415 @@
+{
+ "pack": "pure-water-rnb-flips",
+ "tier": "research-private",
+ "summary": {
+  "files": 541,
+  "errors": 0,
+  "minutes": 109.74,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.26,
+  "pitch_range": [
+   "A0",
+   "A#5"
+  ],
+  "distinct_pitches": 44,
+  "gaps_over_4_semitones": [
+   [
+    "C5",
+    "A#5",
+    10
+   ]
+  ],
+  "files_per_pitch_median": 3.0,
+  "name_velocity_layers": 1,
+  "name_dynamics": [
+   "hard",
+   "medium"
+  ],
+  "articulations": {
+   "closed": 21,
+   "open": 13,
+   "roll": 11,
+   "rim": 7,
+   "slide": 4,
+   "slap": 2
+  },
+  "envelope": {
+   "percussive": 210,
+   "decaying": 148,
+   "long-decay": 63,
+   "sustained": 120
+  },
+  "centroid_hz_median": 1489,
+  "level_db_median": -18.7,
+  "lead_silence_s_median": 0.003,
+  "attack_s_median": 0.99,
+  "duration_s_median": 12.8,
+  "flags": {
+   "dual_mono_files": 6,
+   "cut_off_ending": 383
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Pure Water - RnB Flips/loops/Drum_Loops/Drum_Loops": {
+   "files": 29,
+   "errors": 0,
+   "minutes": 6.44,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.07,
+   "pitch_range": [
+    "A0",
+    "C1"
+   ],
+   "distinct_pitches": 2,
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 26,
+    "decaying": 2,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 635,
+   "level_db_median": -8.9,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 1.1,
+   "duration_s_median": 13.714,
+   "flags": {
+    "cut_off_ending": 16
+   }
+  },
+  "Pure Water - RnB Flips/loops/Drum_Loops/Drum_Loops_No_Kick": {
+   "files": 27,
+   "errors": 0,
+   "minutes": 5.92,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 27
+   },
+   "centroid_hz_median": 3983,
+   "level_db_median": -35.9,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 0.997,
+   "duration_s_median": 12.8,
+   "flags": {
+    "cut_off_ending": 17
+   }
+  },
+  "Pure Water - RnB Flips/loops/Drum_Loops/Hihat_Loops": {
+   "files": 23,
+   "errors": 0,
+   "minutes": 5.28,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.04,
+   "pitch_range": [
+    "C4",
+    "C4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "open": 1
+   },
+   "envelope": {
+    "percussive": 19,
+    "sustained": 1,
+    "decaying": 3
+   },
+   "centroid_hz_median": 8372,
+   "level_db_median": -26.5,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 2.505,
+   "duration_s_median": 13.714,
+   "flags": {
+    "cut_off_ending": 12
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/808": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 1.97,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.88,
+   "pitch_range": [
+    "A0",
+    "C2"
+   ],
+   "distinct_pitches": 6,
+   "files_per_pitch_median": 1.0,
+   "articulations": {
+    "slap": 1
+   },
+   "envelope": {
+    "decaying": 6,
+    "sustained": 1,
+    "percussive": 1
+   },
+   "centroid_hz_median": 70.5,
+   "level_db_median": -7.6,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.716,
+   "duration_s_median": 13.257,
+   "flags": {
+    "cut_off_ending": 6
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Acoustic_Guitar": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 2.69,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.27,
+   "pitch_range": [
+    "B1",
+    "B4"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "B1",
+     "D#3",
+     16
+    ],
+    [
+     "D#3",
+     "B4",
+     20
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1,
+    "decaying": 5,
+    "long-decay": 3,
+    "sustained": 2
+   },
+   "centroid_hz_median": 672,
+   "level_db_median": -15.2,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.362,
+   "duration_s_median": 14.769,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 9
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Bass_Guitar": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 1.56,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.8,
+   "pitch_range": [
+    "G#1",
+    "D2"
+   ],
+   "distinct_pitches": 4,
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "medium"
+   ],
+   "envelope": {
+    "decaying": 4,
+    "percussive": 1
+   },
+   "centroid_hz_median": 126,
+   "level_db_median": -11.5,
+   "lead_silence_s_median": 0.012,
+   "attack_s_median": 0.021,
+   "duration_s_median": 17.455,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Bass_Synth": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 4.26,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.8,
+   "pitch_range": [
+    "A0",
+    "A2"
+   ],
+   "distinct_pitches": 9,
+   "gaps_over_4_semitones": [
+    [
+     "F#1",
+     "C#2",
+     7
+    ],
+    [
+     "C#2",
+     "A2",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 6,
+    "sustained": 5,
+    "percussive": 2,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 75,
+   "level_db_median": -12.1,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 1.497,
+   "duration_s_median": 14.769,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 12
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Electric_Guitar": {
+   "files": 28,
+   "errors": 0,
+   "minutes": 9.11,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.18,
+   "pitch_range": [
+    "F#1",
+    "C5"
+   ],
+   "distinct_pitches": 5,
+   "gaps_over_4_semitones": [
+    [
+     "F#1",
+     "G3",
+     25
+    ],
+    [
+     "A#3",
+     "E4",
+     6
+    ],
+    [
+     "E4",
+     "C5",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 10,
+    "decaying": 16,
+    "sustained": 2
+   },
+   "centroid_hz_median": 1033.5,
+   "level_db_median": -17.3,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.976,
+   "duration_s_median": 17.455,
+   "flags": {
+    "cut_off_ending": 21
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Electric_Piano": {
+   "files": 17,
+   "errors": 0,
+   "minutes": 4.51,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.29,
+   "pitch_range": [
+    "C#1",
+    "E2"
+   ],
+   "distinct_pitches": 5,
+   "gaps_over_4_semitones": [
+    [
+     "E1",
+     "A#1",
+     6
+    ],
+    [
+     "A#1",
+     "D#2",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "long-decay": 1,
+    "decaying": 8,
+    "percussive": 4,
+    "sustained": 4
+   },
+   "centroid_hz_median": 405,
+   "level_db_median": -21.0,
+   "lead_silence_s_median": 0.013,
+   "attack_s_median": 1.033,
+   "duration_s_median": 14.769,
+   "flags": {
+    "cut_off_ending": 16
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Melodic_Stacks": {
+   "files": 49,
+   "errors": 0,
+   "minutes": 14.47,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.45,
+   "pitch_range": [
+    "A#0",
+    "G#2"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "D#1",
+     "A#1",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 22,
+    "long-decay": 10,
+    "sustained": 12,
+    "percussive": 5
+   },
+   "centroid_hz_median": 673,
+   "level_db_median": -15.9,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.808,
+   "duration_s_median": 16.0,
+   "flags": {
+    "cut_off_ending": 47
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Piano": {
+   "files": 12,
+   "errors": 0,
+   "minutes": 3.85,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.42,
+   "pitch_range": [
+    "D1",
+    "G4"
+   ],
+   "distinct_pitches": 5,
+   "gaps_over_4_semitones": [
+    [
+     "D1",
+     "G#1",
+     6
+    ],
+    [
+     "G#1",
+     "G2",
+     11
+    ],
+    [
+     "G#2",
+     "G4",
+     23
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "long-decay": 2,
+    "decaying": 5,
+    "sustained": 5
+   },
+   "centroid_hz_median": 955.0,
+   "level_db_median": -21.0,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 2.009,
+   "duration_s_median": 21.333,
+   "flags": {
+    "cut_off_ending": 11
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Songstarters": {
+   "files": 43,
+   "errors": 0,
+   "minutes": 12.46,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.44,
+   "pitch_range": [
+    "A0",
+    "A#5"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "C#2",
+     "B2",
+     10
+    ],
+    [
+     "B2",
+     "G4",
+     20
+    ],
+    [
+     "G#4",
+     "A#5",
+     14
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_velocity_layers": 1,
+   "envelope": {
+    "percussive": 3,
+    "decaying": 10,
+    "sustained": 29,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 566,
+   "level_db_median": -19.2,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 2.409,
+   "duration_s_median": 16.0,
+   "flags": {
+    "cut_off_ending": 42
+   }
+  },
+  "Pure Water - RnB Flips/loops/Melodic_Loops/Synths": {
+   "files": 18,
+   "errors": 0,
+   "minutes": 5.62,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.22,
+   "pitch_range": [
+    "G1",
+    "A#4"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "G1",
+     "D#2",
+     8
+    ],
+    [
+     "F#2",
+     "A#4",
+     28
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "long-decay": 2,
+    "percussive": 3,
+    "sustained": 9,
+    "decaying": 4
+   },
+   "centroid_hz_median": 560.5,
+   "level_db_median": -22.45,
+   "lead_silence_s_median": 0.009,
+   "attack_s_median": 1.821,
+   "duration_s_median": 15.384,
+   "flags": {
+    "cut_off_ending": 15
+   }
+  },
+  "Pure Water - RnB Flips/loops/Percussion_Loops": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.75,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.25,
+   "pitch_range": [
+    "B3",
+    "B3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 4
+   },
+   "centroid_hz_median": 1745.0,
+   "level_db_median": -27.75,
+   "lead_silence_s_median": 0.158,
+   "attack_s_median": 1.067,
+   "duration_s_median": 12.0,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Ambient_Vocals": {
+   "files": 20,
+   "errors": 0,
+   "minutes": 5.79,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.45,
+   "pitch_range": [
+    "G#3",
+    "A#4"
+   ],
+   "distinct_pitches": 8,
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "hard"
+   ],
+   "envelope": {
+    "decaying": 8,
+    "long-decay": 2,
+    "sustained": 7,
+    "percussive": 3
+   },
+   "centroid_hz_median": 1554.5,
+   "level_db_median": -25.0,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 1.927,
+   "duration_s_median": 16.727,
+   "flags": {
+    "cut_off_ending": 17
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Resampled_Vocals": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 3.02,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.27,
+   "pitch_range": [
+    "F4",
+    "A#4"
+   ],
+   "distinct_pitches": 3,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 4,
+    "long-decay": 2,
+    "decaying": 4,
+    "sustained": 1
+   },
+   "centroid_hz_median": 2033,
+   "level_db_median": -21.7,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 2.797,
+   "duration_s_median": 16.0,
+   "flags": {
+    "cut_off_ending": 6
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Vocal_Adlibs": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 2.28,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.38,
+   "pitch_range": [
+    "F#2",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "F#2",
+     "C5",
+     30
+    ]
+   ],
+   "files_per_pitch_median": 1.5,
+   "envelope": {
+    "long-decay": 4,
+    "percussive": 1,
+    "decaying": 1,
+    "sustained": 2
+   },
+   "centroid_hz_median": 1998.5,
+   "level_db_median": -20.4,
+   "lead_silence_s_median": 0.013,
+   "attack_s_median": 1.533,
+   "duration_s_median": 15.584,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Vocal_Chops": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 2.11,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.86,
+   "pitch_range": [
+    "G4",
+    "B4"
+   ],
+   "distinct_pitches": 4,
+   "files_per_pitch_median": 1.5,
+   "envelope": {
+    "decaying": 4,
+    "sustained": 2,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1069,
+   "level_db_median": -25.9,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 1.905,
+   "duration_s_median": 21.333,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Vocal_Phrases": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 2.21,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1,
+    "long-decay": 1,
+    "decaying": 4,
+    "sustained": 2
+   },
+   "centroid_hz_median": 1749.0,
+   "level_db_median": -20.65,
+   "lead_silence_s_median": 0.391,
+   "attack_s_median": 0.794,
+   "duration_s_median": 16.941,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 3
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Vocal_Stacks/Dry": {
+   "files": 30,
+   "errors": 0,
+   "minutes": 3.68,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.23,
+   "pitch_range": [
+    "F#1",
+    "F3"
+   ],
+   "distinct_pitches": 7,
+   "gaps_over_4_semitones": [
+    [
+     "B1",
+     "E2",
+     5
+    ],
+    [
+     "G2",
+     "F3",
+     10
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 5,
+    "sustained": 7,
+    "long-decay": 17,
+    "percussive": 1
+   },
+   "centroid_hz_median": 2631.0,
+   "level_db_median": -16.5,
+   "lead_silence_s_median": 0.009,
+   "attack_s_median": 1.772,
+   "duration_s_median": 6.761,
+   "flags": {
+    "cut_off_ending": 8
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Vocal_Stacks/Wet": {
+   "files": 30,
+   "errors": 0,
+   "minutes": 3.78,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.2,
+   "pitch_range": [
+    "A#1",
+    "F3"
+   ],
+   "distinct_pitches": 6,
+   "gaps_over_4_semitones": [
+    [
+     "B1",
+     "E2",
+     5
+    ],
+    [
+     "G#2",
+     "F3",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 5,
+    "sustained": 14,
+    "long-decay": 10,
+    "percussive": 1
+   },
+   "centroid_hz_median": 2647.5,
+   "level_db_median": -17.35,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 1.898,
+   "duration_s_median": 6.809,
+   "flags": {
+    "cut_off_ending": 19
+   }
+  },
+  "Pure Water - RnB Flips/loops/Vocal_Loops/Vocal_Stacks_Resampled": {
+   "files": 22,
+   "errors": 0,
+   "minutes": 6.22,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.09,
+   "pitch_range": [
+    "G#2",
+    "F4"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "G#2",
+     "F4",
+     21
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 6,
+    "decaying": 2,
+    "long-decay": 4,
+    "sustained": 10
+   },
+   "centroid_hz_median": 1270.5,
+   "level_db_median": -24.3,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 1.631,
+   "duration_s_median": 14.769,
+   "flags": {
+    "cut_off_ending": 19
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/808": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 0.25,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.78,
+   "pitch_range": [
+    "A0",
+    "G1"
+   ],
+   "distinct_pitches": 5,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "slide": 1,
+    "slap": 1
+   },
+   "envelope": {
+    "decaying": 9
+   },
+   "centroid_hz_median": 71,
+   "level_db_median": -7.3,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.05,
+   "duration_s_median": 1.708,
+   "flags": {}
+  },
+  "Pure Water - RnB Flips/one_shots/Bass_Synth": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.05,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C#1",
+    "G#1"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C#1",
+     "G#1",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 1
+   },
+   "centroid_hz_median": 123.0,
+   "level_db_median": -10.95,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.013,
+   "duration_s_median": 1.488,
+   "flags": {
+    "dual_mono_files": 1
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Drums/Claps": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.01,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 4
+   },
+   "centroid_hz_median": 5506.5,
+   "level_db_median": -18.55,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.025,
+   "duration_s_median": 0.117,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Drums/Hihats": {
+   "files": 46,
+   "errors": 0,
+   "minutes": 0.22,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "closed": 21,
+    "open": 12,
+    "roll": 11,
+    "slide": 3
+   },
+   "envelope": {
+    "percussive": 40,
+    "decaying": 5,
+    "sustained": 1
+   },
+   "centroid_hz_median": 8403.5,
+   "level_db_median": -21.6,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.003,
+   "duration_s_median": 0.169,
+   "flags": {
+    "cut_off_ending": 38
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Drums/Kicks": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 0.05,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 14,
+    "sustained": 1
+   },
+   "centroid_hz_median": 56,
+   "level_db_median": -8.1,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.059,
+   "duration_s_median": 0.197,
+   "flags": {
+    "cut_off_ending": 15
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Drums/Rims": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 0.04,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "rim": 7
+   },
+   "envelope": {
+    "percussive": 7
+   },
+   "centroid_hz_median": 3297,
+   "level_db_median": -20.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.132,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Drums/Snares": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.03,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 11
+   },
+   "centroid_hz_median": 4213,
+   "level_db_median": -17.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.16,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 9
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Electric_Guitar": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.07,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.5,
+   "pitch_range": [
+    "C5",
+    "C5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 2
+   },
+   "centroid_hz_median": 1222.5,
+   "level_db_median": -20.2,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.06,
+   "duration_s_median": 2.171,
+   "flags": {}
+  },
+  "Pure Water - RnB Flips/one_shots/FX_One_Shots": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 0.29,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "long-decay": 1,
+    "percussive": 3,
+    "decaying": 1,
+    "sustained": 3
+   },
+   "centroid_hz_median": 3005.0,
+   "level_db_median": -25.5,
+   "lead_silence_s_median": 0.08,
+   "attack_s_median": 0.612,
+   "duration_s_median": 1.159,
+   "flags": {
+    "cut_off_ending": 5
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Percussion": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.01,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.5,
+   "pitch_range": [
+    "C4",
+    "C4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 2
+   },
+   "centroid_hz_median": 8331.5,
+   "level_db_median": -25.2,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.009,
+   "duration_s_median": 0.274,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Pure Water - RnB Flips/one_shots/Vocal_One_Shots": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 0.72,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.3,
+   "pitch_range": [
+    "E4",
+    "B4"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "E4",
+     "A#4",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 8,
+    "percussive": 2
+   },
+   "centroid_hz_median": 2043.0,
+   "level_db_median": -17.15,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.676,
+   "duration_s_median": 3.896,
+   "flags": {}
+  }
+ }
+}
