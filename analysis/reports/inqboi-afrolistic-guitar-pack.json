@@ -1,0 +1,1127 @@
+{
+ "pack": "inqboi-afrolistic-guitar-pack",
+ "tier": "research-private",
+ "summary": {
+  "files": 70,
+  "errors": 0,
+  "minutes": 29.75,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.4,
+  "pitch_range": [
+   "C#2",
+   "F#5"
+  ],
+  "distinct_pitches": 17,
+  "gaps_over_4_semitones": [
+   [
+    "C#2",
+    "G2",
+    6
+   ],
+   [
+    "G2",
+    "E3",
+    9
+   ],
+   [
+    "B3",
+    "E4",
+    5
+   ],
+   [
+    "C#5",
+    "F#5",
+    5
+   ]
+  ],
+  "files_per_pitch_median": 1,
+  "envelope": {
+   "percussive": 31,
+   "long-decay": 1,
+   "decaying": 17,
+   "sustained": 15
+  },
+  "centroid_hz_median": 1992.0,
+  "level_db_median": -35.15,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 1.345,
+  "duration_s_median": 19.2,
+  "flags": {
+   "dual_mono_files": 7,
+   "cut_off_ending": 55,
+   "silent_files": 6
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 1 100BPM Dmin": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.64,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "A4",
+    "A4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 2116,
+   "level_db_median": -46.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.22,
+   "duration_s_median": 38.4,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 1 100BPM Dmin/Dry": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 1.92,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.67,
+   "pitch_range": [
+    "E3",
+    "A3"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "E3",
+     "A3",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 1,
+    "long-decay": 1,
+    "decaying": 1
+   },
+   "centroid_hz_median": 594,
+   "level_db_median": -44.6,
+   "lead_silence_s_median": 0.098,
+   "attack_s_median": 1.152,
+   "duration_s_median": 38.4,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 1 100BPM Dmin/Wet": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 1.92,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "E3",
+    "E3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1,
+    "sustained": 1,
+    "decaying": 1
+   },
+   "centroid_hz_median": 1434,
+   "level_db_median": -46.5,
+   "lead_silence_s_median": 0.015,
+   "attack_s_median": 1.175,
+   "duration_s_median": 38.4,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 10 107BPM Bmaj": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.3,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F#4",
+    "F#4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 1
+   },
+   "centroid_hz_median": 2713,
+   "level_db_median": -24.8,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 1.009,
+   "duration_s_median": 17.95,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 10 107BPM Bmaj/Dry": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.9,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "F#4",
+    "F#4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 2
+   },
+   "centroid_hz_median": 2039,
+   "level_db_median": -37.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.866,
+   "duration_s_median": 17.95,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 10 107BPM Bmaj/Wet": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.9,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "F#4",
+    "F#4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 2
+   },
+   "centroid_hz_median": 2290,
+   "level_db_median": -27.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.865,
+   "duration_s_median": 17.95,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 2 90BPM A#min": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.36,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "decaying": 1
+   },
+   "centroid_hz_median": 2108,
+   "level_db_median": -33.6,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 21.333,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 2 90BPM A#min/Dry": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 1.07,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "F3",
+    "F3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 2,
+    "decaying": 1
+   },
+   "centroid_hz_median": 623,
+   "level_db_median": -42.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.339,
+   "duration_s_median": 21.333,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 2 90BPM A#min/Wet": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 1.07,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "F4",
+    "F4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1,
+    "decaying": 2
+   },
+   "centroid_hz_median": 1819,
+   "level_db_median": -42.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.689,
+   "duration_s_median": 21.333,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 3 105BPM Emin": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.3,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "decaying": 1
+   },
+   "centroid_hz_median": 1453,
+   "level_db_median": -25.6,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.05,
+   "duration_s_median": 18.28,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 3 105BPM Emin/Dry": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.61,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 1
+   },
+   "centroid_hz_median": 531.5,
+   "level_db_median": -32.4,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.12,
+   "duration_s_median": 18.28,
+   "flags": {
+    "dual_mono_files": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 3 105BPM Emin/Wet": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.61,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1310.5,
+   "level_db_median": -29.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.11,
+   "duration_s_median": 18.28,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 4 120BPM Cmaj": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.27,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 2455,
+   "level_db_median": -31.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.15,
+   "duration_s_median": 16.0,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 4 120BPM Cmaj/Dry": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.8,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "G2",
+    "G2"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 2,
+    "sustained": 1
+   },
+   "centroid_hz_median": 1314,
+   "level_db_median": -39.2,
+   "lead_silence_s_median": 0.136,
+   "attack_s_median": 0.734,
+   "duration_s_median": 16.0,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 3
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 4 120BPM Cmaj/Wet": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.8,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "C5",
+    "C5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 2,
+    "sustained": 1
+   },
+   "centroid_hz_median": 2429,
+   "level_db_median": -36.5,
+   "lead_silence_s_median": 0.139,
+   "attack_s_median": 0.7,
+   "duration_s_median": 16.0,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 5 97BPM Bmin": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.16,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "F#4",
+    "F#4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 2533,
+   "level_db_median": -34.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 3.26,
+   "duration_s_median": 9.897,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 5 97BPM Bmin/Dry": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.33,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "sustained": 1,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1349.0,
+   "level_db_median": -35.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.26,
+   "duration_s_median": 9.897,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 5 97BPM Bmin/Wet": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.33,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.5,
+   "pitch_range": [
+    "F#4",
+    "F#4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 2
+   },
+   "centroid_hz_median": 1977.0,
+   "level_db_median": -37.95,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.265,
+   "duration_s_median": 9.897,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 6 95BPM Emin": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 1.01,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "decaying": 1
+   },
+   "centroid_hz_median": 2810,
+   "level_db_median": -28.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.88,
+   "duration_s_median": 60.632,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 6 95BPM Emin/Dry": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 3.03,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.67,
+   "pitch_range": [
+    "E4",
+    "B4"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "E4",
+     "B4",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 1,
+    "sustained": 1
+   },
+   "centroid_hz_median": 768,
+   "level_db_median": -34.8,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 0.84,
+   "duration_s_median": 60.632,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 6 95BPM Emin/Wet": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 3.03,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.67,
+   "pitch_range": [
+    "E4",
+    "B4"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "E4",
+     "B4",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 2,
+    "percussive": 1
+   },
+   "centroid_hz_median": 2545,
+   "level_db_median": -33.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.74,
+   "duration_s_median": 60.632,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 7 100BPM F#min": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.32,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C#5",
+    "C#5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 2469,
+   "level_db_median": -24.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.11,
+   "duration_s_median": 19.2,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 7 100BPM F#min/Dry": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.96,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "C#2",
+    "C#2"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "sustained": 2,
+    "decaying": 1
+   },
+   "centroid_hz_median": 1221,
+   "level_db_median": -37.6,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.66,
+   "duration_s_median": 19.2,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 7 100BPM F#min/Wet": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.96,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "sustained": 2,
+    "percussive": 1
+   },
+   "centroid_hz_median": 2555,
+   "level_db_median": -31.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.11,
+   "duration_s_median": 19.2,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 8 98BPM Emaj": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.65,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "B3",
+    "B3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "sustained": 1
+   },
+   "centroid_hz_median": 1988,
+   "level_db_median": -22.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.17,
+   "duration_s_median": 39.184,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 8 98BPM Emaj/Dry": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 2.61,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "sustained": 1
+   },
+   "centroid_hz_median": 845,
+   "level_db_median": -29.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.25,
+   "duration_s_median": 39.184,
+   "flags": {
+    "cut_off_ending": 1,
+    "silent_files": 3
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 8 98BPM Emaj/Wet": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 2.61,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.25,
+   "pitch_range": [
+    "B3",
+    "B3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "sustained": 1
+   },
+   "centroid_hz_median": 1996,
+   "level_db_median": -22.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.17,
+   "duration_s_median": 39.184,
+   "flags": {
+    "cut_off_ending": 1,
+    "silent_files": 3
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 9 112BPM G#min": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.14,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 3127,
+   "level_db_median": -21.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.35,
+   "duration_s_median": 8.571,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 9 112BPM G#min/Dry": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.57,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "A#3",
+    "F#5"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "A#3",
+     "F#4",
+     8
+    ],
+    [
+     "A#4",
+     "F#5",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 2,
+    "sustained": 2
+   },
+   "centroid_hz_median": 2729.5,
+   "level_db_median": -44.95,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 3.17,
+   "duration_s_median": 8.571,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "Inqboi Beatz Afrolistic Guitar Pack/Loop 9 112BPM G#min/Wet": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.57,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.75,
+   "pitch_range": [
+    "G#3",
+    "C#5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "G#3",
+     "A#4",
+     14
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 3,
+    "sustained": 1
+   },
+   "centroid_hz_median": 3189.5,
+   "level_db_median": -27.05,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.69,
+   "duration_s_median": 8.571,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  }
+ }
+}

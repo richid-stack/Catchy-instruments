@@ -9,6 +9,7 @@ LOG="$ROOT/datasets/PULLED.psv"
 
 while IFS='|' read -r id repo tier license attribution notes; do
   case "$id" in ''|id|\#*) continue ;; esac
+  if [ "$repo" = "-" ]; then echo "manual $id (user-supplied, not fetched)"; continue; fi
   dest="$ROOT/datasets/$tier/$id"
   if [ -d "$dest" ]; then echo "skip   $id"; continue; fi
   tmp="$(mktemp -d "$ROOT/datasets/.tmp.XXXXXX")"
