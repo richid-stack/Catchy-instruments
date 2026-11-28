@@ -1,0 +1,1410 @@
+{
+ "pack": "91vocals-jaded-vinyl-rnb-soul",
+ "tier": "research-private",
+ "summary": {
+  "files": 661,
+  "errors": 0,
+  "minutes": 142.94,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_16",
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.25,
+  "pitch_range": [
+   "A0",
+   "C#6"
+  ],
+  "distinct_pitches": 52,
+  "gaps_over_4_semitones": [
+   [
+    "E5",
+    "A#5",
+    6
+   ]
+  ],
+  "files_per_pitch_median": 3.0,
+  "name_dynamics": [
+   "hard",
+   "medium",
+   "soft"
+  ],
+  "articulations": {
+   "rim": 17,
+   "open": 2,
+   "roll": 2,
+   "ghost": 1
+  },
+  "envelope": {
+   "percussive": 319,
+   "long-decay": 31,
+   "sustained": 113,
+   "decaying": 198
+  },
+  "centroid_hz_median": 1148,
+  "level_db_median": -17.7,
+  "lead_silence_s_median": 0.004,
+  "attack_s_median": 0.965,
+  "duration_s_median": 13.714,
+  "flags": {
+   "dual_mono_files": 51,
+   "cut_off_ending": 356
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Drum_Loops/Drum_Loops": {
+   "files": 37,
+   "errors": 0,
+   "minutes": 8.85,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "rim": 1
+   },
+   "envelope": {
+    "percussive": 37
+   },
+   "centroid_hz_median": 305,
+   "level_db_median": -12.2,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 2.119,
+   "duration_s_median": 13.333,
+   "flags": {
+    "cut_off_ending": 5
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Drum_Loops/Drum_Loops_No_Kick": {
+   "files": 35,
+   "errors": 0,
+   "minutes": 8.32,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "rim": 1
+   },
+   "envelope": {
+    "percussive": 35
+   },
+   "centroid_hz_median": 4264,
+   "level_db_median": -38.4,
+   "lead_silence_s_median": 0.008,
+   "attack_s_median": 1.076,
+   "duration_s_median": 13.333,
+   "flags": {
+    "cut_off_ending": 5
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Drum_Loops/Hihat_Loops": {
+   "files": 29,
+   "errors": 0,
+   "minutes": 6.43,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 28,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 7052,
+   "level_db_median": -28.0,
+   "lead_silence_s_median": 0.011,
+   "attack_s_median": 1.999,
+   "duration_s_median": 13.151,
+   "flags": {
+    "cut_off_ending": 7
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/FX_Loops": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.23,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 1
+   },
+   "centroid_hz_median": 1415,
+   "level_db_median": -20.7,
+   "lead_silence_s_median": 0.01,
+   "attack_s_median": 0.12,
+   "duration_s_median": 13.521,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Acoustic_Guitar": {
+   "files": 16,
+   "errors": 0,
+   "minutes": 3.86,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.12,
+   "pitch_range": [
+    "F#3",
+    "E5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "F#3",
+     "E5",
+     22
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "sustained": 5,
+    "percussive": 6,
+    "decaying": 5
+   },
+   "centroid_hz_median": 1786.5,
+   "level_db_median": -23.85,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 2.714,
+   "duration_s_median": 14.545,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 16
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Bass_Guitar": {
+   "files": 25,
+   "errors": 0,
+   "minutes": 7.37,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.64,
+   "pitch_range": [
+    "D1",
+    "F2"
+   ],
+   "distinct_pitches": 9,
+   "gaps_over_4_semitones": [
+    [
+     "E1",
+     "A1",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 2,
+   "name_dynamics": [
+    "soft"
+   ],
+   "envelope": {
+    "sustained": 5,
+    "percussive": 4,
+    "decaying": 16
+   },
+   "centroid_hz_median": 151,
+   "level_db_median": -11.6,
+   "lead_silence_s_median": 0.01,
+   "attack_s_median": 2.143,
+   "duration_s_median": 16.842,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 21
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Bass_Synth": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 2.69,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.62,
+   "pitch_range": [
+    "D#1",
+    "A1"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "D#1",
+     "G#1",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 4,
+    "sustained": 3,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 153.0,
+   "level_db_median": -11.8,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 1.01,
+   "duration_s_median": 17.455,
+   "flags": {
+    "dual_mono_files": 3,
+    "cut_off_ending": 6
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Electric_Guitar": {
+   "files": 75,
+   "errors": 0,
+   "minutes": 21.3,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.24,
+   "pitch_range": [
+    "C1",
+    "B4"
+   ],
+   "distinct_pitches": 14,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "A#1",
+     10
+    ],
+    [
+     "D2",
+     "A#2",
+     8
+    ],
+    [
+     "D#3",
+     "A#3",
+     7
+    ],
+    [
+     "C#4",
+     "F#4",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 24,
+    "percussive": 25,
+    "sustained": 21,
+    "long-decay": 5
+   },
+   "centroid_hz_median": 724,
+   "level_db_median": -18.8,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 1.757,
+   "duration_s_median": 15.0,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 60
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Electric_Piano": {
+   "files": 17,
+   "errors": 0,
+   "minutes": 5.15,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.41,
+   "pitch_range": [
+    "A0",
+    "E4"
+   ],
+   "distinct_pitches": 7,
+   "gaps_over_4_semitones": [
+    [
+     "B0",
+     "A1",
+     10
+    ],
+    [
+     "D2",
+     "D4",
+     24
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 8,
+    "sustained": 5,
+    "long-decay": 2,
+    "percussive": 2
+   },
+   "centroid_hz_median": 385,
+   "level_db_median": -17.8,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.657,
+   "duration_s_median": 15.0,
+   "flags": {
+    "cut_off_ending": 16
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Melodic_Stacks": {
+   "files": 49,
+   "errors": 0,
+   "minutes": 14.15,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.45,
+   "pitch_range": [
+    "A0",
+    "B2"
+   ],
+   "distinct_pitches": 13,
+   "gaps_over_4_semitones": [
+    [
+     "A0",
+     "E1",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 2,
+   "envelope": {
+    "sustained": 34,
+    "decaying": 13,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 506,
+   "level_db_median": -15.7,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 2.289,
+   "duration_s_median": 15.0,
+   "flags": {
+    "cut_off_ending": 49
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Piano": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 1.1,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "sustained": 2,
+    "percussive": 2
+   },
+   "centroid_hz_median": 485.0,
+   "level_db_median": -26.2,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 2.018,
+   "duration_s_median": 16.389,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Songstarters": {
+   "files": 44,
+   "errors": 0,
+   "minutes": 12.85,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.34,
+   "pitch_range": [
+    "C1",
+    "C5"
+   ],
+   "distinct_pitches": 11,
+   "gaps_over_4_semitones": [
+    [
+     "G1",
+     "C2",
+     5
+    ],
+    [
+     "C2",
+     "F#2",
+     6
+    ],
+    [
+     "F#2",
+     "C3",
+     6
+    ],
+    [
+     "D#3",
+     "B4",
+     20
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "sustained": 15,
+    "percussive": 10,
+    "decaying": 16,
+    "long-decay": 3
+   },
+   "centroid_hz_median": 494.5,
+   "level_db_median": -16.1,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 2.162,
+   "duration_s_median": 16.842,
+   "flags": {
+    "cut_off_ending": 41
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Melodic_Loops/Synths": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 2.5,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.27,
+   "pitch_range": [
+    "F1",
+    "A#3"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "B1",
+     6
+    ],
+    [
+     "B1",
+     "A#3",
+     23
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "sustained": 8,
+    "percussive": 1,
+    "decaying": 2
+   },
+   "centroid_hz_median": 361,
+   "level_db_median": -21.3,
+   "lead_silence_s_median": 0.011,
+   "attack_s_median": 1.719,
+   "duration_s_median": 14.118,
+   "flags": {
+    "cut_off_ending": 11
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Percussion_Loops": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 2.65,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.09,
+   "pitch_range": [
+    "D#4",
+    "D#4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "soft"
+   ],
+   "envelope": {
+    "percussive": 10,
+    "sustained": 1
+   },
+   "centroid_hz_median": 3986,
+   "level_db_median": -32.6,
+   "lead_silence_s_median": 0.181,
+   "attack_s_median": 1.845,
+   "duration_s_median": 16.0,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Ambient_Vocals": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 4.25,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.6,
+   "pitch_range": [
+    "C3",
+    "D5"
+   ],
+   "distinct_pitches": 7,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "G3",
+     7
+    ],
+    [
+     "G3",
+     "C4",
+     5
+    ],
+    [
+     "G#4",
+     "D5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "long-decay": 1,
+    "sustained": 7,
+    "decaying": 6,
+    "percussive": 1
+   },
+   "centroid_hz_median": 691,
+   "level_db_median": -28.4,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 3.384,
+   "duration_s_median": 14.118,
+   "flags": {
+    "cut_off_ending": 14
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Resampled_Vocals": {
+   "files": 49,
+   "errors": 0,
+   "minutes": 13.64,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.35,
+   "pitch_range": [
+    "G#3",
+    "C5"
+   ],
+   "distinct_pitches": 9,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 25,
+    "percussive": 18,
+    "long-decay": 1,
+    "sustained": 5
+   },
+   "centroid_hz_median": 974,
+   "level_db_median": -22.8,
+   "lead_silence_s_median": 0.022,
+   "attack_s_median": 1.194,
+   "duration_s_median": 17.143,
+   "flags": {
+    "cut_off_ending": 28
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Vocal_Adlibs/Dry": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 1.86,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.12,
+   "pitch_range": [
+    "E4",
+    "E4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 4,
+    "long-decay": 4
+   },
+   "centroid_hz_median": 2689.0,
+   "level_db_median": -16.9,
+   "lead_silence_s_median": 0.035,
+   "attack_s_median": 1.788,
+   "duration_s_median": 12.727,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 1
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Vocal_Adlibs/Wet": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 2.16,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.22,
+   "pitch_range": [
+    "B3",
+    "E4"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "B3",
+     "E4",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 1,
+    "decaying": 5,
+    "long-decay": 3
+   },
+   "centroid_hz_median": 2806,
+   "level_db_median": -16.5,
+   "lead_silence_s_median": 0.029,
+   "attack_s_median": 1.869,
+   "duration_s_median": 14.545,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Vocal_Hooks/Dry": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 3.02,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.22,
+   "pitch_range": [
+    "F#4",
+    "G#4"
+   ],
+   "distinct_pitches": 2,
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 3,
+    "decaying": 6
+   },
+   "centroid_hz_median": 3752,
+   "level_db_median": -14.1,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.886,
+   "duration_s_median": 21.818,
+   "flags": {
+    "dual_mono_files": 7,
+    "cut_off_ending": 1
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Vocal_Hooks/Wet": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 4.67,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.36,
+   "pitch_range": [
+    "A#3",
+    "G#4"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "A#3",
+     "F4",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "percussive": 4,
+    "decaying": 9,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 4077.5,
+   "level_db_median": -13.85,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.857,
+   "duration_s_median": 19.798,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Vocal_Phrases/Dry": {
+   "files": 28,
+   "errors": 0,
+   "minutes": 6.09,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.36,
+   "pitch_range": [
+    "C4",
+    "A4"
+   ],
+   "distinct_pitches": 7,
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "soft"
+   ],
+   "envelope": {
+    "decaying": 15,
+    "percussive": 10,
+    "long-decay": 3
+   },
+   "centroid_hz_median": 3606.5,
+   "level_db_median": -13.0,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 1.037,
+   "duration_s_median": 13.151,
+   "flags": {
+    "dual_mono_files": 19,
+    "cut_off_ending": 1
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/loops/Vocal_Loops/Vocal_Phrases/Wet": {
+   "files": 35,
+   "errors": 0,
+   "minutes": 7.76,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.51,
+   "pitch_range": [
+    "A#2",
+    "A4"
+   ],
+   "distinct_pitches": 10,
+   "gaps_over_4_semitones": [
+    [
+     "A#2",
+     "G3",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "soft"
+   ],
+   "envelope": {
+    "percussive": 13,
+    "decaying": 19,
+    "long-decay": 3
+   },
+   "centroid_hz_median": 4522,
+   "level_db_median": -14.2,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 0.926,
+   "duration_s_median": 13.151,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Bass_Synth": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.23,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.6,
+   "pitch_range": [
+    "A#0",
+    "F1"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "A#0",
+     "D#1",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "name_dynamics": [
+    "medium",
+    "soft"
+   ],
+   "envelope": {
+    "decaying": 2,
+    "long-decay": 1,
+    "percussive": 2
+   },
+   "centroid_hz_median": 93,
+   "level_db_median": -11.9,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.37,
+   "duration_s_median": 3.204,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Drums/Claps": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.06,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 2,
+    "decaying": 1,
+    "sustained": 1
+   },
+   "centroid_hz_median": 3861.0,
+   "level_db_median": -20.65,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.024,
+   "duration_s_median": 0.359,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Drums/Cymbals": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 0.05,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "decaying": 1
+   },
+   "centroid_hz_median": 10761,
+   "level_db_median": -17.7,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.0,
+   "duration_s_median": 3.215,
+   "flags": {}
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Drums/Hihats": {
+   "files": 34,
+   "errors": 0,
+   "minutes": 0.13,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_dynamics": [
+    "hard",
+    "medium",
+    "soft"
+   ],
+   "articulations": {
+    "open": 2,
+    "roll": 2
+   },
+   "envelope": {
+    "percussive": 33,
+    "decaying": 1
+   },
+   "centroid_hz_median": 7145.5,
+   "level_db_median": -23.05,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.212,
+   "flags": {
+    "cut_off_ending": 14
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Drums/Kicks": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 0.06,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_dynamics": [
+    "soft"
+   ],
+   "envelope": {
+    "percussive": 19
+   },
+   "centroid_hz_median": 71,
+   "level_db_median": -9.1,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.028,
+   "duration_s_median": 0.158,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 17
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Drums/Rims": {
+   "files": 14,
+   "errors": 0,
+   "minutes": 0.11,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "rim": 14
+   },
+   "envelope": {
+    "percussive": 14
+   },
+   "centroid_hz_median": 4448.5,
+   "level_db_median": -22.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.158,
+   "flags": {
+    "cut_off_ending": 7
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Drums/Snaps": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.04,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 6
+   },
+   "centroid_hz_median": 5247.5,
+   "level_db_median": -24.7,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.004,
+   "duration_s_median": 0.139,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Drums/Snares": {
+   "files": 18,
+   "errors": 0,
+   "minutes": 0.11,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_dynamics": [
+    "hard",
+    "soft"
+   ],
+   "articulations": {
+    "rim": 1
+   },
+   "envelope": {
+    "percussive": 18
+   },
+   "centroid_hz_median": 3903.0,
+   "level_db_median": -19.75,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.208,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Guitar": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.27,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.6,
+   "pitch_range": [
+    "F3",
+    "C#6"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "F3",
+     "A#5",
+     29
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "sustained": 1,
+    "decaying": 3,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1238,
+   "level_db_median": -19.7,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.175,
+   "duration_s_median": 2.813,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Percussion": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.05,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.2,
+   "pitch_range": [
+    "F#4",
+    "F#4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 4
+   },
+   "centroid_hz_median": 6277,
+   "level_db_median": -21.4,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.019,
+   "duration_s_median": 0.17,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 3
+   }
+  },
+  "91Vocals Jaded - Vinyl RnB & Soul/one_shots/Vocal_One_Shots": {
+   "files": 21,
+   "errors": 0,
+   "minutes": 0.89,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.33,
+   "pitch_range": [
+    "B3",
+    "C#5"
+   ],
+   "distinct_pitches": 6,
+   "gaps_over_4_semitones": [
+    [
+     "G4",
+     "C#5",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "name_dynamics": [
+    "medium"
+   ],
+   "articulations": {
+    "ghost": 1
+   },
+   "envelope": {
+    "decaying": 12,
+    "percussive": 9
+   },
+   "centroid_hz_median": 1510,
+   "level_db_median": -13.8,
+   "lead_silence_s_median": 0.012,
+   "attack_s_median": 0.295,
+   "duration_s_median": 2.144,
+   "flags": {
+    "dual_mono_files": 8,
+    "cut_off_ending": 4
+   }
+  }
+ }
+}

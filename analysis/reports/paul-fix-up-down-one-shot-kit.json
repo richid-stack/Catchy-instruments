@@ -1,0 +1,388 @@
+{
+ "pack": "paul-fix-up-down-one-shot-kit",
+ "tier": "research-private",
+ "summary": {
+  "files": 57,
+  "errors": 0,
+  "minutes": 2.76,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_16"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.89,
+  "pitch_range": [
+   "C1",
+   "C#5"
+  ],
+  "distinct_pitches": 6,
+  "gaps_over_4_semitones": [
+   [
+    "C1",
+    "C2",
+    12
+   ],
+   [
+    "C2",
+    "C4",
+    24
+   ],
+   [
+    "C4",
+    "G4",
+    7
+   ],
+   [
+    "G4",
+    "C5",
+    5
+   ]
+  ],
+  "files_per_pitch_median": 4.0,
+  "name_dynamics": [
+   "hard"
+  ],
+  "articulations": {
+   "bell": 8
+  },
+  "envelope": {
+   "long-decay": 6,
+   "decaying": 42,
+   "sustained": 3,
+   "percussive": 6
+  },
+  "centroid_hz_median": 853,
+  "level_db_median": -16.5,
+  "lead_silence_s_median": 0.001,
+  "attack_s_median": 0.039,
+  "duration_s_median": 2.718,
+  "flags": {
+   "dual_mono_files": 17,
+   "cut_off_ending": 22
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Paul Fix - Up Down (One Shot Kit)/Bass": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 0.43,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.8,
+   "pitch_range": [
+    "C1",
+    "C2"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "C2",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 4.0,
+   "envelope": {
+    "long-decay": 3,
+    "decaying": 7
+   },
+   "centroid_hz_median": 209.0,
+   "level_db_median": -12.3,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.042,
+   "duration_s_median": 2.393,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 4
+   }
+  },
+  "Paul Fix - Up Down (One Shot Kit)/Bells": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 0.59,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.88,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 3.5,
+   "articulations": {
+    "bell": 8
+   },
+   "envelope": {
+    "decaying": 5,
+    "sustained": 2,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 1050.5,
+   "level_db_median": -17.1,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.029,
+   "duration_s_median": 3.923,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 5
+   }
+  },
+  "Paul Fix - Up Down (One Shot Kit)/Flutes & Horns": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.34,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "G4",
+     7
+    ],
+    [
+     "G4",
+     "C5",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 4,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 815,
+   "level_db_median": -21.6,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.288,
+   "duration_s_median": 3.625,
+   "flags": {
+    "dual_mono_files": 1
+   }
+  },
+  "Paul Fix - Up Down (One Shot Kit)/Guitar": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 0.31,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.89,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 4.0,
+   "envelope": {
+    "decaying": 6,
+    "percussive": 2,
+    "sustained": 1
+   },
+   "centroid_hz_median": 1119,
+   "level_db_median": -15.9,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.009,
+   "duration_s_median": 1.846,
+   "flags": {
+    "dual_mono_files": 6,
+    "cut_off_ending": 3
+   }
+  },
+  "Paul Fix - Up Down (One Shot Kit)/Keys": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 0.46,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.9,
+   "pitch_range": [
+    "C4",
+    "C#5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 3,
+   "envelope": {
+    "decaying": 7,
+    "percussive": 2,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 851.5,
+   "level_db_median": -17.35,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.035,
+   "duration_s_median": 2.519,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 4
+   }
+  },
+  "Paul Fix - Up Down (One Shot Kit)/Pluck": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.16,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.83,
+   "pitch_range": [
+    "C5",
+    "C#5"
+   ],
+   "distinct_pitches": 2,
+   "files_per_pitch_median": 2.5,
+   "envelope": {
+    "decaying": 5,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1072.5,
+   "level_db_median": -17.15,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.025,
+   "duration_s_median": 1.678,
+   "flags": {
+    "dual_mono_files": 3,
+    "cut_off_ending": 2
+   }
+  },
+  "Paul Fix - Up Down (One Shot Kit)/Synths": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 0.47,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 4.5,
+   "name_dynamics": [
+    "hard"
+   ],
+   "envelope": {
+    "decaying": 8,
+    "percussive": 1
+   },
+   "centroid_hz_median": 827,
+   "level_db_median": -15.2,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.259,
+   "duration_s_median": 2.899,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 4
+   }
+  }
+ }
+}

@@ -1,0 +1,339 @@
+{
+ "pack": "paul-fix-kontakt-oneshot-kit",
+ "tier": "research-private",
+ "summary": {
+  "files": 42,
+  "errors": 0,
+  "minutes": 2.61,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.88,
+  "pitch_range": [
+   "C1",
+   "C6"
+  ],
+  "distinct_pitches": 7,
+  "gaps_over_4_semitones": [
+   [
+    "C1",
+    "C2",
+    12
+   ],
+   [
+    "C2",
+    "C3",
+    12
+   ],
+   [
+    "D#3",
+    "C4",
+    9
+   ],
+   [
+    "C4",
+    "C5",
+    12
+   ],
+   [
+    "C5",
+    "C6",
+    12
+   ]
+  ],
+  "files_per_pitch_median": 3,
+  "articulations": {
+   "bell": 8,
+   "vibrato": 1
+  },
+  "envelope": {
+   "decaying": 30,
+   "percussive": 10,
+   "long-decay": 2
+  },
+  "centroid_hz_median": 682.0,
+  "level_db_median": -12.95,
+  "lead_silence_s_median": 0.002,
+  "attack_s_median": 0.069,
+  "duration_s_median": 3.177,
+  "flags": {
+   "dual_mono_files": 4,
+   "cut_off_ending": 2
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Paul Fix - Kontakt (OneShot Kit)/Bass": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.24,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C1",
+    "C2"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "C2",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 2.5,
+   "envelope": {
+    "decaying": 4,
+    "percussive": 1
+   },
+   "centroid_hz_median": 214,
+   "level_db_median": -6.7,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.189,
+   "duration_s_median": 2.762,
+   "flags": {
+    "dual_mono_files": 3
+   }
+  },
+  "Paul Fix - Kontakt (OneShot Kit)/Bells": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 0.58,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.88,
+   "pitch_range": [
+    "C5",
+    "C6"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C5",
+     "C6",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 3.5,
+   "articulations": {
+    "bell": 8
+   },
+   "envelope": {
+    "decaying": 4,
+    "percussive": 4
+   },
+   "centroid_hz_median": 577.0,
+   "level_db_median": -15.6,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.024,
+   "duration_s_median": 4.15,
+   "flags": {}
+  },
+  "Paul Fix - Kontakt (OneShot Kit)/Flutes": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.29,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.83,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 2.5,
+   "articulations": {
+    "vibrato": 1
+   },
+   "envelope": {
+    "decaying": 3,
+    "percussive": 3
+   },
+   "centroid_hz_median": 937.5,
+   "level_db_median": -19.2,
+   "lead_silence_s_median": 0.009,
+   "attack_s_median": 0.8,
+   "duration_s_median": 2.946,
+   "flags": {}
+  },
+  "Paul Fix - Kontakt (OneShot Kit)/Guitar": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 0.63,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.88,
+   "pitch_range": [
+    "C3",
+    "C4"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 3.5,
+   "envelope": {
+    "long-decay": 2,
+    "decaying": 6
+   },
+   "centroid_hz_median": 1388.0,
+   "level_db_median": -12.35,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.024,
+   "duration_s_median": 4.007,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 1
+   }
+  },
+  "Paul Fix - Kontakt (OneShot Kit)/Keys": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 0.47,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.89,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 4.0,
+   "envelope": {
+    "percussive": 2,
+    "decaying": 7
+   },
+   "centroid_hz_median": 651,
+   "level_db_median": -15.8,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.05,
+   "duration_s_median": 3.169,
+   "flags": {}
+  },
+  "Paul Fix - Kontakt (OneShot Kit)/Synth": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.39,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.83,
+   "pitch_range": [
+    "C1",
+    "C4"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "D#3",
+     27
+    ],
+    [
+     "D#3",
+     "C4",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 6
+   },
+   "centroid_hz_median": 760.5,
+   "level_db_median": -15.25,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.233,
+   "duration_s_median": 3.145,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  }
+ }
+}

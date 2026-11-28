@@ -1,0 +1,669 @@
+{
+ "pack": "beat-butcha-pure-protein-drum-kit-vol-5",
+ "tier": "research-private",
+ "summary": {
+  "files": 997,
+  "errors": 0,
+  "minutes": 43.05,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT",
+   "PCM_16",
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100,
+   48000
+  ],
+  "channels": [
+   1,
+   2
+  ],
+  "pitched_ratio": 0.1,
+  "pitch_range": [
+   "C#1",
+   "F7"
+  ],
+  "distinct_pitches": 46,
+  "gaps_over_4_semitones": [
+   [
+    "D#4",
+    "G#4",
+    5
+   ],
+   [
+    "C6",
+    "F6",
+    5
+   ],
+   [
+    "F6",
+    "D7",
+    9
+   ]
+  ],
+  "files_per_pitch_median": 2.0,
+  "name_dynamics": [
+   "f"
+  ],
+  "articulations": {
+   "muted": 24,
+   "roll": 15,
+   "rim": 10,
+   "open": 8,
+   "shake": 3,
+   "closed": 1
+  },
+  "envelope": {
+   "percussive": 696,
+   "decaying": 185,
+   "long-decay": 46,
+   "sustained": 70
+  },
+  "centroid_hz_median": 3345,
+  "level_db_median": -16.9,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.01,
+  "duration_s_median": 0.892,
+  "flags": {
+   "dual_mono_files": 186,
+   "cut_off_ending": 442,
+   "clipped_files": 115
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/EXTRA CHOPS/DRUMS": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 0.51,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 10
+   },
+   "centroid_hz_median": 1401.5,
+   "level_db_median": -11.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.725,
+   "duration_s_median": 3.332,
+   "flags": {
+    "dual_mono_files": 3,
+    "cut_off_ending": 10
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/EXTRA CHOPS/GUITAR": {
+   "files": 66,
+   "errors": 0,
+   "minutes": 1.86,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.29,
+   "pitch_range": [
+    "D#1",
+    "E5"
+   ],
+   "distinct_pitches": 15,
+   "gaps_over_4_semitones": [
+    [
+     "D#1",
+     "B1",
+     8
+    ],
+    [
+     "B1",
+     "F2",
+     6
+    ],
+    [
+     "G3",
+     "D5",
+     19
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "muted": 24
+   },
+   "envelope": {
+    "decaying": 25,
+    "long-decay": 4,
+    "percussive": 36,
+    "sustained": 1
+   },
+   "centroid_hz_median": 810.5,
+   "level_db_median": -19.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.04,
+   "duration_s_median": 1.254,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 28
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/EXTRA CHOPS/OTHER CHOPS": {
+   "files": 39,
+   "errors": 0,
+   "minutes": 4.46,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.36,
+   "pitch_range": [
+    "C#1",
+    "B5"
+   ],
+   "distinct_pitches": 12,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "A#1",
+     5
+    ],
+    [
+     "A#1",
+     "E2",
+     6
+    ],
+    [
+     "E2",
+     "C#3",
+     9
+    ],
+    [
+     "C#3",
+     "G#3",
+     7
+    ],
+    [
+     "C#4",
+     "G5",
+     18
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "sustained": 20,
+    "long-decay": 2,
+    "decaying": 10,
+    "percussive": 7
+   },
+   "centroid_hz_median": 906,
+   "level_db_median": -20.2,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.839,
+   "duration_s_median": 5.783,
+   "flags": {
+    "dual_mono_files": 23,
+    "cut_off_ending": 34,
+    "clipped_files": 4
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/EXTRA CHOPS/WURLI": {
+   "files": 122,
+   "errors": 0,
+   "minutes": 15.31,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.3,
+   "pitch_range": [
+    "F1",
+    "A#5"
+   ],
+   "distinct_pitches": 23,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "C#2",
+     8
+    ],
+    [
+     "F3",
+     "A#3",
+     5
+    ],
+    [
+     "A#3",
+     "D#4",
+     5
+    ],
+    [
+     "D#4",
+     "G#4",
+     5
+    ],
+    [
+     "G#4",
+     "C#5",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 78,
+    "long-decay": 21,
+    "sustained": 17,
+    "percussive": 6
+   },
+   "centroid_hz_median": 654.5,
+   "level_db_median": -26.15,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.304,
+   "duration_s_median": 6.859,
+   "flags": {
+    "dual_mono_files": 74,
+    "cut_off_ending": 71,
+    "clipped_files": 1
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/FX": {
+   "files": 65,
+   "errors": 0,
+   "minutes": 7.07,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.12,
+   "pitch_range": [
+    "C5",
+    "D7"
+   ],
+   "distinct_pitches": 7,
+   "gaps_over_4_semitones": [
+    [
+     "C#5",
+     "A#5",
+     9
+    ],
+    [
+     "C6",
+     "F6",
+     5
+    ],
+    [
+     "F6",
+     "D7",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 17,
+    "percussive": 24,
+    "sustained": 5,
+    "long-decay": 19
+   },
+   "centroid_hz_median": 1612,
+   "level_db_median": -23.8,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.647,
+   "duration_s_median": 6.228,
+   "flags": {
+    "dual_mono_files": 7,
+    "cut_off_ending": 19
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/KICK": {
+   "files": 125,
+   "errors": 0,
+   "minutes": 1.94,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.1,
+   "pitch_range": [
+    "D1",
+    "G1"
+   ],
+   "distinct_pitches": 6,
+   "files_per_pitch_median": 2.0,
+   "envelope": {
+    "percussive": 108,
+    "decaying": 17
+   },
+   "centroid_hz_median": 938,
+   "level_db_median": -11.8,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.807,
+   "flags": {
+    "dual_mono_files": 10,
+    "cut_off_ending": 42,
+    "clipped_files": 15
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/PERC & HATS/HATS": {
+   "files": 134,
+   "errors": 0,
+   "minutes": 0.8,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.01,
+   "pitch_range": [
+    "F3",
+    "F3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "open": 7,
+    "closed": 1
+   },
+   "envelope": {
+    "percussive": 115,
+    "sustained": 9,
+    "decaying": 10
+   },
+   "centroid_hz_median": 6876.0,
+   "level_db_median": -24.3,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.264,
+   "flags": {
+    "dual_mono_files": 21,
+    "cut_off_ending": 115,
+    "clipped_files": 3
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/PERC & HATS/PERC": {
+   "files": 52,
+   "errors": 0,
+   "minutes": 0.84,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.21,
+   "pitch_range": [
+    "C#2",
+    "F7"
+   ],
+   "distinct_pitches": 9,
+   "gaps_over_4_semitones": [
+    [
+     "E2",
+     "A#2",
+     6
+    ],
+    [
+     "E3",
+     "C#5",
+     21
+    ],
+    [
+     "C#5",
+     "F6",
+     16
+    ],
+    [
+     "F6",
+     "F7",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "shake": 3
+   },
+   "envelope": {
+    "percussive": 44,
+    "decaying": 4,
+    "sustained": 4
+   },
+   "centroid_hz_median": 1854.0,
+   "level_db_median": -18.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.443,
+   "flags": {
+    "dual_mono_files": 16,
+    "cut_off_ending": 32
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/PERC & HATS/RIDES": {
+   "files": 30,
+   "errors": 0,
+   "minutes": 5.72,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "open": 1
+   },
+   "envelope": {
+    "decaying": 21,
+    "percussive": 2,
+    "sustained": 7
+   },
+   "centroid_hz_median": 4838.5,
+   "level_db_median": -29.6,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.225,
+   "duration_s_median": 3.562,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 19
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/SNARES/ROLLS": {
+   "files": 15,
+   "errors": 0,
+   "minutes": 0.06,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100,
+    48000
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "roll": 15
+   },
+   "envelope": {
+    "percussive": 7,
+    "sustained": 7,
+    "decaying": 1
+   },
+   "centroid_hz_median": 3122,
+   "level_db_median": -18.8,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.07,
+   "duration_s_median": 0.178,
+   "flags": {
+    "dual_mono_files": 5,
+    "cut_off_ending": 15
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/SNARES/SINGLE SNARES": {
+   "files": 158,
+   "errors": 0,
+   "minutes": 1.43,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.01,
+   "pitch_range": [
+    "F3",
+    "F3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "rim": 5
+   },
+   "envelope": {
+    "percussive": 156,
+    "decaying": 2
+   },
+   "centroid_hz_median": 4804.0,
+   "level_db_median": -15.55,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.457,
+   "flags": {
+    "dual_mono_files": 18,
+    "cut_off_ending": 45,
+    "clipped_files": 42
+   }
+  },
+  "Beat Butcha - Pure Protein Drum Kit Vol.5/SNARES/STACKED SNARES": {
+   "files": 181,
+   "errors": 0,
+   "minutes": 3.06,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_dynamics": [
+    "f"
+   ],
+   "articulations": {
+    "rim": 5
+   },
+   "envelope": {
+    "percussive": 181
+   },
+   "centroid_hz_median": 5505,
+   "level_db_median": -14.7,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.907,
+   "flags": {
+    "dual_mono_files": 6,
+    "cut_off_ending": 12,
+    "clipped_files": 50
+   }
+  }
+ }
+}

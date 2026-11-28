@@ -1,0 +1,676 @@
+{
+ "pack": "tane-retrospect",
+ "tier": "research-private",
+ "summary": {
+  "files": 112,
+  "errors": 0,
+  "minutes": 157.12,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_16",
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.38,
+  "pitch_range": [
+   "A#0",
+   "F7"
+  ],
+  "distinct_pitches": 26,
+  "gaps_over_4_semitones": [
+   [
+    "A#0",
+    "F1",
+    7
+   ],
+   [
+    "D3",
+    "G3",
+    5
+   ],
+   [
+    "G3",
+    "C4",
+    5
+   ],
+   [
+    "D4",
+    "G#4",
+    6
+   ],
+   [
+    "G#4",
+    "D5",
+    6
+   ],
+   [
+    "D5",
+    "A#5",
+    8
+   ]
+  ],
+  "files_per_pitch_median": 1.0,
+  "envelope": {
+   "long-decay": 14,
+   "sustained": 42,
+   "decaying": 35,
+   "percussive": 21
+  },
+  "centroid_hz_median": 1290.0,
+  "level_db_median": -25.95,
+  "lead_silence_s_median": 0.004,
+  "attack_s_median": 0.821,
+  "duration_s_median": 92.53,
+  "flags": {
+   "dual_mono_files": 8,
+   "cut_off_ending": 65
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Tane Retrospect/Compositions - No Drums": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 14.08,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.6,
+   "pitch_range": [
+    "F1",
+    "B2"
+   ],
+   "distinct_pitches": 6,
+   "gaps_over_4_semitones": [
+    [
+     "B1",
+     "G2",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "long-decay": 2,
+    "sustained": 2,
+    "decaying": 5,
+    "percussive": 1
+   },
+   "centroid_hz_median": 606.0,
+   "level_db_median": -13.5,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.118,
+   "duration_s_median": 92.191,
+   "flags": {
+    "cut_off_ending": 5
+   }
+  },
+  "Tane Retrospect/Drums": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 10.1,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.14,
+   "pitch_range": [
+    "G#1",
+    "G#1"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 7
+   },
+   "centroid_hz_median": 611,
+   "level_db_median": -12.1,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.049,
+   "duration_s_median": 92.53,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Tane Retrospect/Full Compositions": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 14.08,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.4,
+   "pitch_range": [
+    "F1",
+    "B1"
+   ],
+   "distinct_pitches": 4,
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "long-decay": 2,
+    "decaying": 4,
+    "sustained": 3,
+    "percussive": 1
+   },
+   "centroid_hz_median": 609.0,
+   "level_db_median": -11.4,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 1.748,
+   "duration_s_median": 92.191,
+   "flags": {
+    "cut_off_ending": 5
+   }
+  },
+  "Tane Retrospect/Stems/Foggy_81_BPM_Bbm": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 12.25,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.5,
+   "pitch_range": [
+    "F1",
+    "F7"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "F1",
+     "D#2",
+     10
+    ],
+    [
+     "D#2",
+     "C6",
+     45
+    ],
+    [
+     "C6",
+     "F7",
+     17
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 2,
+    "long-decay": 3,
+    "sustained": 3
+   },
+   "centroid_hz_median": 2538.0,
+   "level_db_median": -29.35,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 1.01,
+   "duration_s_median": 91.852,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 3
+   }
+  },
+  "Tane Retrospect/Stems/Garlic Butter_73_BPM_Bm": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 17.01,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.56,
+   "pitch_range": [
+    "B2",
+    "B5"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "B2",
+     "D4",
+     15
+    ],
+    [
+     "D4",
+     "A#5",
+     20
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 4,
+    "long-decay": 2,
+    "sustained": 3
+   },
+   "centroid_hz_median": 1707,
+   "level_db_median": -27.4,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 0.342,
+   "duration_s_median": 113.425,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 3
+   }
+  },
+  "Tane Retrospect/Stems/Highway_86_BPM_Cm": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 5.21,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.29,
+   "pitch_range": [
+    "C3",
+    "C3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 2,
+   "envelope": {
+    "decaying": 2,
+    "sustained": 5
+   },
+   "centroid_hz_median": 2646,
+   "level_db_median": -44.4,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 1.496,
+   "duration_s_median": 44.651,
+   "flags": {
+    "cut_off_ending": 7
+   }
+  },
+  "Tane Retrospect/Stems/Lotus_70_BPM_Em": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 8.23,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.11,
+   "pitch_range": [
+    "B1",
+    "B1"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 4,
+    "percussive": 2,
+    "sustained": 3
+   },
+   "centroid_hz_median": 1186,
+   "level_db_median": -30.0,
+   "lead_silence_s_median": 0.317,
+   "attack_s_median": 1.74,
+   "duration_s_median": 54.857,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 9
+   }
+  },
+  "Tane Retrospect/Stems/Mojitos_74_BPM_D": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 4.32,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.2,
+   "pitch_range": [
+    "A1",
+    "A1"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1,
+    "decaying": 1,
+    "sustained": 3
+   },
+   "centroid_hz_median": 754,
+   "level_db_median": -21.0,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 1.602,
+   "duration_s_median": 51.892,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 5
+   }
+  },
+  "Tane Retrospect/Stems/Phat_Dog_83_BPM_Bm.wav": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 13.88,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.11,
+   "pitch_range": [
+    "D5",
+    "D5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "sustained": 6,
+    "percussive": 1,
+    "decaying": 2
+   },
+   "centroid_hz_median": 6961,
+   "level_db_median": -78.3,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.918,
+   "duration_s_median": 92.53,
+   "flags": {
+    "cut_off_ending": 7
+   }
+  },
+  "Tane Retrospect/Stems/Red Sand_81_bpm_C#m": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 16.25,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.57,
+   "pitch_range": [
+    "A1",
+    "C#7"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "A1",
+     "G#2",
+     11
+    ],
+    [
+     "G#2",
+     "C#6",
+     41
+    ],
+    [
+     "C#6",
+     "C#7",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 2,
+    "percussive": 1,
+    "long-decay": 1,
+    "sustained": 3
+   },
+   "centroid_hz_median": 2282,
+   "level_db_median": -29.6,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.15,
+   "duration_s_median": 139.259,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 3
+   }
+  },
+  "Tane Retrospect/Stems/Retrospect_76_BPM_F": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 13.68,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.38,
+   "pitch_range": [
+    "A#0",
+    "D4"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "A#0",
+     "D3",
+     28
+    ],
+    [
+     "D3",
+     "D4",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 2,
+    "sustained": 3,
+    "decaying": 3
+   },
+   "centroid_hz_median": 1325.0,
+   "level_db_median": -27.4,
+   "lead_silence_s_median": 0.761,
+   "attack_s_median": 1.487,
+   "duration_s_median": 102.632,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 3
+   }
+  },
+  "Tane Retrospect/Stems/Secrets_78_BPM_Ebm.wav": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 10.67,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.38,
+   "pitch_range": [
+    "G#1",
+    "D#6"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "G#1",
+     "G3",
+     23
+    ],
+    [
+     "G3",
+     "G#4",
+     13
+    ],
+    [
+     "G#4",
+     "D#6",
+     19
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 3,
+    "percussive": 4,
+    "sustained": 4,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 1714,
+   "level_db_median": -27.2,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.127,
+   "duration_s_median": 49.231,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 9
+   }
+  },
+  "Tane Retrospect/Stems/The Duke_76_BPM_Gm": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 17.37,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.5,
+   "pitch_range": [
+    "G1",
+    "G6"
+   ],
+   "distinct_pitches": 5,
+   "gaps_over_4_semitones": [
+    [
+     "G1",
+     "G2",
+     12
+    ],
+    [
+     "G2",
+     "G3",
+     12
+    ],
+    [
+     "G3",
+     "C4",
+     5
+    ],
+    [
+     "C4",
+     "G6",
+     31
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 3,
+    "percussive": 1,
+    "sustained": 4,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 2391.5,
+   "level_db_median": -86.9,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.518,
+   "duration_s_median": 104.211,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 4
+   }
+  }
+ }
+}

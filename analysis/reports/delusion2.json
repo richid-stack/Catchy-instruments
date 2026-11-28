@@ -1,0 +1,557 @@
+{
+ "pack": "delusion2",
+ "tier": "research-private",
+ "summary": {
+  "files": 172,
+  "errors": 0,
+  "minutes": 28.6,
+  "formats": [
+   "MP3",
+   "WAV"
+  ],
+  "subtypes": [
+   "MPEG_LAYER_III",
+   "PCM_16"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.13,
+  "pitch_range": [
+   "C1",
+   "C#8"
+  ],
+  "distinct_pitches": 14,
+  "gaps_over_4_semitones": [
+   [
+    "D#1",
+    "G#1",
+    5
+   ],
+   [
+    "G#1",
+    "D#2",
+    7
+   ],
+   [
+    "D#2",
+    "G#3",
+    17
+   ],
+   [
+    "G#3",
+    "D4",
+    6
+   ],
+   [
+    "F#5",
+    "C#8",
+    31
+   ]
+  ],
+  "files_per_pitch_median": 1.0,
+  "articulations": {
+   "rim": 6
+  },
+  "envelope": {
+   "long-decay": 5,
+   "sustained": 29,
+   "percussive": 115,
+   "decaying": 22
+  },
+  "centroid_hz_median": 2609,
+  "level_db_median": -28.2,
+  "lead_silence_s_median": 0.001,
+  "attack_s_median": 0.249,
+  "duration_s_median": 12.076,
+  "flags": {
+   "dual_mono_files": 27,
+   "cut_off_ending": 75,
+   "clipped_files": 13,
+   "silent_files": 1
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "DELUSION Vol 2": {
+   "files": 1,
+   "errors": 0,
+   "minutes": 1.43,
+   "formats": [
+    "MP3"
+   ],
+   "subtypes": [
+    "MPEG_LAYER_III"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "long-decay": 1
+   },
+   "centroid_hz_median": 6337,
+   "level_db_median": -26.0,
+   "lead_silence_s_median": 0.029,
+   "attack_s_median": 2.891,
+   "duration_s_median": 85.655,
+   "flags": {}
+  },
+  "DELUSION Vol 2/Demo Tracks": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 4.48,
+   "formats": [
+    "MP3"
+   ],
+   "subtypes": [
+    "MPEG_LAYER_III"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.4,
+   "pitch_range": [
+    "D1",
+    "G#1"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "D1",
+     "G#1",
+     6
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "sustained": 4,
+    "percussive": 1
+   },
+   "centroid_hz_median": 2840,
+   "level_db_median": -9.1,
+   "lead_silence_s_median": 0.03,
+   "attack_s_median": 2.71,
+   "duration_s_median": 52.718,
+   "flags": {
+    "cut_off_ending": 4,
+    "clipped_files": 2
+   }
+  },
+  "DELUSION Vol 2/One-Shots/808 & Bass": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 0.19,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.38,
+   "pitch_range": [
+    "C1",
+    "G#1"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "G#1",
+     8
+    ]
+   ],
+   "files_per_pitch_median": 1.5,
+   "envelope": {
+    "sustained": 6,
+    "decaying": 2
+   },
+   "centroid_hz_median": 118.0,
+   "level_db_median": -16.05,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 0.049,
+   "duration_s_median": 1.549,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 8
+   }
+  },
+  "DELUSION Vol 2/One-Shots/FX & Others": {
+   "files": 16,
+   "errors": 0,
+   "minutes": 0.59,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.06,
+   "pitch_range": [
+    "A4",
+    "A4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 8,
+    "percussive": 3,
+    "sustained": 5
+   },
+   "centroid_hz_median": 6962.5,
+   "level_db_median": -39.15,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.134,
+   "duration_s_median": 2.175,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 6
+   }
+  },
+  "DELUSION Vol 2/One-Shots/HH & OH": {
+   "files": 12,
+   "errors": 0,
+   "minutes": 0.06,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 10,
+    "sustained": 2
+   },
+   "centroid_hz_median": 8353.5,
+   "level_db_median": -35.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.002,
+   "duration_s_median": 0.22,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 7
+   }
+  },
+  "DELUSION Vol 2/One-Shots/Kicks": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.02,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 5
+   },
+   "centroid_hz_median": 107,
+   "level_db_median": -9.0,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.205,
+   "flags": {
+    "dual_mono_files": 3,
+    "cut_off_ending": 4,
+    "clipped_files": 2
+   }
+  },
+  "DELUSION Vol 2/One-Shots/Percs": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.04,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.09,
+   "pitch_range": [
+    "D5",
+    "D5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "rim": 3
+   },
+   "envelope": {
+    "percussive": 11
+   },
+   "centroid_hz_median": 1521,
+   "level_db_median": -28.3,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.0,
+   "duration_s_median": 0.205,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 3,
+    "clipped_files": 1
+   }
+  },
+  "DELUSION Vol 2/One-Shots/Snare & Claps": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.06,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 13
+   },
+   "centroid_hz_median": 5168,
+   "level_db_median": -22.4,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.008,
+   "duration_s_median": 0.205,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 3
+   }
+  },
+  "DELUSION Vol 2/WAV Loops/808 & Bass Loops": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 1.76,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.5,
+   "pitch_range": [
+    "C#1",
+    "D#2"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "D#1",
+     "G#1",
+     5
+    ],
+    [
+     "G#1",
+     "D#2",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 4,
+    "sustained": 3,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 129.0,
+   "level_db_median": -15.8,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 2.984,
+   "duration_s_median": 12.892,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 7
+   }
+  },
+  "DELUSION Vol 2/WAV Loops/Drum Loops": {
+   "files": 64,
+   "errors": 0,
+   "minutes": 13.7,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.05,
+   "pitch_range": [
+    "G#3",
+    "C#8"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "G#3",
+     "C#8",
+     53
+    ]
+   ],
+   "files_per_pitch_median": 1.5,
+   "articulations": {
+    "rim": 3
+   },
+   "envelope": {
+    "percussive": 60,
+    "long-decay": 3
+   },
+   "centroid_hz_median": 3918,
+   "level_db_median": -27.4,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.57,
+   "duration_s_median": 12.152,
+   "flags": {
+    "dual_mono_files": 9,
+    "cut_off_ending": 9,
+    "clipped_files": 8,
+    "silent_files": 1
+   }
+  },
+  "DELUSION Vol 2/WAV Loops/FX & Other Loops": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.44,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.5,
+   "pitch_range": [
+    "B4",
+    "B4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1,
+    "decaying": 1
+   },
+   "centroid_hz_median": 2202.0,
+   "level_db_median": -36.3,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 1.967,
+   "duration_s_median": 13.151,
+   "flags": {}
+  },
+  "DELUSION Vol 2/WAV Loops/Melody Loops": {
+   "files": 27,
+   "errors": 0,
+   "minutes": 5.84,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.26,
+   "pitch_range": [
+    "D1",
+    "F#5"
+   ],
+   "distinct_pitches": 7,
+   "gaps_over_4_semitones": [
+    [
+     "D1",
+     "G#1",
+     6
+    ],
+    [
+     "G#1",
+     "G#3",
+     24
+    ],
+    [
+     "G#3",
+     "D4",
+     6
+    ],
+    [
+     "A4",
+     "F#5",
+     9
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 7,
+    "percussive": 11,
+    "sustained": 9
+   },
+   "centroid_hz_median": 880,
+   "level_db_median": -33.1,
+   "lead_silence_s_median": 0.003,
+   "attack_s_median": 1.568,
+   "duration_s_median": 12.632,
+   "flags": {
+    "cut_off_ending": 24
+   }
+  }
+ }
+}

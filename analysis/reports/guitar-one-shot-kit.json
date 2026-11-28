@@ -1,0 +1,168 @@
+{
+ "pack": "guitar-one-shot-kit",
+ "tier": "research-private",
+ "summary": {
+  "files": 50,
+  "errors": 0,
+  "minutes": 4.45,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.86,
+  "pitch_range": [
+   "C3",
+   "C5"
+  ],
+  "distinct_pitches": 4,
+  "gaps_over_4_semitones": [
+   [
+    "C3",
+    "C4",
+    12
+   ],
+   [
+    "C4",
+    "B4",
+    11
+   ]
+  ],
+  "files_per_pitch_median": 10.0,
+  "articulations": {
+   "muted": 5,
+   "tremolo": 3,
+   "vibrato": 3,
+   "bend": 1
+  },
+  "envelope": {
+   "decaying": 25,
+   "long-decay": 16,
+   "sustained": 4,
+   "percussive": 5
+  },
+  "centroid_hz_median": 754.0,
+  "level_db_median": -27.85,
+  "lead_silence_s_median": 0.005,
+  "attack_s_median": 0.028,
+  "duration_s_median": 5.708,
+  "flags": {
+   "cut_off_ending": 9
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "GUITAR - ONE SHOT KIT/Simple": {
+   "files": 26,
+   "errors": 0,
+   "minutes": 2.4,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.92,
+   "pitch_range": [
+    "C3",
+    "C5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ],
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 11,
+   "envelope": {
+    "decaying": 13,
+    "long-decay": 8,
+    "sustained": 4,
+    "percussive": 1
+   },
+   "centroid_hz_median": 731.5,
+   "level_db_median": -27.45,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 0.033,
+   "duration_s_median": 6.757,
+   "flags": {
+    "cut_off_ending": 7
+   }
+  },
+  "GUITAR - ONE SHOT KIT/Special": {
+   "files": 24,
+   "errors": 0,
+   "minutes": 2.05,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.79,
+   "pitch_range": [
+    "C3",
+    "B4"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ],
+    [
+     "C4",
+     "B4",
+     11
+    ]
+   ],
+   "files_per_pitch_median": 7,
+   "articulations": {
+    "muted": 5,
+    "tremolo": 3,
+    "vibrato": 3,
+    "bend": 1
+   },
+   "envelope": {
+    "decaying": 12,
+    "percussive": 4,
+    "long-decay": 8
+   },
+   "centroid_hz_median": 762.0,
+   "level_db_median": -29.2,
+   "lead_silence_s_median": 0.006,
+   "attack_s_median": 0.02,
+   "duration_s_median": 4.615,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  }
+ }
+}

@@ -1,0 +1,263 @@
+{
+ "pack": "amaterasu-ethnic-one-shot-kit-free-version",
+ "tier": "research-private",
+ "summary": {
+  "files": 32,
+  "errors": 0,
+  "minutes": 2.32,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.91,
+  "pitch_range": [
+   "C4",
+   "F7"
+  ],
+  "distinct_pitches": 5,
+  "gaps_over_4_semitones": [
+   [
+    "C4",
+    "G4",
+    7
+   ],
+   [
+    "G4",
+    "C5",
+    5
+   ],
+   [
+    "C5",
+    "C6",
+    12
+   ],
+   [
+    "C6",
+    "F7",
+    17
+   ]
+  ],
+  "files_per_pitch_median": 1,
+  "articulations": {
+   "tremolo": 1,
+   "sustain": 1
+  },
+  "envelope": {
+   "sustained": 2,
+   "decaying": 20,
+   "percussive": 4,
+   "long-decay": 6
+  },
+  "centroid_hz_median": 1319.5,
+  "level_db_median": -25.85,
+  "lead_silence_s_median": 0.007,
+  "attack_s_median": 0.179,
+  "duration_s_median": 3.766,
+  "flags": {
+   "dual_mono_files": 6,
+   "cut_off_ending": 5
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "AMATERASU - ETHNIC ONE SHOT KIT (FREE VERSION)/ONE SHOT/CHOIR": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.72,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.85,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "G4",
+     7
+    ],
+    [
+     "G4",
+     "C5",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 2,
+   "envelope": {
+    "sustained": 1,
+    "decaying": 10,
+    "percussive": 2
+   },
+   "centroid_hz_median": 1343,
+   "level_db_median": -25.0,
+   "lead_silence_s_median": 0.019,
+   "attack_s_median": 0.229,
+   "duration_s_median": 2.879,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 3
+   }
+  },
+  "AMATERASU - ETHNIC ONE SHOT KIT (FREE VERSION)/ONE SHOT/MALLET": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 0.54,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.86,
+   "pitch_range": [
+    "C4",
+    "F7"
+   ],
+   "distinct_pitches": 4,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ],
+    [
+     "C5",
+     "C6",
+     12
+    ],
+    [
+     "C6",
+     "F7",
+     17
+    ]
+   ],
+   "files_per_pitch_median": 1.5,
+   "envelope": {
+    "long-decay": 2,
+    "percussive": 1,
+    "decaying": 4
+   },
+   "centroid_hz_median": 2351,
+   "level_db_median": -28.7,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 0.019,
+   "duration_s_median": 3.692,
+   "flags": {
+    "dual_mono_files": 1
+   }
+  },
+  "AMATERASU - ETHNIC ONE SHOT KIT (FREE VERSION)/ONE SHOT/STRINGS": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.57,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 6,
+   "articulations": {
+    "tremolo": 1
+   },
+   "envelope": {
+    "decaying": 4,
+    "sustained": 1,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 1462.0,
+   "level_db_median": -23.8,
+   "lead_silence_s_median": 0.005,
+   "attack_s_median": 0.653,
+   "duration_s_median": 5.224,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "AMATERASU - ETHNIC ONE SHOT KIT (FREE VERSION)/ONE SHOT/WIND": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.49,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 3.0,
+   "articulations": {
+    "sustain": 1
+   },
+   "envelope": {
+    "long-decay": 3,
+    "percussive": 1,
+    "decaying": 2
+   },
+   "centroid_hz_median": 1142.5,
+   "level_db_median": -26.9,
+   "lead_silence_s_median": 0.01,
+   "attack_s_median": 0.403,
+   "duration_s_median": 4.705,
+   "flags": {
+    "dual_mono_files": 1
+   }
+  }
+ }
+}

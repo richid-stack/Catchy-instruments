@@ -1,0 +1,341 @@
+{
+ "pack": "paul-fix-pirates-one-shot-kit",
+ "tier": "research-private",
+ "summary": {
+  "files": 36,
+  "errors": 0,
+  "minutes": 4.59,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT",
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.69,
+  "pitch_range": [
+   "C1",
+   "C5"
+  ],
+  "distinct_pitches": 6,
+  "gaps_over_4_semitones": [
+   [
+    "C1",
+    "C2",
+    12
+   ],
+   [
+    "C2",
+    "C3",
+    12
+   ],
+   [
+    "C3",
+    "G#3",
+    8
+   ],
+   [
+    "C4",
+    "C5",
+    12
+   ]
+  ],
+  "files_per_pitch_median": 3.0,
+  "articulations": {
+   "bell": 6
+  },
+  "envelope": {
+   "decaying": 19,
+   "percussive": 3,
+   "sustained": 5,
+   "long-decay": 9
+  },
+  "centroid_hz_median": 788.5,
+  "level_db_median": -29.75,
+  "lead_silence_s_median": 0.009,
+  "attack_s_median": 0.395,
+  "duration_s_median": 6.678,
+  "flags": {
+   "dual_mono_files": 8,
+   "cut_off_ending": 7
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Paul Fix - Pirates (One Shot Kit)/Bass": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.28,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.75,
+   "pitch_range": [
+    "C1",
+    "C2"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C1",
+     "C2",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1.5,
+   "envelope": {
+    "decaying": 4
+   },
+   "centroid_hz_median": 91.5,
+   "level_db_median": -12.05,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 0.068,
+   "duration_s_median": 3.992,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 1
+   }
+  },
+  "Paul Fix - Pirates (One Shot Kit)/Bells": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.48,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.67,
+   "pitch_range": [
+    "C4",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 2.0,
+   "articulations": {
+    "bell": 6
+   },
+   "envelope": {
+    "decaying": 5,
+    "percussive": 1
+   },
+   "centroid_hz_median": 881.0,
+   "level_db_median": -25.5,
+   "lead_silence_s_median": 0.009,
+   "attack_s_median": 0.204,
+   "duration_s_median": 4.204,
+   "flags": {}
+  },
+  "Paul Fix - Pirates (One Shot Kit)/Keys": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 1.08,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.89,
+   "pitch_range": [
+    "C3",
+    "C5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ],
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 6,
+    "sustained": 1,
+    "long-decay": 2
+   },
+   "centroid_hz_median": 531,
+   "level_db_median": -27.0,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.33,
+   "duration_s_median": 6.989,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 1
+   }
+  },
+  "Paul Fix - Pirates (One Shot Kit)/Orchestral": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.37,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.75,
+   "pitch_range": [
+    "C3",
+    "C5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ],
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 3,
+    "sustained": 1
+   },
+   "centroid_hz_median": 1916.5,
+   "level_db_median": -25.35,
+   "lead_silence_s_median": 0.015,
+   "attack_s_median": 0.19,
+   "duration_s_median": 4.894,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 1
+   }
+  },
+  "Paul Fix - Pirates (One Shot Kit)/Risers & Textures": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 1.4,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.2,
+   "pitch_range": [
+    "G#3",
+    "G#3"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 1,
+    "sustained": 3,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 1958,
+   "level_db_median": -45.8,
+   "lead_silence_s_median": 0.072,
+   "attack_s_median": 2.638,
+   "duration_s_median": 12.298,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 4
+   }
+  },
+  "Paul Fix - Pirates (One Shot Kit)/Synths": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 1.0,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.75,
+   "pitch_range": [
+    "C3",
+    "C4"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 3.0,
+   "envelope": {
+    "decaying": 1,
+    "long-decay": 6,
+    "percussive": 1
+   },
+   "centroid_hz_median": 851.5,
+   "level_db_median": -34.55,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 1.229,
+   "duration_s_median": 7.543,
+   "flags": {
+    "dual_mono_files": 3
+   }
+  }
+ }
+}

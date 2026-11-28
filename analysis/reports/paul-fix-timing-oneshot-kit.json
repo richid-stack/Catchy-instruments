@@ -1,0 +1,289 @@
+{
+ "pack": "paul-fix-timing-oneshot-kit",
+ "tier": "research-private",
+ "summary": {
+  "files": 25,
+  "errors": 0,
+  "minutes": 1.24,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.92,
+  "pitch_range": [
+   "C2",
+   "C6"
+  ],
+  "distinct_pitches": 6,
+  "gaps_over_4_semitones": [
+   [
+    "C2",
+    "C3",
+    12
+   ],
+   [
+    "C3",
+    "C4",
+    12
+   ],
+   [
+    "C4",
+    "G4",
+    7
+   ],
+   [
+    "G4",
+    "C5",
+    5
+   ],
+   [
+    "C5",
+    "C6",
+    12
+   ]
+  ],
+  "files_per_pitch_median": 2.0,
+  "envelope": {
+   "decaying": 21,
+   "percussive": 4
+  },
+  "centroid_hz_median": 1114,
+  "level_db_median": -23.1,
+  "lead_silence_s_median": 0.024,
+  "attack_s_median": 0.24,
+  "duration_s_median": 2.697,
+  "flags": {
+   "cut_off_ending": 6
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Paul Fix - Timing (OneShot Kit)/Flutes": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.22,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C6"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C4",
+     "C5",
+     12
+    ],
+    [
+     "C5",
+     "C6",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 2,
+   "envelope": {
+    "decaying": 4,
+    "percussive": 2
+   },
+   "centroid_hz_median": 1706.5,
+   "level_db_median": -20.35,
+   "lead_silence_s_median": 0.052,
+   "attack_s_median": 0.456,
+   "duration_s_median": 2.275,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Paul Fix - Timing (OneShot Kit)/Guitars": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.24,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C4",
+    "C4"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 5,
+   "envelope": {
+    "decaying": 4,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1375,
+   "level_db_median": -21.7,
+   "lead_silence_s_median": 0.052,
+   "attack_s_median": 0.016,
+   "duration_s_median": 3.032,
+   "flags": {}
+  },
+  "Paul Fix - Timing (OneShot Kit)/Keys": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 0.33,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C3",
+    "C5"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ],
+    [
+     "C4",
+     "C5",
+     12
+    ]
+   ],
+   "files_per_pitch_median": 2,
+   "envelope": {
+    "decaying": 7
+   },
+   "centroid_hz_median": 767,
+   "level_db_median": -25.1,
+   "lead_silence_s_median": 0.007,
+   "attack_s_median": 0.033,
+   "duration_s_median": 2.667,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Paul Fix - Timing (OneShot Kit)/Plucks": {
+   "files": 2,
+   "errors": 0,
+   "minutes": 0.1,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 1.0,
+   "pitch_range": [
+    "C2",
+    "C5"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "C2",
+     "C5",
+     36
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "decaying": 1,
+    "percussive": 1
+   },
+   "centroid_hz_median": 1106.0,
+   "level_db_median": -22.1,
+   "lead_silence_s_median": 0.025,
+   "attack_s_median": 0.01,
+   "duration_s_median": 3.147,
+   "flags": {
+    "cut_off_ending": 1
+   }
+  },
+  "Paul Fix - Timing (OneShot Kit)/Synths": {
+   "files": 5,
+   "errors": 0,
+   "minutes": 0.34,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.6,
+   "pitch_range": [
+    "C3",
+    "G4"
+   ],
+   "distinct_pitches": 3,
+   "gaps_over_4_semitones": [
+    [
+     "C3",
+     "C4",
+     12
+    ],
+    [
+     "C4",
+     "G4",
+     7
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "decaying": 5
+   },
+   "centroid_hz_median": 883,
+   "level_db_median": -36.8,
+   "lead_silence_s_median": 0.033,
+   "attack_s_median": 0.837,
+   "duration_s_median": 3.429,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  }
+ }
+}

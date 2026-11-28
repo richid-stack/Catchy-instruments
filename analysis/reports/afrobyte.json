@@ -1,0 +1,117 @@
+{
+ "pack": "afrobyte",
+ "tier": "research-private",
+ "summary": {
+  "files": 126,
+  "errors": 0,
+  "minutes": 50.19,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT"
+  ],
+  "sample_rates": [
+   48000
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.55,
+  "pitch_range": [
+   "A0",
+   "A5"
+  ],
+  "distinct_pitches": 34,
+  "gaps_over_4_semitones": [
+   [
+    "F2",
+    "C#3",
+    8
+   ],
+   [
+    "B4",
+    "E5",
+    5
+   ]
+  ],
+  "files_per_pitch_median": 2.0,
+  "articulations": {
+   "bell": 1
+  },
+  "envelope": {
+   "decaying": 32,
+   "percussive": 21,
+   "sustained": 68,
+   "long-decay": 5
+  },
+  "centroid_hz_median": 588.0,
+  "level_db_median": -32.05,
+  "lead_silence_s_median": 0.002,
+  "attack_s_median": 1.528,
+  "duration_s_median": 20.211,
+  "flags": {
+   "dual_mono_files": 11,
+   "cut_off_ending": 116,
+   "clipped_files": 1
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Afrobyte": {
+   "files": 126,
+   "errors": 0,
+   "minutes": 50.19,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT"
+   ],
+   "sample_rates": [
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.55,
+   "pitch_range": [
+    "A0",
+    "A5"
+   ],
+   "distinct_pitches": 34,
+   "gaps_over_4_semitones": [
+    [
+     "F2",
+     "C#3",
+     8
+    ],
+    [
+     "B4",
+     "E5",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 2.0,
+   "articulations": {
+    "bell": 1
+   },
+   "envelope": {
+    "decaying": 32,
+    "percussive": 21,
+    "sustained": 68,
+    "long-decay": 5
+   },
+   "centroid_hz_median": 588.0,
+   "level_db_median": -32.05,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 1.528,
+   "duration_s_median": 20.211,
+   "flags": {
+    "dual_mono_files": 11,
+    "cut_off_ending": 116,
+    "clipped_files": 1
+   }
+  }
+ }
+}

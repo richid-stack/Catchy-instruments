@@ -1,0 +1,257 @@
+{
+ "pack": "pluto",
+ "tier": "research-private",
+ "summary": {
+  "files": 154,
+  "errors": 0,
+  "minutes": 61.95,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "FLOAT",
+   "PCM_16",
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100,
+   48000
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.24,
+  "pitch_range": [
+   "B0",
+   "C#8"
+  ],
+  "distinct_pitches": 23,
+  "gaps_over_4_semitones": [
+   [
+    "B2",
+    "E3",
+    5
+   ],
+   [
+    "A3",
+    "D#4",
+    6
+   ],
+   [
+    "F#4",
+    "B4",
+    5
+   ],
+   [
+    "D#5",
+    "C#8",
+    34
+   ]
+  ],
+  "files_per_pitch_median": 1,
+  "articulations": {
+   "open": 10,
+   "bell": 3,
+   "roll": 2
+  },
+  "envelope": {
+   "percussive": 83,
+   "decaying": 23,
+   "long-decay": 15,
+   "sustained": 28
+  },
+  "centroid_hz_median": 1206,
+  "level_db_median": -23.7,
+  "lead_silence_s_median": 0.002,
+  "attack_s_median": 1.8,
+  "duration_s_median": 15.61,
+  "flags": {
+   "dual_mono_files": 20,
+   "cut_off_ending": 60,
+   "clipped_files": 5,
+   "silent_files": 5
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Cymatics - PLUTO Artist Pack/Drum Loop Collection": {
+   "files": 62,
+   "errors": 0,
+   "minutes": 13.67,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100,
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "articulations": {
+    "open": 10,
+    "roll": 2
+   },
+   "envelope": {
+    "percussive": 58,
+    "decaying": 1,
+    "long-decay": 1
+   },
+   "centroid_hz_median": 4880.5,
+   "level_db_median": -17.85,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 1.512,
+   "duration_s_median": 12.973,
+   "flags": {
+    "dual_mono_files": 14,
+    "cut_off_ending": 10,
+    "clipped_files": 5,
+    "silent_files": 2
+   }
+  },
+  "Cymatics - PLUTO Artist Pack/Hihat Loop & MIDI Collection": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 1.91,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100,
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.1,
+   "pitch_range": [
+    "C#8",
+    "C#8"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 10
+   },
+   "centroid_hz_median": 7786.5,
+   "level_db_median": -24.65,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 2.335,
+   "duration_s_median": 12.68,
+   "flags": {
+    "dual_mono_files": 3,
+    "cut_off_ending": 1
+   }
+  },
+  "Cymatics - PLUTO Artist Pack/Melody Loop Collection": {
+   "files": 72,
+   "errors": 0,
+   "minutes": 44.75,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100,
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.49,
+   "pitch_range": [
+    "B0",
+    "D#5"
+   ],
+   "distinct_pitches": 21,
+   "gaps_over_4_semitones": [
+    [
+     "B2",
+     "E3",
+     5
+    ],
+    [
+     "A3",
+     "D#4",
+     6
+    ],
+    [
+     "F#4",
+     "B4",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 1,
+   "articulations": {
+    "bell": 3
+   },
+   "envelope": {
+    "sustained": 28,
+    "long-decay": 14,
+    "decaying": 22,
+    "percussive": 5
+   },
+   "centroid_hz_median": 693,
+   "level_db_median": -24.9,
+   "lead_silence_s_median": 0.004,
+   "attack_s_median": 1.813,
+   "duration_s_median": 40.563,
+   "flags": {
+    "dual_mono_files": 3,
+    "cut_off_ending": 45,
+    "silent_files": 3
+   }
+  },
+  "Cymatics - PLUTO Artist Pack/Percussion Loop Collection": {
+   "files": 10,
+   "errors": 0,
+   "minutes": 1.61,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "FLOAT",
+    "PCM_16",
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100,
+    48000
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.1,
+   "pitch_range": [
+    "C5",
+    "C5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 10
+   },
+   "centroid_hz_median": 1284.0,
+   "level_db_median": -25.9,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 2.045,
+   "duration_s_median": 7.934,
+   "flags": {
+    "cut_off_ending": 4
+   }
+  }
+ }
+}

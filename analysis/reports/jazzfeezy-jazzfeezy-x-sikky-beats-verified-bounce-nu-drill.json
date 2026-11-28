@@ -1,0 +1,423 @@
+{
+ "pack": "jazzfeezy-jazzfeezy-x-sikky-beats-verified-bounce-nu-drill",
+ "tier": "research-private",
+ "summary": {
+  "files": 100,
+  "errors": 0,
+  "minutes": 5.2,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   1,
+   2
+  ],
+  "pitched_ratio": 0.13,
+  "pitch_range": [
+   "C1",
+   "G#6"
+  ],
+  "distinct_pitches": 5,
+  "gaps_over_4_semitones": [
+   [
+    "C1",
+    "F#1",
+    6
+   ],
+   [
+    "F#1",
+    "D#4",
+    33
+   ],
+   [
+    "D#4",
+    "D5",
+    11
+   ],
+   [
+    "D5",
+    "G#6",
+    18
+   ]
+  ],
+  "files_per_pitch_median": 1,
+  "name_dynamics": [
+   "soft"
+  ],
+  "articulations": {
+   "roll": 2,
+   "slide": 1,
+   "open": 1
+  },
+  "envelope": {
+   "percussive": 59,
+   "sustained": 19,
+   "decaying": 19,
+   "long-decay": 3
+  },
+  "centroid_hz_median": 4202.0,
+  "level_db_median": -14.3,
+  "lead_silence_s_median": 0.001,
+  "attack_s_median": 0.02,
+  "duration_s_median": 0.212,
+  "flags": {
+   "dual_mono_files": 19,
+   "cut_off_ending": 84
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/loops/drum_loops": {
+   "files": 3,
+   "errors": 0,
+   "minutes": 0.72,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 3
+   },
+   "centroid_hz_median": 4888,
+   "level_db_median": -26.1,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 3.21,
+   "duration_s_median": 14.656,
+   "flags": {
+    "cut_off_ending": 2
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/loops/melodic_loops/songstarter_loops": {
+   "files": 9,
+   "errors": 0,
+   "minutes": 2.36,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "sustained": 4,
+    "percussive": 1,
+    "decaying": 4
+   },
+   "centroid_hz_median": 758,
+   "level_db_median": -16.8,
+   "lead_silence_s_median": 0.002,
+   "attack_s_median": 1.652,
+   "duration_s_median": 14.222,
+   "flags": {
+    "cut_off_ending": 9
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/loops/percussion_loops": {
+   "files": 4,
+   "errors": 0,
+   "minutes": 0.68,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 3,
+    "decaying": 1
+   },
+   "centroid_hz_median": 6409.5,
+   "level_db_median": -22.45,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 2.019,
+   "duration_s_median": 10.142,
+   "flags": {
+    "cut_off_ending": 3
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/one_shots/bass_one_shots": {
+   "files": 11,
+   "errors": 0,
+   "minutes": 0.43,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.82,
+   "pitch_range": [
+    "C1",
+    "C1"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 9,
+   "articulations": {
+    "slide": 1
+   },
+   "envelope": {
+    "decaying": 8,
+    "long-decay": 3
+   },
+   "centroid_hz_median": 153,
+   "level_db_median": -5.8,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.089,
+   "duration_s_median": 2.503,
+   "flags": {
+    "dual_mono_files": 8,
+    "cut_off_ending": 8
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/one_shots/drums/hats": {
+   "files": 13,
+   "errors": 0,
+   "minutes": 0.19,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "name_dynamics": [
+    "soft"
+   ],
+   "articulations": {
+    "roll": 2,
+    "open": 1
+   },
+   "envelope": {
+    "percussive": 10,
+    "sustained": 3
+   },
+   "centroid_hz_median": 8730,
+   "level_db_median": -19.8,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.019,
+   "duration_s_median": 0.081,
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 11
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/one_shots/drums/kicks": {
+   "files": 8,
+   "errors": 0,
+   "minutes": 0.02,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.12,
+   "pitch_range": [
+    "F#1",
+    "F#1"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 8
+   },
+   "centroid_hz_median": 121.5,
+   "level_db_median": -5.35,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.029,
+   "duration_s_median": 0.168,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 8
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/one_shots/drums/snare": {
+   "files": 19,
+   "errors": 0,
+   "minutes": 0.03,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 15,
+    "sustained": 4
+   },
+   "centroid_hz_median": 4574,
+   "level_db_median": -11.3,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.009,
+   "duration_s_median": 0.084,
+   "flags": {
+    "cut_off_ending": 19
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/one_shots/fx": {
+   "files": 7,
+   "errors": 0,
+   "minutes": 0.67,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.0,
+   "envelope": {
+    "percussive": 2,
+    "decaying": 5
+   },
+   "centroid_hz_median": 2529,
+   "level_db_median": -34.4,
+   "lead_silence_s_median": 0.419,
+   "attack_s_median": 0.517,
+   "duration_s_median": 5.036,
+   "flags": {}
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/one_shots/percussion": {
+   "files": 20,
+   "errors": 0,
+   "minutes": 0.06,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    1,
+    2
+   ],
+   "pitched_ratio": 0.1,
+   "pitch_range": [
+    "D#4",
+    "G#6"
+   ],
+   "distinct_pitches": 2,
+   "gaps_over_4_semitones": [
+    [
+     "D#4",
+     "G#6",
+     29
+    ]
+   ],
+   "files_per_pitch_median": 1.0,
+   "envelope": {
+    "sustained": 6,
+    "percussive": 13,
+    "decaying": 1
+   },
+   "centroid_hz_median": 5830.5,
+   "level_db_median": -15.55,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.076,
+   "flags": {
+    "dual_mono_files": 4,
+    "cut_off_ending": 18
+   }
+  },
+  "Jazzfeezy Jazzfeezy X Sikky Beats - Verified Bounce Nu-Drill/one_shots/vocals": {
+   "files": 6,
+   "errors": 0,
+   "minutes": 0.03,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.17,
+   "pitch_range": [
+    "D5",
+    "D5"
+   ],
+   "distinct_pitches": 1,
+   "files_per_pitch_median": 1,
+   "envelope": {
+    "percussive": 4,
+    "sustained": 2
+   },
+   "centroid_hz_median": 2744.0,
+   "level_db_median": -12.8,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.038,
+   "duration_s_median": 0.346,
+   "flags": {
+    "dual_mono_files": 2,
+    "cut_off_ending": 6
+   }
+  }
+ }
+}
