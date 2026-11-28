@@ -160,7 +160,7 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
             lo, hi = bal["keys"][0], bal["keys"][1]
             report["patches"][b["id"]]["key_balance"] = balance_keys(
                 trial, b, datasets_root, range(int(lo), int(hi) + 1), max_db=bal.get("max_db", 9.0),
-                strength=bal.get("strength", 0.85))
+                strength=bal.get("strength", 0.85), window_s=bal.get("window_s", 0.5))
         if spec.get("match_loudness", True):
             m = {**(spec.get("measure") or {}), **(by_id[b["id"]].get("measure") or {})}
             kw = {}

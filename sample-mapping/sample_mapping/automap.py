@@ -30,6 +30,7 @@ DEFAULTS = {
     "key_span": 3,          # keys covered beyond the lowest and highest sampled notes
     "trim_lead": True,
     "level_scope": "key",
+    "fill_velocity": False,  # a key that lacks some velocity layers lets its nearest layer cover the gap (sparse, harvested packs)
 }
 
 
@@ -103,6 +104,17 @@ def build_pitched_zones(datasets_root, tier, pack_id, inventory_dir, options=Non
     by_cell = collections.defaultdict(list)
     for i in items:
         by_cell[(i["key"], i["vel"])].append(i)
+    vids_at = collections.defaultdict(list)
+    for key, vid in sorted(by_cell):
+        vids_at[key].append(vid)
+
+    def key_band(key, vid):
+        if not opts["fill_velocity"]:
+            return band[vid]
+        vs, k = vids_at[key], vids_at[key].index(vid)
+        low = 1 if k == 0 else (band[vs[k - 1]][1] + band[vid][0]) // 2 + 1
+        high = 127 if k == len(vs) - 1 else (band[vid][1] + band[vs[k + 1]][0]) // 2
+        return low, high
 
     loops, loop_cache, zones = collections.Counter(), {}, []
     for (key, vid), members in sorted(by_cell.items()):
@@ -110,7 +122,8 @@ def build_pitched_zones(datasets_root, tier, pack_id, inventory_dir, options=Non
         for pos, i in enumerate(members, start=1):
             rec = i["rec"]
             zone = {"s": f"{tier}/{pack_id}/{i['path']}", "_lvl": rec.get("level_db"), "lk": max(lo[key], 0),
-                    "hk": min(hi[key], 127), "lv": band[vid][0], "hv": band[vid][1], "root": round(i["root"], 3),
+                    "hk": min(hi[key], 127), "lv": key_band(key, vid)[0], "hv": key_band(key, vid)[1],
+                    "root": round(i["root"], 3),
                     "g": 0.0, "st": 0.0, "_seq": (pos, len(members)), "_rand": (0.0, 1.0)}
             if opts["trim_lead"] and rec.get("lead_s", 0.0) > 0.004:
                 zone["st"] = round(rec["lead_s"] - 0.002, 4)

@@ -1,0 +1,106 @@
+{
+ "name": "Afrobeat Guitar (Loop Harvest)",
+ "genre": "afrobeat",
+ "type": "guitar",
+ "description": "Guitars made from real played guitar loops: every note was cut out of a dry loop stem, kept only if it is one clear pitch, tuned to equal temperament and mapped across the keyboard with round robins and velocity layers.",
+ "default_patch": "inq",
+ "match_loudness": true,
+ "target_rms_db": -24.0,
+ "patches": [
+  {
+   "id": "inq",
+   "name": "Afrolistic Pluck",
+   "note": "Notes from the Inqboi Afrolistic dry stems: short, bright, played highlife-style licks.",
+   "source": {
+    "pack": "harvest-guitar-loops",
+    "tier": "research-private",
+    "mode": "pitched",
+    "options": {
+     "include": "^inq/",
+     "fill_velocity": true,
+     "level_scope": "key"
+    }
+   },
+   "balance": {
+    "keys": [
+     40,
+     84
+    ],
+    "max_db": 12,
+    "strength": 0.95,
+    "window_s": 0.15
+   },
+   "voice": {
+    "attack_s": 0.002,
+    "release_s": 0.12,
+    "highpass_hz": 70,
+    "dynamic_range_db": 24
+   }
+  },
+  {
+   "id": "elec",
+   "name": "Soul Electric",
+   "note": "Notes from the 91Vocals / Pure Water electric guitar loops (raw takes only, no tape or echo versions).",
+   "source": {
+    "pack": "harvest-guitar-loops",
+    "tier": "research-private",
+    "mode": "pitched",
+    "options": {
+     "include": "^elec/",
+     "fill_velocity": true,
+     "level_scope": "key"
+    }
+   },
+   "balance": {
+    "keys": [
+     40,
+     74
+    ],
+    "max_db": 12,
+    "strength": 0.95,
+    "window_s": 0.15
+   },
+   "voice": {
+    "attack_s": 0.002,
+    "release_s": 0.12,
+    "highpass_hz": 70,
+    "dynamic_range_db": 24
+   }
+  },
+  {
+   "id": "acou",
+   "name": "Acoustic Pluck",
+   "note": "Notes from the acoustic guitar loops. Fewer clean notes, so wider key spans.",
+   "source": {
+    "pack": "harvest-guitar-loops",
+    "tier": "research-private",
+    "mode": "pitched",
+    "options": {
+     "include": "^acou/",
+     "fill_velocity": true,
+     "level_scope": "key",
+     "key_span": 5
+    }
+   },
+   "balance": {
+    "keys": [
+     46,
+     80
+    ],
+    "max_db": 12,
+    "strength": 0.95,
+    "window_s": 0.15
+   },
+   "voice": {
+    "attack_s": 0.002,
+    "release_s": 0.15,
+    "highpass_hz": 70,
+    "dynamic_range_db": 24
+   }
+  }
+ ],
+ "measure": {
+  "dur": 0.3,
+  "window_s": 0.2
+ }
+}

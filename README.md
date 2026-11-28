@@ -32,6 +32,14 @@ python3 -I -m unittest discover -s tests
 
 `audition.py` plays one MIDI part through every patch of an instrument in turn and prints where each patch starts.
 
+**Loops into instruments.** Producer packs often have only loops. `sample-mapping/harvest_loops.py` cuts single notes
+out of dry loop stems: it finds each attack, keeps a note only when two pitch detectors agree and its energy sits on
+one set of harmonics (chords and noise are dropped), tunes it to equal temperament, fades it out where the next note
+starts, and writes `<family>_<Note>_v<layer>_rr<n>.wav`. Louder notes become higher velocity layers and repeats become
+round robins. The pitched automapper (`mode: "pitched"`, with `fill_velocity: true` for sparse note sets) then maps them
+like any recorded instrument. See `generated-instruments/afrobeat/guitar-loops/` for a worked example; the harvested
+notes themselves stay in `datasets/research-private` and out of git.
+
 An instrument is a set of patches. Each patch is one sample pack program mapped into zones (key range,
 velocity range, root pitch, loop). Zones start from the pack's own SFZ mapping. The analysis then
 sets root pitch from the detected pitch when it is within 50 cents of the declared one (this puts

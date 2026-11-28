@@ -16,6 +16,7 @@ for sub in ("analysis", "sample-mapping", "instrument-builder", "audio-engine"):
 import inventory  # noqa: E402
 from audioinv.features import detect_pitch  # noqa: E402
 from instrument_builder.build import BuildError, build_instrument, measure_loudness_db  # noqa: E402
+from sample_mapping import harvest  # noqa: E402
 from sample_mapping.automap import build_pitched_zones  # noqa: E402
 from sample_mapping.looping import find_loop  # noqa: E402
 from sample_mapping.zones import build_zones  # noqa: E402
@@ -582,6 +583,140 @@ class AutomapTests(unittest.TestCase):
             audio, _ = eng.render([Note(0.0, 0.8, key, 100)], tail_s=0.1, peak_limit=1e9)
             res = detect_pitch(audio.mean(axis=1), SR, int(0.05 * SR))
             self.assertLess(abs(res["pitch_midi"] - key) * 100, 8.0, (key, res))
+
+
+class AutomapFillVelocityTests(unittest.TestCase):
+    """Sparse packs (harvested notes) have keys with only some of the velocity layers."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        base = Path(cls.tmp.name)
+        cls.datasets = base / "datasets"
+        pack = cls.datasets / "clean" / "sparse" / "g"
+        pack.mkdir(parents=True)
+        # keys: A3 has layers 1 and 3, C4 only layer 3, E4 only layer 1, G4 all three layers
+        have = {57: (1, 3), 60: (3,), 64: (1,), 67: (1, 2, 3)}
+        names = {57: "A3", 60: "C4", 64: "E4", 67: "G4"}
+        for midi, layers in have.items():
+            for v in layers:
+                sf.write(pack / f"Gtr_{names[midi]}_v{v}.wav", harmonic(midi_hz(midi), 0.5, 0.2 * v, 6.0), SR)
+        cls.inv = base / "inventory"
+        inventory.process_pack("clean", "sparse", str(cls.datasets / "clean" / "sparse"), str(cls.inv),
+                               str(base / "reports"), 1, True)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def _bands(self, **opts):
+        zones, _ = build_pitched_zones(str(self.datasets), "clean", "sparse", str(self.inv), {"include": "g/", **opts})
+        out = {}
+        for z in zones:
+            out.setdefault(round(z["root"]), []).append((z["lv"], z["hv"]))
+        return {k: sorted(v) for k, v in out.items()}
+
+    def test_without_filling_a_key_keeps_only_its_own_bands(self):
+        bands = self._bands()
+        self.assertEqual(bands[60], [(86, 127)])      # a lone loud layer leaves soft playing silent
+
+    def test_filling_lets_each_key_cover_the_whole_velocity_range(self):
+        bands = self._bands(fill_velocity=True)
+        self.assertEqual(bands[60], [(1, 127)])
+        self.assertEqual(bands[64], [(1, 127)])
+        self.assertEqual(bands[57], [(1, 64), (65, 127)])        # two layers meet in the middle of the gap
+        self.assertEqual(bands[67], [(1, 42), (43, 85), (86, 127)])    # a complete key is left as it was
+
+
+class HarvestTests(unittest.TestCase):
+    """Cutting single notes out of a loop stem."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        base = Path(cls.tmp.name)
+        stem = np.zeros(int(14 * SR), dtype=np.float32)
+
+        def put(t, x):
+            a = int(t * SR)
+            stem[a:a + len(x)] += x[:len(stem) - a]
+
+        def pluck(midi, amp, dur=0.6, cents=0.0):
+            x = harmonic(midi_hz(midi + cents / 100.0), dur, amp, 6.0)
+            x[:int(0.002 * SR)] *= np.linspace(0, 1, int(0.002 * SR))
+            return x
+
+        # single notes: A3 three times at different strengths, D4, E4, a B3 that is 30 cents sharp
+        for i, (midi, amp, cents) in enumerate([(57, 0.5, 0), (62, 0.5, 0), (64, 0.4, 0), (57, 0.12, 0),
+                                                (59, 0.45, 30), (57, 0.5, 0), (62, 0.1, 0)]):
+            put(0.5 + 0.8 * i, pluck(midi, amp, cents=cents))
+        # a strummed chord (C3 E3 G3, 12 ms between strings) and a burst of noise: neither is a single pitch
+        for j, m in enumerate((48, 52, 55)):
+            put(7.0 + 0.012 * j, pluck(m, 0.4, 0.9))
+        put(9.0, (0.3 * np.random.default_rng(3).standard_normal(int(0.3 * SR)) * np.exp(-np.arange(int(0.3 * SR)) / 3000)).astype(np.float32))
+        cls.stem_path = base / "Dry" / "stem.wav"
+        cls.stem_path.parent.mkdir()
+        sf.write(cls.stem_path, stem, SR)
+        cls.out = base / "out"
+        cls.report = harvest.harvest([str(cls.stem_path)], str(cls.out), "t", {"layers": 2})
+        cls.files = sorted(os.listdir(cls.out))
+        cls.wavs = [f for f in cls.files if f.endswith(".wav")]
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def test_finds_the_single_notes_and_names_them_for_the_automapper(self):
+        import re
+        self.assertGreaterEqual(len(self.wavs), 6)
+        names = set()
+        for f in self.wavs:
+            m = re.fullmatch(r"t_([A-G]#?-?\d+)_v(\d+)_rr(\d+)\.wav", f)
+            self.assertIsNotNone(m, f)
+            names.add(m.group(1))
+        self.assertTrue({"A3", "D4", "E4", "B3"} <= names, names)
+
+    def test_chords_and_noise_are_left_out(self):
+        names = " ".join(self.wavs)
+        for chord_note in ("C3", "E3", "G3"):
+            self.assertNotIn(f"_{chord_note}_", names)
+        self.assertGreater(sum(self.report["rejected"].values()), 0)
+
+    def test_every_note_is_on_pitch_even_when_the_loop_was_sharp(self):
+        for f in self.wavs:
+            x, sr = sf.read(self.out / f, always_2d=True)
+            note = f.split("_")[1]
+            midi = 12 * (int(note[-1]) + 1) + {"C": 0, "C#": 1, "D": 2, "D#": 3, "E": 4, "F": 5, "F#": 6, "G": 7,
+                                                "G#": 8, "A": 9, "A#": 10, "B": 11}[note[:-1]]
+            res = detect_pitch(x.mean(axis=1), sr, int(0.002 * sr))
+            self.assertTrue(res["pitched"], f)
+            self.assertAlmostEqual(res["pitch_midi"], midi, delta=0.12, msg=f)    # within 12 cents, so B3 (30 cents sharp) was corrected
+
+    def test_notes_start_and_end_without_clicks(self):
+        for f in self.wavs:
+            x, _ = sf.read(self.out / f, always_2d=True)
+            peak = float(np.max(np.abs(x)))
+            self.assertLess(float(np.max(np.abs(x[:4]))), 0.05 * peak, f)
+            self.assertLess(float(np.max(np.abs(x[-4:]))), 0.002, f)
+
+    def test_different_strengths_of_one_pitch_become_layers_and_repeats_become_round_robins(self):
+        a3 = [f for f in self.wavs if "_A3_" in f]
+        self.assertGreaterEqual(len(a3), 3)
+        self.assertTrue(any("_v1_" in f for f in a3) and any("_v2_" in f for f in a3), a3)
+        rr = {f.split("_")[-1] for f in a3 if "_v2_" in f}
+        self.assertGreaterEqual(len(rr), 2, a3)       # two loud A3 notes: two round robins of the loud layer
+
+    def test_round_robins_of_a_layer_play_at_one_level(self):
+        loud = sorted(f for f in self.wavs if "_A3_v2_" in f)
+        levels = [rms_db(sf.read(self.out / f)[0][int(0.01 * SR):int(0.21 * SR)]) for f in loud]
+        self.assertLess(max(levels) - min(levels), 1.0, levels)
+
+    def test_the_report_lists_what_was_kept(self):
+        with open(self.out / "harvest-report.json", encoding="utf-8") as fh:
+            rep = json.load(fh)
+        self.assertEqual(rep["files_written"], len(self.wavs))
+        self.assertEqual(len(rep["notes"]), len(self.wavs))
+        self.assertEqual(rep["family"], "t")
 
 
 @unittest.skipUnless((ROOT / "datasets" / "clean" / "salamander-grand").is_dir()

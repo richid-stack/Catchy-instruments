@@ -1,0 +1,197 @@
+{
+ "pack": "harvest-guitar-loops",
+ "tier": "research-private",
+ "summary": {
+  "files": 723,
+  "errors": 0,
+  "minutes": 4.77,
+  "formats": [
+   "WAV"
+  ],
+  "subtypes": [
+   "PCM_24"
+  ],
+  "sample_rates": [
+   44100
+  ],
+  "channels": [
+   2
+  ],
+  "pitched_ratio": 0.93,
+  "pitch_range": [
+   "B1",
+   "C#6"
+  ],
+  "distinct_pitches": 46,
+  "files_per_pitch_median": 16.5,
+  "name_velocity_layers": 3,
+  "name_round_robins": 6,
+  "envelope": {
+   "sustained": 267,
+   "percussive": 318,
+   "decaying": 138
+  },
+  "centroid_hz_median": 842,
+  "level_db_median": -22.3,
+  "lead_silence_s_median": 0.0,
+  "attack_s_median": 0.01,
+  "duration_s_median": 0.198,
+  "name_vs_pitch": {
+   "compared": 672,
+   "agree": 667,
+   "octave_shift_mode": 0,
+   "mismatch": 3
+  },
+  "flags": {
+   "dual_mono_files": 109,
+   "cut_off_ending": 713
+  },
+  "sfz_files": 0
+ },
+ "groups": {
+  "acou": {
+   "files": 45,
+   "errors": 0,
+   "minutes": 0.27,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.82,
+   "pitch_range": [
+    "E2",
+    "E5"
+   ],
+   "distinct_pitches": 20,
+   "gaps_over_4_semitones": [
+    [
+     "G#3",
+     "C#4",
+     5
+    ]
+   ],
+   "files_per_pitch_median": 2.0,
+   "name_velocity_layers": 3,
+   "name_round_robins": 4,
+   "envelope": {
+    "sustained": 28,
+    "percussive": 9,
+    "decaying": 8
+   },
+   "centroid_hz_median": 1307,
+   "level_db_median": -22.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.215,
+   "name_vs_pitch": {
+    "compared": 37,
+    "agree": 37,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "dual_mono_files": 1,
+    "cut_off_ending": 45
+   }
+  },
+  "elec": {
+   "files": 258,
+   "errors": 0,
+   "minutes": 1.86,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.9,
+   "pitch_range": [
+    "B1",
+    "D5"
+   ],
+   "distinct_pitches": 37,
+   "files_per_pitch_median": 6,
+   "name_velocity_layers": 3,
+   "name_round_robins": 6,
+   "envelope": {
+    "percussive": 84,
+    "decaying": 52,
+    "sustained": 122
+   },
+   "centroid_hz_median": 602.0,
+   "level_db_median": -22.5,
+   "lead_silence_s_median": 0.0,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.203,
+   "name_vs_pitch": {
+    "compared": 231,
+    "agree": 226,
+    "octave_shift_mode": 0,
+    "mismatch": 3
+   },
+   "flags": {
+    "cut_off_ending": 254
+   }
+  },
+  "inq": {
+   "files": 420,
+   "errors": 0,
+   "minutes": 2.64,
+   "formats": [
+    "WAV"
+   ],
+   "subtypes": [
+    "PCM_24"
+   ],
+   "sample_rates": [
+    44100
+   ],
+   "channels": [
+    2
+   ],
+   "pitched_ratio": 0.96,
+   "pitch_range": [
+    "D2",
+    "C#6"
+   ],
+   "distinct_pitches": 41,
+   "files_per_pitch_median": 10,
+   "name_velocity_layers": 3,
+   "name_round_robins": 6,
+   "envelope": {
+    "percussive": 225,
+    "sustained": 117,
+    "decaying": 78
+   },
+   "centroid_hz_median": 919.0,
+   "level_db_median": -22.15,
+   "lead_silence_s_median": 0.001,
+   "attack_s_median": 0.01,
+   "duration_s_median": 0.186,
+   "name_vs_pitch": {
+    "compared": 404,
+    "agree": 404,
+    "octave_shift_mode": 0,
+    "mismatch": 0
+   },
+   "flags": {
+    "dual_mono_files": 108,
+    "cut_off_ending": 414
+   }
+  }
+ }
+}
