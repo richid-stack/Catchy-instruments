@@ -16,6 +16,7 @@ for sub in ("analysis", "sample-mapping", "instrument-builder", "audio-engine"):
 import inventory  # noqa: E402
 from audioinv.features import detect_pitch  # noqa: E402
 from instrument_builder.build import BuildError, build_instrument, measure_loudness_db  # noqa: E402
+from sample_mapping.automap import build_pitched_zones  # noqa: E402
 from sample_mapping.looping import find_loop  # noqa: E402
 from sample_mapping.zones import build_zones  # noqa: E402
 from sampler import dsp  # noqa: E402
@@ -456,6 +457,132 @@ class FeatureTests(unittest.TestCase):
         self.assertLess(info["after_spread_db"], 1.5)
         del spec
 
+    def test_stack_patch_plays_the_same_notes_through_transposed_layers(self):
+        zones = [self._zone("tone_a.wav", 57, 57.0)]
+        zones[0].update({"lk": 40, "hk": 80})
+        manifest = {"format": FORMAT, "name": "t", "patches": [
+            {"id": "a", "voice": self._voice(), "zones": zones},
+            {"id": "s", "voice": self._voice(), "zones": [],
+             "stack": [{"patch": "a", "transpose": 0, "gain_db": 0.0}, {"patch": "a", "transpose": 12, "gain_db": -6.0}]}]}
+        eng = Engine(Instrument(manifest), str(self.datasets), sr=SR)
+        audio, st = eng.render([Note(0.0, 1.0, 57, 100)], patch="s", tail_s=0.2, peak_limit=1e9)
+        self.assertEqual(st["layers"], 2)
+        low, high = band_db(audio.mean(axis=1), 220.0, 0.2, 0.8), band_db(audio.mean(axis=1), 440.0, 0.2, 0.8)
+        self.assertGreater(low, -45.0)
+        self.assertGreater(high, -45.0)
+        self.assertAlmostEqual(low - high, 6.0, delta=1.0)    # the octave layer is 6 dB down
+
+    def test_bad_stacks_are_rejected(self):
+        base = {"id": "a", "voice": self._voice(), "zones": [self._zone("tone_a.wav", 57, 57.0)]}
+        def load(*extra):
+            return Instrument({"format": FORMAT, "name": "t", "patches": [base, *extra]})
+        with self.assertRaises(InstrumentError):    # unknown layer
+            load({"id": "s", "voice": self._voice(), "zones": [], "stack": [{"patch": "nope"}]})
+        with self.assertRaises(InstrumentError):    # a stack inside a stack
+            load({"id": "s", "voice": self._voice(), "zones": [], "stack": [{"patch": "a"}]},
+                 {"id": "t", "voice": self._voice(), "zones": [], "stack": [{"patch": "s"}]})
+        with self.assertRaises(InstrumentError):    # zones and layers together
+            load({"id": "s", "voice": self._voice(), "zones": base["zones"], "stack": [{"patch": "a"}]})
+        with self.assertRaises(InstrumentError):    # absurd transpose
+            load({"id": "s", "voice": self._voice(), "zones": [], "stack": [{"patch": "a", "transpose": 99}]})
+
+    def test_decay_option_shortens_notes(self):
+        zones = [self._zone("tone_a.wav", 57, 57.0)]
+        plain, _ = self._engine(zones).render([Note(0.0, 1.5, 57, 100)], tail_s=0.2, peak_limit=1e9)
+        fast, _ = self._engine(zones, decay_s=0.1).render([Note(0.0, 1.5, 57, 100)], tail_s=0.2, peak_limit=1e9)
+        drop = band_db(plain.mean(axis=1), 220.0, 0.9, 1.1) - band_db(fast.mean(axis=1), 220.0, 0.9, 1.1)
+        self.assertGreater(drop, 30.0)      # e^(-1/0.1 s) at 1 s is about -87 dB; the ratio is large either way
+        # the decay already acts inside the first 0.1 s: mean power of e^(-2t/0.1) over 0.02-0.1 s is -4.8 dB
+        early = band_db(plain.mean(axis=1), 220.0, 0.02, 0.1) - band_db(fast.mean(axis=1), 220.0, 0.02, 0.1)
+        self.assertAlmostEqual(early, 4.8, delta=1.0)
+
+    @staticmethod
+    def _voice(**kw):
+        return {"attack_s": 0.002, "release_s": 0.1, "gain_db": 0.0, "dynamic_range_db": 30.0, "velocity_curve": 1.0,
+                "loop_decay_s": None, **kw}
+
+
+class AutomapTests(unittest.TestCase):
+    """Mapping a pack that has no SFZ, from its file names."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        base = Path(cls.tmp.name)
+        cls.datasets = base / "datasets"
+        pack = cls.datasets / "clean" / "autopack" / "Horn" / "sus"
+        pack.mkdir(parents=True)
+        # names sit an octave below the sounding pitch (A2 sounds 220 Hz = MIDI 57), like the VSCO brass
+        t = np.arange(int(3.0 * SR)) / SR
+        for name, midi in (("A2", 57), ("C3", 60), ("E3", 64)):
+            for vel, amp in ((1, 0.1), (2, 0.4)):
+                for rr in (1, 2):
+                    tone = amp * np.sin(2 * np.pi * midi_hz(midi) * t) * (1 + 0.02 * rr)
+                    sf.write(pack / f"Horn_sus_{name}_v{vel}_rr{rr}.wav", tone.astype(np.float32), SR)
+        sf.write(pack / "Horn_sus_noise.wav", (0.1 * np.random.default_rng(1).standard_normal(SR)).astype(np.float32), SR)
+        cls.inv = base / "inventory"
+        inventory.process_pack("clean", "autopack", str(cls.datasets / "clean" / "autopack"), str(cls.inv),
+                               str(base / "reports"), 1, True)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def _zones(self, **opts):
+        return build_pitched_zones(str(self.datasets), "clean", "autopack", str(self.inv), {"include": "Horn/sus/", **opts})
+
+    def test_keys_follow_the_sounding_pitch_not_the_octave_in_the_names(self):
+        zones, rep = self._zones()
+        self.assertEqual(rep["pack_octave"], 1)
+        roots = sorted({round(z["root"]) for z in zones})
+        self.assertEqual(roots, [57, 60, 64])
+        for z in zones:
+            self.assertLessEqual(z["lk"], round(z["root"]))
+            self.assertGreaterEqual(z["hk"], round(z["root"]))
+
+    def test_note_ranges_meet_halfway_and_extend_past_the_ends(self):
+        zones, rep = self._zones(key_span=3)
+        spans = {round(z["root"]): (z["lk"], z["hk"]) for z in zones}
+        self.assertEqual(spans[57], (54, 58))        # three keys below, then halfway to 60
+        self.assertEqual(spans[60], (59, 62))
+        self.assertEqual(spans[64], (63, 67))
+
+    def test_velocity_ids_become_equal_bands_and_repeats_become_round_robins(self):
+        zones, rep = self._zones()
+        self.assertEqual(rep["velocity_layers"], 2)
+        self.assertEqual({(z["lv"], z["hv"]) for z in zones}, {(1, 64), (65, 127)})
+        self.assertEqual(rep["round_robin_groups"], 6)
+        self.assertEqual(sorted(z["rr"] for z in zones if round(z["root"]) == 60 and z["lv"] == 1), [[1, 2], [2, 2]])
+
+    def test_unmatched_names_are_skipped_and_reported(self):
+        zones, rep = self._zones()
+        self.assertEqual(rep["skipped"], {"name did not match": 1})
+        self.assertEqual(len(zones), 12)
+
+    def test_loop_and_one_shot_options(self):
+        zones, rep = self._zones(loop="stable")
+        self.assertEqual(rep["loops"].get("found"), 12)
+        for z in zones:
+            start, end, xf = z["loop"]
+            self.assertTrue(0.0 < start < end <= 3.0)
+        zones, rep = self._zones(one_shot=True, loop="stable")
+        self.assertTrue(all(z.get("os") == 1 and "loop" not in z for z in zones))
+
+    def test_a_pattern_that_matches_nothing_is_an_error(self):
+        with self.assertRaises(ValueError):
+            self._zones(include="Nothing/")
+        with self.assertRaises(ValueError):
+            build_pitched_zones(str(self.datasets), "clean", "autopack", str(self.inv), {})
+
+    def test_mapped_notes_play_at_their_own_pitch(self):
+        zones, _ = self._zones()
+        manifest = {"format": FORMAT, "name": "t", "patches": [{"id": "p", "voice": FeatureTests._voice(), "zones": zones}]}
+        eng = Engine(Instrument(manifest), str(self.datasets), sr=SR)
+        for key in (57, 59, 60, 64, 66):
+            audio, _ = eng.render([Note(0.0, 0.8, key, 100)], tail_s=0.1, peak_limit=1e9)
+            res = detect_pitch(audio.mean(axis=1), SR, int(0.05 * SR))
+            self.assertLess(abs(res["pitch_midi"] - key) * 100, 8.0, (key, res))
+
 
 @unittest.skipUnless((ROOT / "datasets" / "clean" / "salamander-grand").is_dir()
                      and (ROOT / "generated-instruments" / "afrobeat" / "piano" / "instrument.json").exists(),
@@ -600,6 +727,78 @@ class AfrobeatGuitarTests(unittest.TestCase):
 
     def test_credits(self):
         self.assertEqual({c["pack"] for c in self.inst.manifest["credits"]}, {"shinyguitar", "ganjo"})
+        self.assertTrue(self.inst.manifest["distributable"])
+
+
+@unittest.skipUnless((ROOT / "datasets" / "clean" / "vsco2ce").is_dir()
+                     and (ROOT / "generated-instruments" / "afrobeat" / "horns" / "instrument.json").exists(),
+                     "sample packs are not downloaded here (see scripts/fetch_datasets.sh)")
+class AfrobeatHornsTests(unittest.TestCase):
+    RANGES = {"trumpet-stab": (60, 78), "trumpet-sustain": (60, 78), "trombone-stab": (40, 62),
+              "trombone-sustain": (40, 62), "sax": (55, 77)}
+
+    @classmethod
+    def setUpClass(cls):
+        cls.inst = Instrument.load(str(ROOT / "generated-instruments" / "afrobeat" / "horns" / "instrument.json"))
+        cls.eng = Engine(cls.inst, str(ROOT / "datasets"), sr=SR)
+
+    def test_notes_play_in_tune(self):
+        for pid, (lo, hi) in self.RANGES.items():
+            checked = 0
+            for key in range(lo, hi + 1, 3):
+                audio, _ = self.eng.render([Note(0.0, 1.0, key, 100)], patch=pid, tail_s=0.3, peak_limit=1e9)
+                res = detect_pitch(audio.mean(axis=1), SR, int(0.15 * SR))
+                if res.get("pitched"):         # stabs are short and the detector sometimes declines
+                    checked += 1
+                    self.assertLess(abs(res["pitch_midi"] - key) * 100, 20.0, (pid, key, res))
+            self.assertGreaterEqual(checked, 5, pid)
+
+    def test_sustained_patches_hold_a_long_note_without_dropping_out_or_pulsing(self):
+        for pid in ("trumpet-sustain", "trombone-sustain", "sax"):
+            lo, hi = self.RANGES[pid]
+            for key in range(lo, hi + 1, 4):
+                audio, _ = self.eng.render([Note(0.0, 6.0, key, 100)], patch=pid, tail_s=0.3, peak_limit=1e9)
+                m = audio.mean(axis=1)
+                frames = [rms_db(m[int(t * SR):int((t + 0.1) * SR)]) for t in np.arange(1.0, 5.8, 0.1)]
+                self.assertGreater(min(frames), -70.0, (pid, key, "sound ended early"))
+                self.assertLess(max(frames) - min(frames), 5.0, (pid, key, "level pulses"))
+
+    def test_velocity_is_monotonic_on_every_sampled_patch(self):
+        for pid, (lo, hi) in self.RANGES.items():
+            levels = []
+            for vel in range(10, 128, 12):
+                audio, _ = self.eng.render([Note(0.0, 0.8, (lo + hi) // 2, vel)], patch=pid, tail_s=0.1, peak_limit=1e9)
+                levels.append(rms_db(audio.mean(axis=1)[: int(0.5 * SR)]))
+            # a velocity-layer switch may leave a tiny step (trumpet-stab: 0.12 dB); a real dip is audible
+            self.assertTrue(all(b > a - 0.5 for a, b in zip(levels, levels[1:])), (pid, levels))
+            self.assertGreater(levels[-1] - levels[0], 12.0, (pid, levels))
+
+    def test_stabs_play_to_the_end_but_sustained_notes_follow_the_key(self):
+        short = [Note(0.0, 0.05, 66, 100)]
+        stab, _ = self.eng.render(short, patch="trumpet-stab", tail_s=0.6, peak_limit=1e9)
+        held, _ = self.eng.render(short, patch="trumpet-sustain", tail_s=0.6, peak_limit=1e9)
+        self.assertGreater(rms_db(stab.mean(axis=1)[int(0.25 * SR):int(0.45 * SR)]), -60.0)
+        self.assertLess(rms_db(held.mean(axis=1)[int(0.6 * SR):int(0.8 * SR)]), -80.0)
+
+    def test_horn_section_is_trumpet_sax_and_an_octave_down_trombone(self):
+        section = self.inst.patches["section"]
+        self.assertEqual([(l["patch"], l["transpose"]) for l in section.stack],
+                         [("trumpet-stab", 0), ("sax", 0), ("trombone-stab", -12)])
+        audio, st = self.eng.render([Note(0.0, 1.0, 69, 100)], patch="section", tail_s=0.5, peak_limit=1e9)
+        self.assertEqual(st["layers"], 3)
+        m = audio.mean(axis=1)
+        self.assertGreater(band_db(m, midi_hz(69), 0.1, 0.5), band_db(m, 3000.0, 0.1, 0.5))     # the played note is there
+        self.assertGreater(band_db(m, midi_hz(57), 0.05, 0.6), -70.0)                           # and the trombone's octave below
+
+    def test_loudness_is_matched_across_patches(self):
+        levels = {}
+        for pid, (lo, hi) in self.RANGES.items():
+            audio, _ = self.eng.render([Note(0.0, 0.8, (lo + hi) // 2, 100)], patch=pid, tail_s=0.5, peak_limit=1e9)
+            levels[pid] = rms_db(audio.mean(axis=1)[: int(0.8 * SR)])
+        self.assertLess(max(levels.values()) - min(levels.values()), 8.0, levels)
+
+    def test_credits(self):
+        self.assertEqual({c["pack"] for c in self.inst.manifest["credits"]}, {"vsco2ce", "weresax"})
         self.assertTrue(self.inst.manifest["distributable"])
 
 

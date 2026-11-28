@@ -90,7 +90,7 @@ class Engine:
         # dynamic_range_db towards velocity 1. The layer's own recorded level is taken out first.
         curve = -v["dynamic_range_db"] * (1.0 - note.vel / 127.0) ** v["velocity_curve"]
         db = v["gain_db"] + zone.get("g", 0.0) + curve - zone.get("rl", 0.0)
-        db = max(-60.0, min(24.0, db))
+        db = max(-80.0, min(40.0, db))
         return buf * (env[:, None] * np.float32(10.0 ** (db / 20.0)))
 
     def _mono_cuts(self, notes, cut_s):
@@ -128,6 +128,35 @@ class Engine:
             live.append(v)
         return choked
 
+    def _render_stack(self, p, notes, tail_s, peak_limit):
+        """A stack patch plays the same notes through several other patches, each transposed and gained."""
+        sr, v = self.sr, p.voice
+        parts, played, skipped = [], 0, 0
+        for layer in p.stack:
+            shift = int(layer.get("transpose", 0))
+            moved = [Note(n.time, n.dur, n.key + shift, n.vel, getattr(n, "channel", 0))
+                     for n in notes if 0 <= n.key + shift <= 127]
+            audio, st = self.render(moved, patch=layer["patch"], tail_s=tail_s, peak_limit=1e9)
+            parts.append(audio * np.float32(10.0 ** (float(layer.get("gain_db", 0.0)) / 20.0)))
+            played += st["notes_played"]
+            skipped += st["notes_without_sample"]
+        out = np.zeros((max(a.shape[0] for a in parts), 2), dtype=np.float32)
+        for a in parts:
+            out[: a.shape[0]] += a
+        out *= np.float32(10.0 ** (float(v.get("gain_db", 0.0)) / 20.0))
+        if v.get("highpass_hz"):
+            out = one_pole(out, v["highpass_hz"], sr, "hp")
+        if v.get("lowpass_hz"):
+            out = one_pole(out, v["lowpass_hz"], sr, "lp")
+        peak = float(np.max(np.abs(out))) if out.size else 0.0
+        scale = 1.0
+        if peak > peak_limit:
+            scale = peak_limit / peak
+            out *= np.float32(scale)
+        return out, {"patch": p.id, "notes_played": played, "notes_without_sample": skipped, "mono_cuts": 0,
+                     "choked": 0, "peak": round(peak * scale, 4), "scale": round(scale, 4),
+                     "seconds": round(out.shape[0] / sr, 2), "layers": len(parts)}
+
     def render(self, notes, patch=None, tail_s=1.0, peak_limit=0.95):
         """Render notes (objects with time, dur, key, vel) to a (frames, 2) float32 array.
 
@@ -138,6 +167,8 @@ class Engine:
         choke_s (fade of a voice cut by a choke group). One-shot zones ignore note length.
         """
         p = self.inst.patches[patch or self.inst.default_patch]
+        if p.stack:
+            return self._render_stack(p, notes, tail_s, peak_limit)
         p.reset_round_robin()
         sr = self.sr
         v = p.voice

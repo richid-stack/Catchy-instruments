@@ -58,6 +58,10 @@ def main():
         json.dump(report, fh, indent=1)
     for p in manifest["patches"]:
         r = report["patches"][p["id"]]
+        if "stack" in r:
+            print(f"{p['id']}: stack of {', '.join(l['patch'] for l in r['stack'])}, "
+                  f"measured {r.get('measured_rms_db_before_trim')} dB, trim {r['auto_gain_db']} dB")
+            continue
         print(f"{p['id']}: {r['zones']} zones, {r['velocity_layers']} velocity layers, keys {r['keys']}, "
               f"measured {r.get('measured_rms_db_before_trim')} dB, trim {r['auto_gain_db']} dB, loops {r['loops']}"
               + (f", key balance {r['key_balance']['before_spread_db']} -> {r['key_balance']['after_spread_db']} dB spread"

@@ -15,6 +15,7 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(_HERE, "..", "..", "sample-mapping"))
 sys.path.insert(0, os.path.join(_HERE, "..", "..", "audio-engine"))
 
+from sample_mapping.automap import build_pitched_zones  # noqa: E402
 from sample_mapping.zones import build_zones  # noqa: E402
 from sampler.engine import Engine  # noqa: E402
 from sampler.instrument import Instrument  # noqa: E402
@@ -44,7 +45,7 @@ def read_pack_table(datasets_root):
     return table
 
 
-def measure_loudness_db(manifest, patch_id, datasets_root, keys=range(48, 73, 4), vel=100, dur=0.9):
+def measure_loudness_db(manifest, patch_id, datasets_root, keys=range(48, 73, 4), vel=100, dur=0.9, window_s=1.5):
     """Render mid-keyboard notes at forte and return their mean-square level in dBFS.
 
     This is a rendered measurement, not an estimate from file levels, so it includes the layer
@@ -54,7 +55,7 @@ def measure_loudness_db(manifest, patch_id, datasets_root, keys=range(48, 73, 4)
     notes = [Note(time=i * 2.2, dur=dur, key=k, vel=vel) for i, k in enumerate(keys)]
     audio, _ = engine.render(notes, patch=patch_id, tail_s=0.5, peak_limit=1e9)
     mono = audio.mean(axis=1)
-    sq = np.concatenate([mono[int(n.time * 44100):int((n.time + 1.5) * 44100)] ** 2 for n in notes])
+    sq = np.concatenate([mono[int(n.time * 44100):int((n.time + window_s) * 44100)] ** 2 for n in notes])
     return float(10.0 * np.log10(max(float(np.mean(sq)), 1e-12)))
 
 
@@ -109,6 +110,8 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
     packs = read_pack_table(datasets_root)
     built, report, used = [], {"patches": {}}, {}
     for p in patches_in:
+        if p.get("stack"):          # layers of other patches; built after the sampled ones
+            continue
         src = p.get("source") or {}
         tier = src.get("tier", "clean")
         if tier not in TIERS:
@@ -116,9 +119,17 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
         if tier == "research-private" and not allow_private:
             raise BuildError(f"patch {p.get('id')} uses research-private samples; pass --allow-private "
                              "for a private build that stays out of git")
-        if not all(k in src for k in ("pack", "sfz")):
-            raise BuildError(f"patch {p.get('id')}: source needs 'pack' and 'sfz'")
-        zones, rep = build_zones(datasets_root, tier, src["pack"], src["sfz"], inventory_dir, src.get("options"))
+        mode = src.get("mode", "sfz")
+        if mode == "pitched":
+            if "pack" not in src:
+                raise BuildError(f"patch {p.get('id')}: source needs 'pack'")
+            zones, rep = build_pitched_zones(datasets_root, tier, src["pack"], inventory_dir, src.get("options"))
+        elif mode == "sfz":
+            if not all(k in src for k in ("pack", "sfz")):
+                raise BuildError(f"patch {p.get('id')}: source needs 'pack' and 'sfz'")
+            zones, rep = build_zones(datasets_root, tier, src["pack"], src["sfz"], inventory_dir, src.get("options"))
+        else:
+            raise BuildError(f"patch {p.get('id')}: unknown source mode {mode!r}")
         if not zones:
             raise BuildError(f"patch {p.get('id')}: no playable zones from {src['pack']}")
         used[src["pack"]] = {"pack": src["pack"], "tier": tier, **{k: v for k, v in packs.get(src["pack"], {}).items() if k != "tier"}}
@@ -127,13 +138,25 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
                       "voice": voice, "zones": zones})
         report["patches"][p["id"]] = rep
 
+    for p in patches_in:
+        if not p.get("stack"):
+            continue
+        ids = {b["id"] for b in built}
+        for layer in p["stack"]:
+            if layer.get("patch") not in ids:
+                raise BuildError(f"patch {p.get('id')}: stack layer {layer.get('patch')!r} is not a sampled patch of this spec")
+        voice = {**VOICE_DEFAULTS, **(p.get("voice") or {})}
+        built.append({"id": p["id"], "name": p.get("name", p["id"]), "note": p.get("note", ""), "voice": voice,
+                      "zones": [], "stack": p["stack"]})
+        report["patches"][p["id"]] = {"stack": p["stack"]}
+
     trial = {"format": FORMAT, "name": spec["name"], "patches": built}
     by_id = {p["id"]: p for p in patches_in}
     target = spec.get("target_rms_db", -24.0)
-    for b in built:
+    for b in sorted(built, key=lambda b: bool(b.get("stack"))):   # stacks last: they sum the trimmed layers
         trim = 0.0
         bal = {**(spec.get("balance") or {}), **(by_id[b["id"]].get("balance") or {})}
-        if bal.get("keys"):
+        if bal.get("keys") and not b.get("stack"):
             lo, hi = bal["keys"][0], bal["keys"][1]
             report["patches"][b["id"]]["key_balance"] = balance_keys(
                 trial, b, datasets_root, range(int(lo), int(hi) + 1), max_db=bal.get("max_db", 9.0),
@@ -144,11 +167,12 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
             if "keys" in m:
                 lo, hi, step = (list(m["keys"]) + [4])[:3] if len(m["keys"]) == 2 else m["keys"]
                 kw["keys"] = range(int(lo), int(hi) + 1, int(step))
-            for name in ("vel", "dur"):
+            for name in ("vel", "dur", "window_s"):
                 if name in m:
                     kw[name] = m[name]
             measured = measure_loudness_db(trial, b["id"], datasets_root, **kw)
-            trim = max(-12.0, min(12.0, target - measured))
+            limit = float(spec.get("max_trim_db", 12.0))
+            trim = max(-limit, min(limit, target - measured))
             report["patches"][b["id"]]["measured_rms_db_before_trim"] = round(measured, 2)
         b["voice"]["gain_db"] = round(b["voice"]["gain_db"] + trim, 2)
         report["patches"][b["id"]]["auto_gain_db"] = round(trim, 2)

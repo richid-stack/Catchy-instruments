@@ -1,0 +1,219 @@
+{
+  "name": "Afrobeat Horns",
+  "genre": "afrobeat",
+  "type": "horns",
+  "description": "Horns for Afrobeat: short stabs and sustained notes on trumpet and tenor trombone, an alto sax, and a Horn Section patch that plays trumpet, sax and trombone (an octave down) together.",
+  "default_patch": "section",
+  "match_loudness": true,
+  "target_rms_db": -24.0,
+  "patches": [
+    {
+      "id": "trumpet-stab",
+      "name": "Trumpet Stab",
+      "note": "Staccato trumpet (VSCO 2 CE). 3 velocity layers x 2 round robins. Each press plays the whole recorded stab whatever the note length.",
+      "source": {
+        "pack": "vsco2ce",
+        "mode": "pitched",
+        "options": {
+          "include": "Brass/Trumpet/stac/",
+          "one_shot": true
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.1,
+        "highpass_hz": 110,
+        "dynamic_range_db": 24
+      },
+      "balance": {
+        "keys": [
+          53,
+          84
+        ],
+        "max_db": 12,
+        "strength": 0.85
+      },
+      "measure": {
+        "keys": [
+          60,
+          80,
+          4
+        ],
+        "dur": 0.3,
+        "window_s": 0.6
+      }
+    },
+    {
+      "id": "trumpet-sustain",
+      "name": "Trumpet Sustain",
+      "note": "Sustained trumpet (VSCO 2 CE), 2 velocity layers, looped in the steadiest part of each note.",
+      "source": {
+        "pack": "vsco2ce",
+        "mode": "pitched",
+        "options": {
+          "include": "Brass/Trumpet/sus/",
+          "loop": "stable"
+        }
+      },
+      "voice": {
+        "attack_s": 0.004,
+        "release_s": 0.25,
+        "highpass_hz": 110,
+        "dynamic_range_db": 24
+      },
+      "balance": {
+        "keys": [
+          53,
+          84
+        ],
+        "max_db": 12,
+        "strength": 0.85
+      },
+      "measure": {
+        "keys": [
+          60,
+          80,
+          4
+        ]
+      }
+    },
+    {
+      "id": "trombone-stab",
+      "name": "Trombone Stab",
+      "note": "Staccato tenor trombone (VSCO 2 CE). 4 velocity layers x 2 round robins, played to the end of the recording.",
+      "source": {
+        "pack": "vsco2ce",
+        "mode": "pitched",
+        "options": {
+          "include": "Brass/Tenor Trombone/stac/",
+          "one_shot": true
+        }
+      },
+      "voice": {
+        "attack_s": 0.002,
+        "release_s": 0.1,
+        "highpass_hz": 60,
+        "dynamic_range_db": 24
+      },
+      "balance": {
+        "keys": [
+          34,
+          65
+        ],
+        "max_db": 12,
+        "strength": 0.85
+      },
+      "measure": {
+        "keys": [
+          40,
+          64,
+          4
+        ],
+        "dur": 0.3,
+        "window_s": 0.6
+      }
+    },
+    {
+      "id": "trombone-sustain",
+      "name": "Trombone Sustain",
+      "note": "Sustained tenor trombone (VSCO 2 CE), 3 velocity layers, looped in the steadiest part of each note.",
+      "source": {
+        "pack": "vsco2ce",
+        "mode": "pitched",
+        "options": {
+          "include": "Brass/Tenor Trombone/sus/",
+          "loop": "stable"
+        }
+      },
+      "voice": {
+        "attack_s": 0.004,
+        "release_s": 0.25,
+        "highpass_hz": 60,
+        "dynamic_range_db": 24
+      },
+      "balance": {
+        "keys": [
+          34,
+          65
+        ],
+        "max_db": 12,
+        "strength": 0.85
+      },
+      "measure": {
+        "keys": [
+          40,
+          64,
+          4
+        ]
+      }
+    },
+    {
+      "id": "sax",
+      "name": "Alto Sax",
+      "note": "Alto saxophone, condenser microphone (Weresax). 2 velocity layers x 2 round robins, sustained notes looped in their steadiest stretch.",
+      "source": {
+        "pack": "weresax",
+        "sfz": "Programs/Sax.sfz",
+        "options": {
+          "include": "_cnd",
+          "level_scope": "key",
+          "loop_region": "stable"
+        }
+      },
+      "voice": {
+        "attack_s": 0.006,
+        "release_s": 0.22,
+        "highpass_hz": 100,
+        "dynamic_range_db": 24
+      },
+      "balance": {
+        "keys": [
+          49,
+          80
+        ],
+        "max_db": 12,
+        "strength": 0.85
+      },
+      "measure": {
+        "keys": [
+          55,
+          75,
+          4
+        ]
+      }
+    },
+    {
+      "id": "section",
+      "name": "Horn Section",
+      "note": "Trumpet and trombone stabs with the alto sax. The trombone sounds an octave below what you play. Play chords for a section.",
+      "stack": [
+        {
+          "patch": "trumpet-stab",
+          "transpose": 0,
+          "gain_db": 0.0
+        },
+        {
+          "patch": "sax",
+          "transpose": 0,
+          "gain_db": -3.0
+        },
+        {
+          "patch": "trombone-stab",
+          "transpose": -12,
+          "gain_db": -1.5
+        }
+      ],
+      "voice": {
+        "release_s": 0.15
+      },
+      "measure": {
+        "keys": [
+          55,
+          75,
+          4
+        ]
+      }
+    }
+  ],
+  "max_trim_db": 24
+}

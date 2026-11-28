@@ -1,0 +1,196 @@
+{
+ "patches": {
+  "trumpet-stab": {
+   "pack": "vsco2ce",
+   "mode": "pitched",
+   "include": "Brass/Trumpet/stac/",
+   "samples_matched": 66,
+   "zones": 66,
+   "skipped": {},
+   "keys": [
+    50,
+    87
+   ],
+   "sampled_notes": 11,
+   "velocity_layers": 3,
+   "round_robin_groups": 33,
+   "layered_groups_left_stacked": 0,
+   "roots_from_name": 9,
+   "pack_octave": 1,
+   "loops": {},
+   "layer_levels_db_below_loudest": {
+    "1-42": -9.4,
+    "43-85": -5.6,
+    "86-127": 0.0
+   },
+   "key_balance": {
+    "before_spread_db": 21.4,
+    "after_spread_db": 3.8,
+    "max_correction_db": 10.6
+   },
+   "measured_rms_db_before_trim": -38.02,
+   "auto_gain_db": 14.02
+  },
+  "trumpet-sustain": {
+   "pack": "vsco2ce",
+   "mode": "pitched",
+   "include": "Brass/Trumpet/sus/",
+   "samples_matched": 20,
+   "zones": 20,
+   "skipped": {},
+   "keys": [
+    50,
+    87
+   ],
+   "sampled_notes": 10,
+   "velocity_layers": 2,
+   "round_robin_groups": 0,
+   "layered_groups_left_stacked": 0,
+   "roots_from_name": 0,
+   "pack_octave": 1,
+   "loops": {
+    "found": 20
+   },
+   "layer_levels_db_below_loudest": {
+    "1-64": -2.5,
+    "65-127": 0.0
+   },
+   "key_balance": {
+    "before_spread_db": 11.0,
+    "after_spread_db": 1.8,
+    "max_correction_db": 4.8
+   },
+   "measured_rms_db_before_trim": -25.48,
+   "auto_gain_db": 1.48
+  },
+  "trombone-stab": {
+   "pack": "vsco2ce",
+   "mode": "pitched",
+   "include": "Brass/Tenor Trombone/stac/",
+   "samples_matched": 56,
+   "zones": 56,
+   "skipped": {},
+   "keys": [
+    31,
+    68
+   ],
+   "sampled_notes": 7,
+   "velocity_layers": 4,
+   "round_robin_groups": 28,
+   "layered_groups_left_stacked": 0,
+   "roots_from_name": 13,
+   "pack_octave": 1,
+   "loops": {},
+   "layer_levels_db_below_loudest": {
+    "1-32": -12.2,
+    "33-64": -9.5,
+    "65-95": -6.1,
+    "96-127": 0.0
+   },
+   "key_balance": {
+    "before_spread_db": 15.2,
+    "after_spread_db": 3.3,
+    "max_correction_db": 9.0
+   },
+   "measured_rms_db_before_trim": -37.19,
+   "auto_gain_db": 13.19
+  },
+  "trombone-sustain": {
+   "pack": "vsco2ce",
+   "mode": "pitched",
+   "include": "Brass/Tenor Trombone/sus/",
+   "samples_matched": 31,
+   "zones": 31,
+   "skipped": {},
+   "keys": [
+    31,
+    68
+   ],
+   "sampled_notes": 11,
+   "velocity_layers": 3,
+   "round_robin_groups": 0,
+   "layered_groups_left_stacked": 0,
+   "roots_from_name": 0,
+   "pack_octave": 1,
+   "loops": {
+    "found": 31
+   },
+   "layer_levels_db_below_loudest": {
+    "1-42": -14.0,
+    "43-85": -3.1,
+    "86-127": 0.0
+   },
+   "key_balance": {
+    "before_spread_db": 18.5,
+    "after_spread_db": 2.8,
+    "max_correction_db": 8.3
+   },
+   "measured_rms_db_before_trim": -43.24,
+   "auto_gain_db": 19.24
+  },
+  "sax": {
+   "pack": "weresax",
+   "sfz": "Programs/Sax.sfz",
+   "regions_in_sfz": 256,
+   "zones": 124,
+   "skipped": {
+    "filtered out by include/exclude": 124,
+    "no root key": 8
+   },
+   "sfz_warnings": [],
+   "keys": [
+    49,
+    80
+   ],
+   "velocity_layers": 2,
+   "round_robin_groups": 62,
+   "layered_groups_left_stacked": 0,
+   "layer_levels_db_below_loudest": {
+    "1-63": -2.2,
+    "64-127": 0.0
+   },
+   "loops": {
+    "auto found": 124
+   },
+   "pack_octave": 0,
+   "key_shift_semitones": 0,
+   "declared_vs_detected_pitch": {
+    "compared": 123,
+    "within_60_cents": 123,
+    "octave_shifted": 0,
+    "other": 0,
+    "median_abs_cents": 0.0,
+    "p95_abs_cents": 2.0,
+    "mean_cents": 0.0
+   },
+   "key_balance": {
+    "before_spread_db": 6.0,
+    "after_spread_db": 0.9,
+    "max_correction_db": 2.8
+   },
+   "measured_rms_db_before_trim": -21.27,
+   "auto_gain_db": -2.73
+  },
+  "section": {
+   "stack": [
+    {
+     "patch": "trumpet-stab",
+     "transpose": 0,
+     "gain_db": 0.0
+    },
+    {
+     "patch": "sax",
+     "transpose": 0,
+     "gain_db": -3.0
+    },
+    {
+     "patch": "trombone-stab",
+     "transpose": -12,
+     "gain_db": -1.5
+    }
+   ],
+   "measured_rms_db_before_trim": -23.53,
+   "auto_gain_db": -0.47
+  }
+ }
+}

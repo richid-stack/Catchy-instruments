@@ -32,6 +32,7 @@ class Patch:
         self.name = raw.get("name", self.id)
         self.voice = dict(raw["voice"])
         self.zones = raw["zones"]
+        self.stack = raw.get("stack") or []     # layers: [{"patch": id, "transpose": semitones, "gain_db": dB}]
         self.by_key = collections.defaultdict(list)
         self.extend_semitones = int(self.voice.get("extend_semitones", 12))
         for i, z in enumerate(self.zones):
@@ -91,6 +92,17 @@ class Instrument:
             if "id" not in raw or "zones" not in raw or "voice" not in raw:
                 raise InstrumentError("patch needs id, voice and zones")
             self.patches[raw["id"]] = Patch(raw)
+        for patch in self.patches.values():
+            for layer in patch.stack:
+                sub = self.patches.get(layer.get("patch"))
+                if sub is None or sub.stack:
+                    raise InstrumentError(f"patch {patch.id}: stack layer {layer.get('patch')!r} must be another patch without a stack")
+                if not isinstance(layer.get("transpose", 0), int) or not -48 <= layer.get("transpose", 0) <= 48:
+                    raise InstrumentError(f"patch {patch.id}: stack transpose must be a whole number of semitones within 48")
+            if patch.stack and patch.zones:
+                raise InstrumentError(f"patch {patch.id}: a stack patch has layers, not zones")
+            if not patch.stack and not patch.zones:
+                raise InstrumentError(f"patch {patch.id}: patch has no zones")
         self.default_patch = manifest.get("default_patch") or raw_patches[0]["id"]
         if self.default_patch not in self.patches:
             raise InstrumentError("default_patch is not one of the patches")

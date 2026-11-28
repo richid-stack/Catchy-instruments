@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Write short Afrobeat demo parts as MIDI files (108 BPM, A minor, eight bars: Am9 Am9 D9 Am9, twice).
 
-    python3 -I instrument-builder/demo_afrobeat.py [keys|bass|guitar] OUT.mid
+    python3 -I instrument-builder/demo_afrobeat.py [keys|bass|guitar|horns] OUT.mid
 
 keys (the default): syncopated chord stabs with ghost notes, a bass line in the left hand and a
 pentatonic lick in the second half. guitar: sixteenth-note muted chops on the off-beats with ghost notes
-and a high pentatonic lick in the second half. bass: a syncopated root/octave/fifth line with passing notes,
+and a high pentatonic lick in the second half. horns: short off-beat chord stabs for four bars, then
+held chords with a stab at the end of each bar. bass: a syncopated root/octave/fifth line with passing notes,
 some of them overlapping so monophonic patches show their note cutting. Velocities are humanized
 with a fixed seed so the files are reproducible.
 """
@@ -77,6 +78,27 @@ def guitar_part(rnd, bars):
     return notes
 
 
+HORN_CHORDS = {"Am9": [69, 72, 76], "D9": [66, 69, 72, 76]}
+HORN_STABS_A = [(3, 90), (6, 84), (10, 96)]            # (step, velocity), even bars
+HORN_STABS_B = [(0, 104), (3, 86), (7, 92), (11, 88)]  # odd bars
+
+
+def horns_part(rnd, bars):
+    notes = []
+    for bar, name in enumerate(bars):
+        chord = HORN_CHORDS[name]
+        if bar < 4:
+            hits = [(step, 0.5, vel) for step, vel in (HORN_STABS_A if bar % 2 == 0 else HORN_STABS_B)]
+        else:
+            hits = [(0, 12, 88), (14, 0.5, 106)]           # a held chord, then a stab leading into the next bar
+        for step, length, vel in hits:
+            for i, key in enumerate(chord):
+                jitter = (next(rnd) - 0.5) * 0.012
+                v = max(1, min(127, int(vel + (next(rnd) - 0.5) * 8)))
+                notes.append((max(bar * 4 + step * STEP + jitter, 0.0), length * STEP * (0.95 if length > 1 else 1.0), key, v))
+    return notes
+
+
 def main():
     if len(sys.argv) not in (2, 3):
         sys.exit(__doc__)
@@ -87,6 +109,11 @@ def main():
         notes = bass_part(rnd, BARS)
         write_midi(out, notes, bpm=BPM)
         print(f"wrote {out}: {len(notes)} bass notes, {len(BARS)} bars at {BPM:g} BPM")
+        return
+    if kind == "horns":
+        notes = horns_part(rnd, BARS)
+        write_midi(out, notes, bpm=BPM)
+        print(f"wrote {out}: {len(notes)} horn notes, {len(BARS)} bars at {BPM:g} BPM")
         return
     if kind == "guitar":
         notes = guitar_part(rnd, BARS)

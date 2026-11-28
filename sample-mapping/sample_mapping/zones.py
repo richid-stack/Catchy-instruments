@@ -39,6 +39,7 @@ DEFAULTS = {
     "refine_tuning": True,    # use the detected pitch as root when it is close to the declared one
     "refine_limit": 0.5,      # ...meaning within this many semitones (an instrument tuned well off A440 needs more)
     "auto_loop": True,        # find loops for samples that end while still audible
+    "loop_region": "end",     # "end": loop near the end of the file; "stable": in the steadiest stretch (blown and bowed notes)
     "trim_lead": True,        # skip leading silence
     "sfz_volume": True,       # apply the SFZ author's per-region volume (dB) as zone gain
     "level_scope": "patch",   # "patch": compare velocity layers across the whole patch; "key": per key range
@@ -245,7 +246,7 @@ def build_zones(datasets_root, tier, pack_id, sfz_rel, inventory_dir, options=No
             loops["from sfz"] += 1
         elif opts["auto_loop"] and rec.get("env") == "sustained" and "os" not in zone:
             if rel not in loop_cache:
-                loop_cache[rel] = auto_loop(pack_dir, rel, pitch_for_loop)
+                loop_cache[rel] = auto_loop(pack_dir, rel, pitch_for_loop, sustained_region=opts["loop_region"] == "stable")
             if loop_cache[rel]:
                 zone["loop"] = loop_cache[rel]
                 loops["auto found"] += 1
