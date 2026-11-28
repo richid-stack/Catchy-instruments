@@ -1,0 +1,276 @@
+{
+ "name": "Trap Drums",
+ "genre": "trap",
+ "type": "drums",
+ "description": "Drum kits from real one-shot hits: kick, snare, clap, rim, toms, closed and open hats (the closed hat cuts the open one), crash, ride and percussion, each key with round robins.",
+ "default_patch": "butcha",
+ "match_loudness": true,
+ "target_rms_db": -27.0,
+ "measure": {
+  "keys": [
+   36,
+   46,
+   2
+  ],
+  "vel": 100,
+  "dur": 0.3,
+  "window_s": 0.5
+ },
+ "max_trim_db": 18,
+ "patches": [
+  {
+   "id": "butcha",
+   "name": "Butcha Kit",
+   "note": "Beat Butcha Pure Protein Vol 5: kicks, snares, hats and percussion, typical hits picked per key.",
+   "source": {
+    "tier": "research-private",
+    "mode": "kit",
+    "pack": "beat-butcha-pure-protein-drum-kit-vol-5",
+    "options": {
+     "slots": [
+      {
+       "key": 36,
+       "name": "Kick",
+       "include": "(?i)/KICK/",
+       "exclude": "(?i)sub|808|stomp",
+       "t20": [
+        0.04,
+        0.3
+       ],
+       "rr": 4,
+       "peak_db": -1.5,
+       "name_exclude": "(?i)snr|snare|hat|clap|loop|roll"
+      },
+      {
+       "key": 37,
+       "name": "Rim",
+       "include": "(?i)/SNARES/",
+       "rr": 3,
+       "peak_db": -5,
+       "name_include": "(?i)rim",
+       "name_exclude": "(?i)roll|loop"
+      },
+      {
+       "key": 38,
+       "name": "Snare",
+       "include": "(?i)/SINGLE SNARES/",
+       "exclude": "(?i)roll|rim|clap",
+       "rr": 4,
+       "peak_db": -2,
+       "name_exclude": "(?i)roll|rim|clap|loop"
+      },
+      {
+       "key": 39,
+       "name": "Clap",
+       "include": "(?i)/SNARES/",
+       "rr": 4,
+       "peak_db": -4,
+       "name_include": "(?i)clap",
+       "name_exclude": "(?i)roll|loop"
+      },
+      {
+       "key": 41,
+       "name": "Tom low",
+       "include": "(?i)/PERC/.*tom",
+       "exclude": "(?i)stomp",
+       "centroid": [
+        0,
+        700
+       ],
+       "rr": 2,
+       "peak_db": -4,
+       "name_exclude": "(?i)stomp|loop"
+      },
+      {
+       "key": 43,
+       "name": "Tom mid",
+       "include": "(?i)/PERC/.*tom",
+       "exclude": "(?i)stomp",
+       "centroid": [
+        700,
+        1500
+       ],
+       "rr": 2,
+       "peak_db": -4,
+       "name_exclude": "(?i)stomp|loop"
+      },
+      {
+       "key": 45,
+       "name": "Tom high",
+       "include": "(?i)/PERC/.*tom",
+       "exclude": "(?i)stomp",
+       "centroid": [
+        1500,
+        9000
+       ],
+       "rr": 2,
+       "peak_db": -4,
+       "name_exclude": "(?i)stomp|loop"
+      },
+      {
+       "key": 42,
+       "name": "Closed hat",
+       "include": "(?i)/HATS/",
+       "exclude": "(?i)open|_oh|ohh|roll",
+       "t20": [
+        0.0,
+        0.09
+       ],
+       "rr": 4,
+       "peak_db": -8,
+       "grp": 1,
+       "name_exclude": "(?i)open|oh|roll|loop|tamb",
+       "dur": [
+        0,
+        0.7
+       ]
+      },
+      {
+       "key": 46,
+       "name": "Open hat",
+       "include": "(?i)/HATS/",
+       "exclude": "(?i)roll",
+       "t20": [
+        0.14,
+        2.0
+       ],
+       "rr": 3,
+       "peak_db": -8,
+       "grp": 2,
+       "off_by": 1,
+       "name_include": "(?i)open|oh",
+       "name_exclude": "(?i)roll|loop|tamb",
+       "dur": [
+        0,
+        2.0
+       ]
+      },
+      {
+       "key": 49,
+       "name": "Crash",
+       "include": "(?i)/RIDES/.*crash",
+       "rr": 2,
+       "peak_db": -8
+      },
+      {
+       "key": 51,
+       "name": "Ride",
+       "include": "(?i)/RIDES/",
+       "exclude": "(?i)crash",
+       "rr": 2,
+       "peak_db": -9,
+       "name_exclude": "(?i)crash|loop"
+      },
+      {
+       "key": 56,
+       "name": "Cowbell",
+       "include": "(?i)cowbell",
+       "rr": 2,
+       "peak_db": -6
+      },
+      {
+       "key": 70,
+       "name": "Shaker",
+       "include": "(?i)shake",
+       "rr": 2,
+       "peak_db": -8
+      }
+     ]
+    }
+   },
+   "voice": {
+    "attack_s": 0.0,
+    "release_s": 0.05,
+    "dynamic_range_db": 24,
+    "highpass_hz": 25
+   }
+  },
+  {
+   "id": "purewater",
+   "name": "Pure Water Kit",
+   "note": "Pure Water R&B one-shots: softer kick and snare, claps, rims, hats and rolls.",
+   "source": {
+    "tier": "research-private",
+    "mode": "kit",
+    "pack": "pure-water-rnb-flips",
+    "options": {
+     "slots": [
+      {
+       "key": 36,
+       "name": "Kick",
+       "include": "(?i)91V_PW_kick",
+       "rr": 4,
+       "peak_db": -1.5
+      },
+      {
+       "key": 37,
+       "name": "Rim",
+       "include": "(?i)91V_PW_rim",
+       "rr": 3,
+       "peak_db": -5
+      },
+      {
+       "key": 38,
+       "name": "Snare",
+       "include": "(?i)91V_PW_snare",
+       "exclude": "(?i)clap",
+       "rr": 4,
+       "peak_db": -2
+      },
+      {
+       "key": 39,
+       "name": "Clap",
+       "include": "(?i)91V_PW_clap",
+       "rr": 4,
+       "peak_db": -4
+      },
+      {
+       "key": 42,
+       "name": "Closed hat",
+       "include": "(?i)91V_PW_hihat_closed",
+       "rr": 4,
+       "peak_db": -8,
+       "grp": 1
+      },
+      {
+       "key": 46,
+       "name": "Open hat",
+       "include": "(?i)91V_PW_hihat_open",
+       "rr": 3,
+       "peak_db": -8,
+       "grp": 2,
+       "off_by": 1
+      },
+      {
+       "key": 44,
+       "name": "Hat roll",
+       "include": "(?i)91V_PW_hihat_roll",
+       "rr": 3,
+       "peak_db": -8
+      },
+      {
+       "key": 54,
+       "name": "Snap",
+       "include": "(?i)91V_PW_perc_snap",
+       "rr": 1,
+       "peak_db": -6
+      },
+      {
+       "key": 56,
+       "name": "Triangle",
+       "include": "(?i)91V_PW_perc_triangle",
+       "rr": 1,
+       "peak_db": -8
+      }
+     ]
+    }
+   },
+   "voice": {
+    "attack_s": 0.0,
+    "release_s": 0.05,
+    "dynamic_range_db": 24,
+    "highpass_hz": 25
+   }
+  }
+ ]
+}

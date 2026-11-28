@@ -18,6 +18,7 @@ from audioinv.features import detect_pitch  # noqa: E402
 from instrument_builder.build import BuildError, build_instrument, measure_loudness_db  # noqa: E402
 from sample_mapping import harvest  # noqa: E402
 from sample_mapping.automap import build_pitched_zones  # noqa: E402
+from sample_mapping.kit import build_kit_zones  # noqa: E402
 from sample_mapping.looping import find_loop  # noqa: E402
 from sample_mapping.zones import build_zones  # noqa: E402
 from sampler import dsp  # noqa: E402
@@ -583,6 +584,93 @@ class AutomapTests(unittest.TestCase):
             audio, _ = eng.render([Note(0.0, 0.8, key, 100)], tail_s=0.1, peak_limit=1e9)
             res = detect_pitch(audio.mean(axis=1), SR, int(0.05 * SR))
             self.assertLess(abs(res["pitch_midi"] - key) * 100, 8.0, (key, res))
+
+
+class KitTests(unittest.TestCase):
+    """Drum hits mapped into a kit."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.tmp = tempfile.TemporaryDirectory()
+        base = Path(cls.tmp.name)
+        cls.datasets = base / "datasets"
+        pack = cls.datasets / "clean" / "drums"
+        (pack / "KICK").mkdir(parents=True)
+        (pack / "HATS").mkdir()
+        rng = np.random.default_rng(5)
+
+        def thump(f0, dur, amp, decay):
+            t = np.arange(int(dur * SR)) / SR
+            return (amp * np.sin(2 * np.pi * (f0 + 60 * np.exp(-t * 40)) * t) * np.exp(-t * decay)).astype(np.float32)
+
+        def hat(dur, amp, decay):
+            t = np.arange(int(dur * SR)) / SR
+            return (amp * rng.standard_normal(len(t)) * np.exp(-t * decay)).astype(np.float32)
+
+        # five kicks: three alike (50 Hz), one much brighter and shorter, one is really a snare by name
+        for i, (f0, amp) in enumerate(((50, 0.8), (52, 0.5), (48, 0.9), (110, 0.7))):
+            sf.write(pack / "KICK" / f"kick_{i}.wav", thump(f0, 0.5, amp, 9), SR)
+        sf.write(pack / "KICK" / "kick_snr.wav", hat(0.3, 0.5, 20), SR)
+        sf.write(pack / "HATS" / "hat_closed.wav", hat(0.12, 0.4, 60), SR)
+        sf.write(pack / "HATS" / "hat_open.wav", hat(0.9, 0.4, 5), SR)
+        cls.inv = base / "inventory"
+        inventory.process_pack("clean", "drums", str(pack), str(cls.inv), str(base / "reports"), 1, True)
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.tmp.cleanup()
+
+    def _kit(self, slots):
+        return build_kit_zones(str(self.datasets), "clean", "drums", str(self.inv), {"slots": slots})
+
+    def test_name_filters_and_typical_hits_become_one_shot_round_robins(self):
+        zones, rep = self._kit([{"key": 36, "name": "Kick", "include": "KICK/", "name_exclude": "snr", "rr": 3}])
+        names = sorted(z["s"].rsplit("/", 1)[-1] for z in zones)
+        self.assertEqual(names, ["kick_0.wav", "kick_1.wav", "kick_2.wav"])      # the bright one and the snare stay out
+        self.assertTrue(all(z["lk"] == z["hk"] == 36 and z.get("os") == 1 for z in zones))
+        self.assertEqual(sorted(z["rr"] for z in zones), [[1, 3], [2, 3], [3, 3]])
+        self.assertEqual(rep["slots"]["Kick"]["matched"], 4)
+
+    def test_round_robins_are_matched_in_loudness_and_peak_lands_on_target(self):
+        zones, _ = self._kit([{"key": 36, "name": "Kick", "include": "KICK/", "name_exclude": "snr", "rr": 3, "peak_db": -6}])
+        eng = Engine(Instrument({"format": FORMAT, "name": "t", "patches": [
+            {"id": "k", "name": "k", "voice": {"attack_s": 0.0, "release_s": 0.05, "gain_db": 0.0, "dynamic_range_db": 30.0, "velocity_curve": 1.0,
+                      "lowpass_hz": None, "highpass_hz": None, "loop_decay_s": None}, "zones": zones}]}),
+            str(self.datasets), sr=SR)
+        levels, peaks = [], []
+        for _ in range(3):
+            audio, _ = eng.render([Note(0.0, 0.3, 36, 127)], tail_s=0.3, peak_limit=1e9)
+            levels.append(rms_db(audio.mean(axis=1)[:int(0.12 * SR)]))
+            peaks.append(20 * math.log10(float(np.max(np.abs(audio)))))
+        self.assertLess(max(levels) - min(levels), 1.5, levels)
+        self.assertLess(abs(float(np.median(peaks)) - -6.0), 1.5, peaks)
+
+    def test_choke_groups_and_empty_slots(self):
+        zones, rep = self._kit([
+            {"key": 42, "name": "Closed", "include": "HATS/", "name_include": "closed", "grp": 1},
+            {"key": 46, "name": "Open", "include": "HATS/", "name_include": "open", "grp": 2, "off_by": 1},
+            {"key": 49, "name": "Crash", "include": "(?i)crash"}])
+        by_key = {z["lk"]: z for z in zones}
+        self.assertEqual(by_key[42]["grp"], 1)
+        self.assertEqual((by_key[46]["grp"], by_key[46]["off_by"]), (2, 1))
+        self.assertEqual(rep["empty_slots"], ["Crash"])
+        self.assertNotIn(49, by_key)
+
+    def test_feature_ranges_pick_long_and_short_hats_apart(self):
+        short, _ = self._kit([{"key": 42, "name": "Short", "include": "HATS/", "dur": [0.0, 0.3]}])
+        long, _ = self._kit([{"key": 46, "name": "Long", "include": "HATS/", "dur": [0.5, 3.0]}])
+        self.assertEqual([z["s"].rsplit("/", 1)[-1] for z in short], ["hat_closed.wav"])
+        self.assertEqual([z["s"].rsplit("/", 1)[-1] for z in long], ["hat_open.wav"])
+
+    def test_builder_kit_mode_builds_and_credits_every_pack(self):
+        spec = {"name": "t kit", "patches": [{"id": "kit", "source": {"pack": "drums", "mode": "kit", "options": {"slots": [
+            {"key": 36, "name": "Kick", "include": "KICK/", "name_exclude": "snr", "rr": 2}]}}}]}
+        manifest, report = build_instrument(spec, str(self.datasets), str(self.inv))
+        self.assertEqual([c["pack"] for c in manifest["credits"]], ["drums"])
+        self.assertEqual(report["patches"]["kit"]["mode"], "kit")
+        with self.assertRaises(BuildError):
+            build_instrument({"name": "x", "patches": [{"id": "k", "source": {"pack": "drums", "mode": "kit"}}]},
+                             str(self.datasets), str(self.inv))
 
 
 class AutomapFillVelocityTests(unittest.TestCase):

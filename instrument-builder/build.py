@@ -62,6 +62,11 @@ def main():
             print(f"{p['id']}: stack of {', '.join(l['patch'] for l in r['stack'])}, "
                   f"measured {r.get('measured_rms_db_before_trim')} dB, trim {r['auto_gain_db']} dB")
             continue
+        if r.get("mode") == "kit":
+            print(f"{p['id']}: kit of {len(r['slots']) - len(r['empty_slots'])} drums ({r['zones']} zones), keys {r['keys']}, "
+                  f"measured {r.get('measured_rms_db_before_trim')} dB, trim {r['auto_gain_db']} dB"
+                  + (f", EMPTY SLOTS: {', '.join(r['empty_slots'])}" if r["empty_slots"] else ""))
+            continue
         print(f"{p['id']}: {r['zones']} zones, {r['velocity_layers']} velocity layers, keys {r['keys']}, "
               f"measured {r.get('measured_rms_db_before_trim')} dB, trim {r['auto_gain_db']} dB, loops {r['loops']}"
               + (f", key balance {r['key_balance']['before_spread_db']} -> {r['key_balance']['after_spread_db']} dB spread"

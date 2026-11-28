@@ -16,6 +16,7 @@ sys.path.insert(0, os.path.join(_HERE, "..", "..", "sample-mapping"))
 sys.path.insert(0, os.path.join(_HERE, "..", "..", "audio-engine"))
 
 from sample_mapping.automap import build_pitched_zones  # noqa: E402
+from sample_mapping.kit import build_kit_zones  # noqa: E402
 from sample_mapping.zones import build_zones  # noqa: E402
 from sampler.engine import Engine  # noqa: E402
 from sampler.instrument import Instrument  # noqa: E402
@@ -120,7 +121,14 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
             raise BuildError(f"patch {p.get('id')} uses research-private samples; pass --allow-private "
                              "for a private build that stays out of git")
         mode = src.get("mode", "sfz")
-        if mode == "pitched":
+        if mode == "kit":
+            if not src.get("options", {}).get("slots"):
+                raise BuildError(f"patch {p.get('id')}: a kit needs options.slots")
+            try:
+                zones, rep = build_kit_zones(datasets_root, tier, src.get("pack"), inventory_dir, src.get("options"))
+            except (ValueError, FileNotFoundError) as e:
+                raise BuildError(f"patch {p.get('id')}: {e}")
+        elif mode == "pitched":
             if "pack" not in src:
                 raise BuildError(f"patch {p.get('id')}: source needs 'pack'")
             zones, rep = build_pitched_zones(datasets_root, tier, src["pack"], inventory_dir, src.get("options"))
@@ -131,8 +139,9 @@ def build_instrument(spec, datasets_root, inventory_dir, allow_private=False):
         else:
             raise BuildError(f"patch {p.get('id')}: unknown source mode {mode!r}")
         if not zones:
-            raise BuildError(f"patch {p.get('id')}: no playable zones from {src['pack']}")
-        used[src["pack"]] = {"pack": src["pack"], "tier": tier, **{k: v for k, v in packs.get(src["pack"], {}).items() if k != "tier"}}
+            raise BuildError(f"patch {p.get('id')}: no playable zones from {src.get('pack') or rep.get('packs')}")
+        for pid in rep.get("packs") or [src["pack"]]:
+            used[pid] = {"pack": pid, "tier": tier, **{k: v for k, v in packs.get(pid, {}).items() if k != "tier"}}
         voice = {**VOICE_DEFAULTS, **(p.get("voice") or {})}
         built.append({"id": p["id"], "name": p.get("name", p["id"]), "note": p.get("note", ""),
                       "voice": voice, "zones": zones})
